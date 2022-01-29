@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Cenit IO - Docs',
   tagline: 'Open iPaaS',
-  url: 'https://master.dh52xlqrqmf4x.amplifyapp.com',
+  url: 'https://docs.cenit.io',
   baseUrl: '/',
   onBrokenLinks: 'ignore', //'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,7 +57,7 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/cenit-io/cenit-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -101,7 +101,7 @@ const config = {
               // },
               // {
               //   label: 'GitHub',
-              //   href: 'https://github.com/facebook/docusaurus',
+              //   href: 'https://github.com/cenit-io/cenit-docs',
               // },
             ],
           },
