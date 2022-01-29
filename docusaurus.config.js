@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Cenit IO - Docs',
   tagline: 'Open iPaaS',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://master.dh52xlqrqmf4x.amplifyapp.com',
   baseUrl: '/',
   onBrokenLinks: 'ignore', //'throw',
   onBrokenMarkdownLinks: 'warn',
