@@ -10,7 +10,7 @@ const config = {
   tagline: 'Open iPaaS',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore', //'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'cenit-io', // Usually your GitHub org/user name.
