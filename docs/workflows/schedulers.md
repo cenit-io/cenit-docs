@@ -10,7 +10,7 @@ Schedulers are events triggered on a certain moment and can be optionally recurr
 
 #### Add New
 
-For creating a new scheduler, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
+For creating a new scheduler, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
 
 ![scheduler new](https://user-images.githubusercontent.com/54523080/150603309-4b2fb26b-01e7-4a1e-8336-a74fe0d17a9d.png)
 

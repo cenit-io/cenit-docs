@@ -6,7 +6,7 @@ The Document Type submenu allows to define new Data Types as well as managing th
 
 #### Add New
 
-For creating a new Data Type, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
+For creating a new Data Type, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
 
 ![new button](https://user-images.githubusercontent.com/54523080/149007817-65482f65-7687-47ed-a8c0-2760fddfee64.png)
 
@@ -78,7 +78,7 @@ After pressing the save button you can see the new data type on the list of data
 
 #### Managing a Data Type
 
-You can manage a Data Type by selecting it and pressing one of the buttons in the  [Generic Menu](generic/generic_menu_options_.md)
+You can manage a Data Type by selecting it and pressing one of the buttons in the  [Generic Menu](generic/generic_menu_options.md)
 
 ![data type managing](https://user-images.githubusercontent.com/54523080/149058497-bd5a3f7d-4645-4462-a3ba-5c3f4eca743b.png)
 
@@ -102,7 +102,7 @@ From the list of Data Types you can manage not only a Data Type definition but a
 
 ![data type records view](https://user-images.githubusercontent.com/54523080/149066255-eb6dbae9-beb5-4ba0-b421-7790f2efb8af.png)
 
-Once inside the records view, you can create a new record by pressing the same button New (+) from the [Generic Menu](generic/generic_menu_options_.md)
+Once inside the records view, you can create a new record by pressing the same button New (+) from the [Generic Menu](generic/generic_menu_options.md)
 
 ![data type record new](https://user-images.githubusercontent.com/54523080/149066711-f70f2091-9449-4929-adf6-6f56c7967b8c.png)
 

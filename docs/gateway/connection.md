@@ -30,7 +30,7 @@ As mentioned before, the connection contains only the base URL, which is https:/
 
 #### Add New
 
-For creating a new Connection, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
+For creating a new Connection, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
 
 ![connection new](https://user-images.githubusercontent.com/54523080/149883960-4ed7fd3d-b832-47d4-89c3-9eb330098e56.png)
 

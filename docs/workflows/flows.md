@@ -6,7 +6,7 @@ Every kind of flow has a different role in the integration, which is implemented
 
 #### Add New
 
-The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md).
+The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options.md).
 
 ![flow new](https://user-images.githubusercontent.com/54523080/150281097-57cfa00c-8721-41fd-b225-a681b0450de9.png)
 
@@ -28,7 +28,7 @@ The  Import Flow generally works this way:
 
 #### Add New
 
-The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md).
+The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options.md).
 
 ![flow new](https://user-images.githubusercontent.com/54523080/150281097-57cfa00c-8721-41fd-b225-a681b0450de9.png)
 
@@ -128,7 +128,7 @@ The Converter Flow generally works this way:
 
 #### Add New
 
-The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md). After pressing the new button you can start filling those fields which are common to every kind of flow.
+The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options.md). After pressing the new button you can start filling those fields which are common to every kind of flow.
 
 ![flow common fields](https://user-images.githubusercontent.com/54523080/150420608-0bab2fcc-d12e-4d01-9f0d-79df225b2881.png)
 
@@ -178,7 +178,7 @@ The Export Flow generally works this way:
 
 #### Add New
 
-The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md). After pressing the new button you can start filling those fields which are common to every kind of flow.
+The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options.md). After pressing the new button you can start filling those fields which are common to every kind of flow.
 
 ![flow common fields](https://user-images.githubusercontent.com/54523080/150420608-0bab2fcc-d12e-4d01-9f0d-79df225b2881.png)
 

@@ -8,7 +8,7 @@ The File Type submenu allows to define new File Types.
 
 #### Add New
 
-For creating a new File Type, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
+For creating a new File Type, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
 
 ![data file type](https://user-images.githubusercontent.com/54523080/149071497-40b94a32-9094-4b89-885e-a0099c35d3dd.png)
 
