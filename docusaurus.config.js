@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'ignore', //'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   organizationName: 'cenit-io', // Usually your GitHub org/user name.
   projectName: 'cenit-docs', // Usually your repo name.
 
@@ -46,7 +46,9 @@ const config = {
         title: 'Cenit I0 - Docs',
         logo: {
           alt: 'Cenit I0 - Docs Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo2.svg',
+          width: 28,
+          // height: 32,
         },
         items: [
           {

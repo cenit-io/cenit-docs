@@ -4,38 +4,89 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'The Platform',
+    Svg: require('../../static/img/Cenit_IO_Backendless.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Multitenant open iPaaS with a modern and powerful engine. Designed to solve unique integrations needs, supporting a wide range of use cases.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Open Source',
+    Svg: require('../../static/img/Cenit_IO_Third-party_service_integration.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Cenit IO is open source and free, and the right place to launch an on-premises Cenit server, that you can modified as needed to build your business. Your code contributions are welcome.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Cloud or On-premises',
+    Svg: require('../../static/img/Cenit_IO_Routing__orchestrations.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        It is your choice use our cloud services to move faster and not worry about infrastructure or deploy a Cenit server in your data center with full control to meet your needs..
+      </>
+    ),
+  },
+  {
+    title: 'Backendless',
+    Svg: require('../../static/img/Cenit_IO_Backendless.svg').default,
+    description: (
+      <>
+        New Data Type is created using a JSON Schema, then a complete REST API and a CRUD UI are generated to manage the data.
+      </>
+    ),
+  },
+  {
+    title: 'Data Integration',
+    Svg: require('../../static/img/Cenit_IO_Data_integration.svg').default,
+    description: (
+      <>
+        Cover data validation, transformation, and mapping. Supported multiple data formats and communication protocols.
+      </>
+    ),
+  },
+  {
+    title: 'Routing & orchestrations',
+    Svg: require('../../static/img/Cenit_IO_Routing__orchestrations.svg').default,
+    description: (
+      <>
+        Setting up multi-step integration flows through atomic functions like connection, transformation, webhook, and flow.
+      </>
+    ),
+  },
+  {
+    title: 'Level Visibility',
+    Svg: require('../../static/img/Cenit_IO_Multi-tenants.svg').default,
+    description: (
+      <>
+        Giving options to share integrations at different openness levels: inside a tenant, to specific tenants, or for everyone.
+      </>
+    ),
+  },
+  {
+    title: 'Integration Services',
+    Svg: require('../../static/img/Cenit_IO_Data_integration.svg').default,
+    description: (
+      <>
+        Runs cloud service integration for publication and management of APIs to support application and data integration needs.
+      </>
+    ),
+  },
+  {
+    title: 'Multi-tenant',
+    Svg: require('../../static/img/Cenit_IO_Multi-tenants.svg').default,
+    description: (
+      <>
+        Convenient Onboarding of New Tenants. Each tenant's data is isolated and remains invisible to other tenants.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
