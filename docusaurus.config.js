@@ -81,30 +81,30 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/cenit-io/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Slack',
+                href: 'https://cenitio.slack.com/join/shared_invite/zt-10zluubzr-42nktMgCndc5I1JFtG0uZA#/shared-invite/email',
               },
-              // {
-              //   label: 'Twitter',
-              //   href: 'https://twitter.com/docusaurus',
-              // },
+              {
+                label: 'Youtube',
+                href: 'https://www.youtube.com/playlist?list=PLY25EbO7w_Nbr5rXq5xuqaJxxxm8pmf4u',
+              },
             ],
           },
           {
             title: 'More',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
-              // {
-              //   label: 'GitHub',
-              //   href: 'https://github.com/cenit-io/cenit-docs',
-              // },
+              {
+                label: 'Suggest a feature',
+                to: 'https://github.com/cenit-io/cenit/issues/new',
+              },
+              {
+                label: 'Report an issue',
+                href: 'https://github.com/cenit-io/cenit/issues/new',
+              },
             ],
           },
         ],
