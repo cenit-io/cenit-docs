@@ -43,7 +43,9 @@ html[data-theme='dark'] .navbar__logo img{
   filter: invert(1);
 }
 
-html[data-theme='dark'] .navbar__title:hover {
+html[data-theme='dark'] .navbar__brand:hover,
+html[data-theme='dark'] .navbar__item.navbar__link:hover,
+html[data-theme='dark']  .navbar__link--active  {
     color: var(--ifm-color-primary-light);
 }
 
