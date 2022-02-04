@@ -6,7 +6,7 @@ The Security/Authorization Providers submenu allows to define new provider as we
 
 #### Add New
 
-For creating a new provider, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md), then select the type of provider, usually OAuth 2.0 Provider and fill every input field.
+For creating a new provider, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md), then select the type of provider, usually OAuth 2.0 Provider and fill every input field.
 
 ![providers](https://user-images.githubusercontent.com/54523080/149273740-0a164078-1d20-4ea7-b932-a2508f312003.png)
 
@@ -26,4 +26,4 @@ After pressing the Save button, the provider appears in the provider list.
 
 #### Managing a provider
 
-You can manage a provider by selecting it and pressing one of the buttons in the [Generic Menu](generic/generic_menu_options.md)
+You can manage a provider by selecting it and pressing one of the buttons in the [Generic Menu](generic/generic_menu_options_.md)
