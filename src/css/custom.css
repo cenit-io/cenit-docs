@@ -37,3 +37,39 @@ html[data-theme='dark'] {
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* Custom styles in dark mode */
+html[data-theme='dark'] .navbar__logo img{
+  filter: invert(1);
+}
+
+html[data-theme='dark'] .navbar__brand:hover,
+html[data-theme='dark'] .navbar__item.navbar__link:hover,
+html[data-theme='dark']  .navbar__link--active  {
+    color: var(--ifm-color-primary-light);
+}
+
+html[data-theme='dark'] .hero--primary{
+  color: var(--ifm-color-primary-lighter);
+  background-color: var(--ifm-color-primary);
+}
+
+html[data-theme='dark'] .menu__link--active{
+  color: var(--ifm-color-primary-lightest);
+}
+
+html[data-theme='dark'] .pagination-nav__label{
+  color: var(--ifm-color-primary-light);
+}
+
+html[data-theme='dark'] .pagination-nav__link:hover {
+    border-color: var(--ifm-color-primary-lightest);
+}
+
+html[data-theme='dark'] .theme-doc-footer-edit-meta-row svg{
+  fill: var(--ifm-color-primary-light);
+}
+
+html[data-theme='dark'] .theme-doc-footer-edit-meta-row a{
+  color: var(--ifm-color-primary-light);
+}
