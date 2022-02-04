@@ -10,7 +10,7 @@ By accesing the submenu Tenants in Administration yo can see the list of the ten
 
 #### Add New
 
-If you want to create a new Tenant, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
+If you want to create a new Tenant, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
 
  ![new tenant](https://user-images.githubusercontent.com/54523080/148875704-bb5ebe3e-979b-4f62-9af6-d7cd362a56ff.png)
 

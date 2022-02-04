@@ -6,7 +6,7 @@ The Security/Authorization Clients submenu allows to define a new client as well
 
 #### Add New
 
-For creating a new client, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md), then select the type of client, usually Remote OAuth Client and fill every input field.
+For creating a new client, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md), then select the type of client, usually Remote OAuth Client and fill every input field.
 
 ![clients](https://user-images.githubusercontent.com/54523080/149278072-035490a9-cea0-4537-979a-77157751f3f0.png)
 
@@ -32,4 +32,4 @@ After pressing the Save button, the client appears in the client list.
 
 #### Managing a client
 
-You can manage a client by selecting it and pressing one of the buttons in the [Generic Menu](generic/generic_menu_options.md)
+You can manage a client by selecting it and pressing one of the buttons in the [Generic Menu](generic/generic_menu_options_.md)

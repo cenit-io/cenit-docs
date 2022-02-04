@@ -10,7 +10,7 @@ The [Connection Example](gateway/connection.md?id=connection-example) in the [Co
 
 #### Add New
 
-For creating a new Resource, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
+For creating a new Resource, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
 
 Every Resource includes some common fields along with the specific object data for the event, these fields are:
 
@@ -34,7 +34,7 @@ Every Resource includes some common fields along with the specific object data f
   
   Sometimes the same method, and consequently the entire URL, can be used to execute different actions depending on the http method. That means you can send a get request to an URL and send a post request to the same URL and obtain different results. Therefore, you should add one or more operations to the resource. Every operation could need different parameters that you must define when adding the operation. 
 
-For creating a new Resource, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
+For creating a new Resource, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
 
 ![resource new](https://user-images.githubusercontent.com/54523080/150006305-e3d9b5e6-f00c-4cf8-838a-e94838304a2e.png)
 

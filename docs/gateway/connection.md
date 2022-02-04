@@ -30,17 +30,17 @@ As mentioned before, the connection contains only the base URL, which is https:/
 
 #### Add New
 
-For creating a new Connection, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md) and fill every input field.
+For creating a new Connection, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
 
 ![connection new](https://user-images.githubusercontent.com/54523080/149883960-4ed7fd3d-b832-47d4-89c3-9eb330098e56.png)
 
 ![connection new conn](https://user-images.githubusercontent.com/54523080/149884425-9c0e10f8-aaab-435d-91aa-d4052d37c8ed.png)
 
-When creating a Connection we need to set it Namespace, it name and the URL, which is the base URL for that API.
+When creating a Connection we need to set its Namespace, its name and the URL, which is the base URL for that API.
 
 ![connection new connection](https://user-images.githubusercontent.com/54523080/149884830-f9da523f-70d0-4495-a1f4-a14c534f2a24.png)
 
-We also need to set the authorization and the parameters and header it may need. The connection URL, parameters and headers can be described by using Liquid Templates. The template parameters and its values are available in the Liquid Templates as local variables so the URL and its components can be computed dynamically.
+We also need to set the authorization and the parameters and header it might need. The connection URL, parameters and headers can be described by using Liquid Templates. The template parameters and its values are available in the Liquid Templates as local variables so the URL and its components can be computed dynamically.
 
 ![credentials](https://user-images.githubusercontent.com/54523080/149885338-6df7fe82-9ff2-485c-af52-59d1c3acb8be.png)
 
@@ -52,7 +52,7 @@ You may set as many headers as you need, by pressing the + button repeatedly. In
 
 ![parameters 1](https://user-images.githubusercontent.com/54523080/149980883-dbff2a82-92fe-4869-8a35-af43938a502d.png)
 
-You may also set as many parameters as you need, by pressing the + button repeatedly. In this case, no other parameters are needed, jut the access token an it was passed as a header. Besides, you can define template parameters and its values can be assigned via code later.
+You may also set as many parameters as you need, by pressing the + button repeatedly. In this case, no other parameters are needed, just the access token an it was passed as a header. Besides, you can define template parameters and its values can be assigned via code later.
 
 ![connection save](https://user-images.githubusercontent.com/54523080/149888975-a435bd5a-bf67-4ee5-a465-594750a468de.png)
 

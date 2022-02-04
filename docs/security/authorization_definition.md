@@ -8,7 +8,7 @@ The Security/Authorizations  submenu allows to define new authorization as well 
 
 #### Add New
 
-For creating a new authorization, click the New button (+) in the [Generic Menu](generic/generic_menu_options.md), then select the type of authorization, usually OAuth 2.0 Authorization, and fill every input field.
+For creating a new authorization, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md), then select the type of authorization, usually OAuth 2.0 Authorization, and fill every input field.
 
 ![authorizations](https://user-images.githubusercontent.com/54523080/149284081-9f5e709f-e02e-4415-a5ce-f66c30cf8d82.png)
 ![authorizations type](https://user-images.githubusercontent.com/54523080/149284092-92280585-c73a-497f-a25d-ee3dad75b25c.png)
