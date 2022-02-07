@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Flows
 
-Flows define how data is routed between endpoints and all integrations in order to automate your operations. The [Basic Integration](tutorials/basic_integration.md) section explains an integration is generally compose of three flows: the [Import Flow](workflows/flows.md#import-flow), the [Converter Flow](workflows/flows.md#converter-flow) and the [Export Flow](workflows/flows.md#export-flow). 
+Flows define how data is routed between endpoints and all integrations in order to automate your operations. The [Basic Integration](basic_integration.md) section explains an integration is generally compose of three flows: the [Import Flow](workflows/flows.md#import-flow), the [Converter Flow](workflows/flows.md#converter-flow) and the [Export Flow](workflows/flows.md#export-flow). 
 
 Every kind of flow has a different role in the integration, which is implemented on its translator. The Import Flow gets data from an API and store it in Cenit by using a [Parser Translator](transformations/parsers.md). The Converter Flow  converts data of a type A, previously stored in Cenit, to data of a type B and store the new data also in Cenit. A [Converter Translator](transformations/converters.md) is in charge of conducted that mapping process. And finally the Export Flow sends data to an API by using a [Template Translator](transformations/templates.md). The flows should be triggered by events that could be of type [Observers](workflows/observers.md), related to changes in data or [Schedulers](workflows/schedulers.md), which could be programmed to trigger at intervals.
 
