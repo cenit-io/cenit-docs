@@ -1,3 +1,9 @@
+---
+
+sidebar_position: 3
+
+---
+
 # File Types
 
 Sometimes the information gotten from an API contains files, such as images, pdf, etc. That info can't be represented using the JSON format.  When dealing with files, we can't define the data type as a [Document Type](data/document_types.md),  we need to define a File Type instead.

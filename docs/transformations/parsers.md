@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+
+---
+
 # Parsers
 
 When implementing a basic integration, we usually need to Import outside data into Cenit. Parser translators create data type records in Cenit from outside data. It deals with only one data type, the type of the data to be created, which is referred in the parser as target data type.

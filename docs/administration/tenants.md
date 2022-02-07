@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+
+---
+
 # Tenants
 
 Cenit is a multi-tenant iPaaS designed to orchestrate data flows in an easy way that may involve several kinds of data formats and communication protocols. Multi-tenancy means that processes have their own dedicated areas, even though they are actually sharing an environment. This means the customer can separate business areas and their respective integration needs, or even just have separate development, test and production environments.

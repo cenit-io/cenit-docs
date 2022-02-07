@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 5
+
+---
+
+
+
 # Updaters
 
 When implementing a basic integration, we usually handle outside data being imported into Cenit, transformed data which are  also stored inside Cenit and formatted data exported outside Cenit. Sometimes might be necessary to update one or more records. Updater translators update data type records inside Cenit. It deals with only one data type, the type of the data to be updated, which is referred in the updater as target data type.

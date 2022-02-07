@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 2
+
+---
+
+
+
 # Document Types
 
 The [Basic Integration](tutorials/basic_integration.md) section explains how  you can achieve a basic integration in Cenit. In order to get data from an API A and send it to another API B the process or flows should be executed. The import flow gets the information of a Data Type A from the API A. The converter flow transforms that info from a Data Type A to a Data Type B. And finally the export flow sends the info of Data Type B to the API B. In order to implement those flows and the translators they use, you need to properly define some Data Types in accordance with the information handled.
@@ -73,8 +81,6 @@ Data type methods:
 After pressing the save button you can see the new data type on the list of data types.
 
 ![list of types](https://user-images.githubusercontent.com/54523080/149055499-d616da04-d91c-4a61-be86-c748a11214f4.png)
-
-
 
 #### Managing a Data Type
 

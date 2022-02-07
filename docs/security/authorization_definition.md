@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 3
+
+---
+
+
+
 # Authorization Definition
 
 As explained in the [Authorization with OAuth 2.0 Section](security/authorization.md),  during the OAuth 2.0 flow,  Cenit sends an authorization request to a specific **authorization endpoint** by presenting its credentials (**identifier** and **secret**) and the list of **scopes**, usually separated by comma, to clarify which resources are intended to use. If authorized, Cenit receives a temporary authorization **code** that will be sent to a specific **token endpoint** in the authorization server and the code is used for requesting an **access token**. After getting the access token, it will be sent to the resource server anytime you want to access to a protected resource.

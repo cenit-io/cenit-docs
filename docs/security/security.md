@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 1
+
+---
+
+
+
 # Security
 
 The Security Menu allows to define all the elements related to permissions.

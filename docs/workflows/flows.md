@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+
+---
+
 # Flows
 
 Flows define how data is routed between endpoints and all integrations in order to automate your operations. The [Basic Integration](tutorials/basic_integration.md) section explains an integration is generally compose of three flows: the [Import Flow](workflows/flows.md#import-flow), the [Converter Flow](workflows/flows.md#converter-flow) and the [Export Flow](workflows/flows.md#export-flow). 

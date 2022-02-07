@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 1
+
+---
+
+
+
 # Workflows
 
 In a [Basic Integration](tutorials/basic_integration.md) where you want to send data from a system A to a system B, you  need to obtain data from a system A and save it in Cenit, where that information is stored. Later, those records of type A, will be mapped to records of type B, where B is a valid data type for the system B. The information of type B is also stored in CENIT and afterwards sent to the system B. In order to implement that integration in Cenit, we define 3 processes called [Flows](workflows/flows.md): the [Import Flow](workflows/flows.md#import-flow), the [Converter Flow](workflows/flows.md#converter-flow) and the [Export Flow](workflows/flows.md#export-flow).

@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 1
+
+---
+
+
+
 # Transformations
 
 [Flows](workflows/flows.md) define how data is routed between endpoints and all integrations in order to automate your operations. Every kind of flow has a different role in the integration, which is implemented on its translator also known as transformation. A Transformation defines a logic for data manipulation.

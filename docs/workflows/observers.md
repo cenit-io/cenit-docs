@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 3
+
+---
+
+
+
 # Observers
 
 The events in Cenit allow to activate the execution of a flow or an algorithm task. Cenit deals with two kinds of events: 

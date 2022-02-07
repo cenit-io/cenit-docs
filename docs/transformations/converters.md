@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 3
+
+---
+
+
+
 # Converters
 
 When implementing a basic integration, we usually need to transform data from one type A to a type B. Converter translators create records of a data type B inside Cenit from records of a data type A which were already stored in Cenit. So, It deals with two data types, the type A, which is referred in the converter as source data type, and the data type B, also known as target data type.

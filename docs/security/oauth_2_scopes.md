@@ -1,1 +1,0 @@
-# Oauth 2 Scopes

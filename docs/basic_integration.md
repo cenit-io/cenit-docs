@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+
+---
+
 # Generic Cenit Process
 
 Cenit is an open iPaaS system which is commonly used to design and develop integration flows, among others functionalities. It has been designed to solve unique integration needs, orchestrate data flows that may involve different types of protocols and data formats, and provide API management capabilities.

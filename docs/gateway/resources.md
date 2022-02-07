@@ -1,3 +1,9 @@
+---
+
+sidebar_position: 3
+
+---
+
 # Resources
 
 As mentioned in the [Connections](gateway/connection.md) section, when dealing with an API in Cenit, the base URL should be defined as a Connection, only once, and you should define a Resource for every method used; that way we separate in Cenit the base URL and the methods. Both, Connection and Resources, make up the endpoint, the whole URL where the request is sent.

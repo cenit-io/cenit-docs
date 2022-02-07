@@ -1,3 +1,9 @@
+---
+
+sidebar_position: 4
+
+---
+
 # Authorization Client
 
 By defining an authorization client you can set the identifier and secret. To know the role of these elements in the authorization process, you can read the [Authorization with OAuth 2.0 Section](security/authorization.md) You must also select a [Provider](security/authorization_providers.md) in order to set the other elements needed in the authorization process. Other optional parameters related to the token request could be set when needed.

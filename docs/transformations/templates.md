@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+
+---
+
 # Templates
 
 When implementing a basic integration, we usually need to export data outside Cenit. Template translators format data type records stored in Cenit to data which be sent outside. It deals with only one data type, the type of the data to be formatted and sent, which is referred in the template as source data type.

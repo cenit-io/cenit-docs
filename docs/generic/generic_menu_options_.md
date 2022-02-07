@@ -1,3 +1,9 @@
+---
+
+sidebar_position: 2
+
+---
+
 # Generic Menu Options
 
 When accessing every entry in the main menu, a list of elements is shown. For example, if we access the menu Workflows/Flow, the list of flows is shown in the working area, if we enter the menu Data/Document Types the working area shows the list of data types, and so on. Regardless the kind of elements we're listing, a generic menu appears as a horizontal bar in the top-right  corner of the working area. This menu contains a set of options which are common to every list of elements in Cenit.

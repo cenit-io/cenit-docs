@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+
+---
+
 # Administration
 
 The Administration Menu allows you to manage different elements in Cenit, such as  [Tenants](administration/tenants.md). The options in this menu may vary accordingly to the user's role.

@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+
+---
+
 # Authorization Provider
 
 By defining an authorization provider you can set the response type which is code, the authorization endpoint, the token endpoint, the method the token is sent, the scope separator which is usually a comma (,) and the refresh token strategy. To know the role of these elements in the authorization process, you can read the [Authorization with OAuth 2.0 Section](security/authorization.md)
