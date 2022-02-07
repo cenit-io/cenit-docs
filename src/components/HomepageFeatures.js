@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'The Platform',
-    Svg: require('../../static/img/Cenit_IO_Backendless.svg').default,
+    Svg: require('../../static/img/Cenit_IO_The_platform.svg').default,
     description: (
       <>
         Multitenant open iPaaS with a modern and powerful engine. Designed to solve unique integrations needs, supporting a wide range of use cases.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Open Source',
-    Svg: require('../../static/img/Cenit_IO_Third-party_service_integration.svg').default,
+    Svg: require('../../static/img/Cenit_IO_Open_source.svg').default,
     description: (
       <>
         Cenit IO is open source and free, and the right place to launch an on-premises Cenit server, that you can modified as needed to build your business. Your code contributions are welcome.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Cloud or On-premises',
-    Svg: require('../../static/img/Cenit_IO_Routing__orchestrations.svg').default,
+    Svg: require('../../static/img/Cenit_IO_Cloud_or_local.svg').default,
     description: (
       <>
         It is your choice use our cloud services to move faster and not worry about infrastructure or deploy a Cenit server in your data center with full control to meet your needs..
@@ -50,7 +50,7 @@ const FeatureList = [
   },
   {
     title: 'Routing & orchestrations',
-    Svg: require('../../static/img/Cenit_IO_Routing__orchestrations.svg').default,
+    Svg: require('../../static/img/Cenit_IO_Routing_&_orchestrations.svg').default,
     description: (
       <>
         Setting up multi-step integration flows through atomic functions like connection, transformation, webhook, and flow.
@@ -59,7 +59,7 @@ const FeatureList = [
   },
   {
     title: 'Level Visibility',
-    Svg: require('../../static/img/Cenit_IO_Multi-tenants.svg').default,
+    Svg: require('../../static/img/Cenit_IO_Shared_resources.svg').default,
     description: (
       <>
         Giving options to share integrations at different openness levels: inside a tenant, to specific tenants, or for everyone.
@@ -68,7 +68,7 @@ const FeatureList = [
   },
   {
     title: 'Integration Services',
-    Svg: require('../../static/img/Cenit_IO_Data_integration.svg').default,
+    Svg: require('../../static/img/Cenit_IO_Integration_services.svg').default,
     description: (
       <>
         Runs cloud service integration for publication and management of APIs to support application and data integration needs.
