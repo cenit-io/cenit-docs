@@ -77,7 +77,7 @@ const FeatureList = [
   },
   {
     title: 'Multi-tenant',
-    Svg: require('../../static/img/Cenit_IO_Multi-tenants.svg').default,
+    Svg: require('../../static/img/Cenit_IO_Multi_tenant.svg').default,
     description: (
       <>
         Convenient Onboarding of New Tenants. Each tenant's data is isolated and remains invisible to other tenants.
