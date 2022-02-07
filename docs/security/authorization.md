@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 2
+
+---
+
+
+
 # Authorization with OAuth 2.0
 
 The Import  Flow  gets  information from an API as well as the Export Flow sends data to another API.  For communicating with those APIs, Cenit needs to know  where to send the request, that is a base URL and its endpoint. Moreover, a flow should ask for permission to access that URL and resource. The [Gateway Section](gateway/gateway.md) explains how to define where to send requests, while this section describes how to configure all the elements related to the authorization process.

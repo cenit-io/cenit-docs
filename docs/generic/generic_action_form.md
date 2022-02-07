@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+
+---
+
 # Generic Action Form
 
 When defining an integration, we need to create different elements in Cenit: flows, transformations, events, data types, etc. Those objects usually contain other objects, for example, a parser translator contains a target data type, a converter translator contains a source data type and a target data type, an import flow contains a parser translator, and so on.  Cenit facilitates that association between two objects, so when you are creating an object A that contains an object B, you can select B from a list of objects  created in advance or you can create the object B directly in the same window you're creating the object A. Thus, no matter the menu you're working with, you might find similar input components , which allow to select an existing object or create a new one. Let's see some examples.

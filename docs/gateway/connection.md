@@ -1,3 +1,9 @@
+---
+
+sidebar_position: 2
+
+---
+
 # Connection
 
 The Import Flow gets information from an API as well as the Export Flow sends data to another API. For communicating with those APIs, Cenit needs to know where to send the request. The APIs generally provide a collection of methods with the same base URL, something like:
