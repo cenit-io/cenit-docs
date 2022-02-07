@@ -4,7 +4,7 @@ When implementing a basic integration, we usually need to transform data from on
 
 #### Add New
 
-The submenu Transformations/Converters allow to create a new converter translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting the type of converter you want to define, for example, Ruby Converter, which refers to a converter written in a DSL based on the Ruby Programming Language, so the logic of the converter translator is described in ruby style. When creating the converter translator, you may select the most suitable [Converter Model](transformations/converters.md?id=converter-models) depending on the data format you need to handle.
+The submenu Transformations/Converters allow to create a new converter translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting the type of converter you want to define, for example, Ruby Converter, which refers to a converter written in a DSL based on the Ruby Programming Language, so the logic of the converter translator is described in ruby style. When creating the converter translator, you may select the most suitable [Converter Model](transformations/converters.md#converter-models) depending on the data format you need to handle.
 
 ![Converter selecting ruby parser](https://user-images.githubusercontent.com/54523080/151060207-15620a9e-5730-48d3-87e8-e3d7b3908a1f.png)
 
@@ -64,7 +64,7 @@ sources.each do |source|
 end
 ```
 
-The code may vary not only  because the transformation we need to implement can be complex, but also due to the different kinds of converters we are able to create, so you should know the [Converter Models](transformations/converters.md?id=converter-models) which are available to be used when defining  converter.
+The code may vary not only  because the transformation we need to implement can be complex, but also due to the different kinds of converters we are able to create, so you should know the [Converter Models](transformations/converters.md#converter-models) which are available to be used when defining  converter.
 
 ![Converter save](https://user-images.githubusercontent.com/54523080/151108761-860f032e-6791-42cd-8b14-966b56580636.png)
 

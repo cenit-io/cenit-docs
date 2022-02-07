@@ -4,7 +4,7 @@ When implementing a basic integration, we usually need to export data outside Ce
 
 #### Add New
 
-The submenu Transformations/Templates allow to create a new template translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting the type of template you want to define, for example, Ruby Template, which refers to a template written in a DSL based on the Ruby Programming Language, so the logic of the converter translator is described in ruby style. When creating the template translator, you may select the most suitable [Template Model](transformations/templates.md?id=template-models) depending on the data format you need to export.
+The submenu Transformations/Templates allow to create a new template translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting the type of template you want to define, for example, Ruby Template, which refers to a template written in a DSL based on the Ruby Programming Language, so the logic of the converter translator is described in ruby style. When creating the template translator, you may select the most suitable [Template Model](transformations/templates.md#template-models) depending on the data format you need to export.
 
 ![Template selecting ruby](https://user-images.githubusercontent.com/54523080/151486650-ba22a5d7-72a5-4e99-8439-f463f35960e5.png)
 
@@ -28,7 +28,7 @@ After selecting the kind of template you can start filling every field.
   
   Define the algorithm to format the data  which will be sent outside Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a template is handled by Cenit as a [Snippet](compute/snippets.md).
 
-The main goal of a transformation is to manipulate data. The objective of a template translator is to format the data that an [Export Flow](workflows/flows.md?id=export-flow) will send to an API after the transformation. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code:
+The main goal of a transformation is to manipulate data. The objective of a template translator is to format the data that an [Export Flow](workflows/flows.md#export-flow) will send to an API after the transformation. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code:
 
 - source or sources:
   
