@@ -23,14 +23,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/cenit-io/cenit-docs/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/cenit-io/cenit-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
