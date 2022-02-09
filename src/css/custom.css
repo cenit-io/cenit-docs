@@ -27,6 +27,7 @@ html[data-theme='dark'] {
   --ifm-color-primary-lightest: #ffffff;
 }
 
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -46,7 +47,7 @@ html[data-theme='dark'] .navbar__logo img{
 html[data-theme='dark'] .navbar__brand:hover,
 html[data-theme='dark'] .navbar__item.navbar__link:hover,
 html[data-theme='dark']  .navbar__link--active  {
-    color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-primary-light);
 }
 
 html[data-theme='dark'] .hero--primary{
@@ -63,7 +64,7 @@ html[data-theme='dark'] .pagination-nav__label{
 }
 
 html[data-theme='dark'] .pagination-nav__link:hover {
-    border-color: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary-lightest);
 }
 
 html[data-theme='dark'] .theme-doc-footer-edit-meta-row svg{
@@ -73,3 +74,12 @@ html[data-theme='dark'] .theme-doc-footer-edit-meta-row svg{
 html[data-theme='dark'] .theme-doc-footer-edit-meta-row a{
   color: var(--ifm-color-primary-light);
 }
+
+html[data-theme='dark'] .footer__link-item:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+html[data-theme='dark'] a {
+  color: var(--ifm-color-primary-light);
+}
+

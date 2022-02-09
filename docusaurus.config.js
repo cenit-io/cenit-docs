@@ -63,7 +63,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
@@ -96,11 +96,11 @@ const config = {
             items: [
               {
                 label: 'Suggest a feature',
-                to: 'https://github.com/cenit-io/cenit/issues/new',
+                href: 'https://github.com/cenit-io/cenit/issues/new?assignees=&labels=&template=feature_request.md&title=',
               },
               {
                 label: 'Report an issue',
-                href: 'https://github.com/cenit-io/cenit/issues/new',
+                href: 'https://github.com/cenit-io/cenit/issues/new?assignees=&labels=&template=bug_report.md&title=',
               },
             ],
           },
