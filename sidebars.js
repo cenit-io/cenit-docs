@@ -53,6 +53,11 @@ const sidebars = {
     },	
 	{
       type: 'category',
+      label: 'Monitors',
+      items: ['monitors/monitors', 'monitors/system_notifications', 'monitors/tasks'],
+    },		
+	{
+      type: 'category',
       label: 'Generic Elements',
       items: ['generic/generic_action_form', 'generic/generic_menu_options_'],
     },		
