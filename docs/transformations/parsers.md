@@ -47,7 +47,7 @@ A simple JSON importer can be defined by the line of code below:
 
 The method create_from_json! persists a new record of the target data type by using a  a parameter of type json. You should notice this line of code creates a record of the target data type by taking every property value from the data obtained from the request and possibly discarding the remaining ones. So they need to share a similar structure in order to get the right result.
 
-Actually, there are several methods available on the target data type object that can be invoked to create records. They all have the following pattern:
+Actually, there are several methods available on the target data type object that can be invoked to create records. All of them have the following pattern:
 
 `(create|new)_from_(json|xml|edi)[!]`
 
