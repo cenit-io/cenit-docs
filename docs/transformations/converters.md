@@ -50,7 +50,7 @@ The main goal of a transformation is to manipulate data. The objective of a conv
 
 When these variables are used together, the code becomes simpler. For example:
 
-```
+```ruby
 target.full_name = source.name
 target.birthday = source.bday
 target.age = "#{source.age} years old"
@@ -60,7 +60,7 @@ This code creates a new record with properties full_name and birthday instead of
 
 When processing several records, the Source Handler field should be set true in order to access the variable sources in the code which would be like the one below:
 
-```
+```ruby
 sources.each do |source|
     target.full_name = source.name
     target.bithday = source.bday
@@ -130,10 +130,13 @@ Than code looks similar to the liquid template code shown above, however it's a 
 
 When using transformations such as XSLT templates, you should consider they are just template engines and so they can be used to produce any kind of content type, for example, JSON content.
 
-Even if records are not stored in XML format an XSLT transformation is possible for Cenit by  following the steps below :  
-1.Format the source record into XML if necessary.  
-2.Applies the XSLT transformation to the XML formatted record.  
-3.Create a target data from the transformed XML document.
+Even if records are not stored in XML format an XSLT transformation is possible for Cenit by  following the steps below:
+
+1. Format the source record into XML if necessary.  
+
+2. Applies the XSLT transformation to the XML formatted record.  
+
+3. Create a target data from the transformed XML document.
 
  Of course, is simpler to use for this case a template like Liquid or Handlebars.
 

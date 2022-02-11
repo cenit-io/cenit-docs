@@ -57,7 +57,7 @@ The create methods attempt to persist the records, halting on error only if the 
 
 Sometimes we get from the API not a single record, but several ones. Those cases require a little more of transformation code to parse the outside data to create multiple records:
 
-```
+```ruby
 parsed_data = JSON.parse(data)
 parsed_data.each do |item|
   target_data_type.create_from_json!(item)
@@ -66,7 +66,7 @@ end
 
 The reality is even more complex. When requesting data from an API we need to understand in detail the response data structure. For example, when requesting to the endpoint ` https://slack.com/api/conversations.list ` we can not simply iterate over the variable data because in that case the response data is not an array of conversations but a json with a property channels that contains the array. So the code is a little bit different:
 
-```
+```ruby
 parsed_data = JSON.parse(data)
 conversations = parsed_data["channels"]
 conversations.each do |conversation|

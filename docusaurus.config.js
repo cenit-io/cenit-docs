@@ -23,14 +23,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/cenit-io/cenit-docs/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/cenit-io/cenit-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -66,7 +63,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
@@ -99,11 +96,11 @@ const config = {
             items: [
               {
                 label: 'Suggest a feature',
-                to: 'https://github.com/cenit-io/cenit/issues/new',
+                href: 'https://github.com/cenit-io/cenit/issues/new?assignees=&labels=&template=feature_request.md&title=',
               },
               {
                 label: 'Report an issue',
-                href: 'https://github.com/cenit-io/cenit/issues/new',
+                href: 'https://github.com/cenit-io/cenit/issues/new?assignees=&labels=&template=bug_report.md&title=',
               },
             ],
           },
