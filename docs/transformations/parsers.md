@@ -27,19 +27,16 @@ After selecting the kind of parser you can start filling every field.
 
 - Code:
   
-  Define the algorithm to receive the requested data and store it in Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a parser is  handled by Cenit as a [Snippet](compute/snippets.md).
+  Define the algorithm to receive the requested data and store it in Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a parser is  handled by Cenit as a [Snippet](compute/snippets.md). It doesn't mean you are forced to create or edit a snippet when coding, you may just modify the code field and Cenit implicitly updates the linked snippet.
 
-The main goal of a transformation is to manipulate data. The objective of a parser translator is to import outside data into Cenit. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code:
+The main goal of a transformation is to manipulate data. The objective of a parser translator is to import outside data into Cenit. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code. The most important pre-defined variables are described in the table below.
 
-- data:
-  
-  The data obtained from a request is stored in the variable: "data", and it should be transformed to Json.
-  
-  `parsed_data = JSON.parse(data)`
+##### Pre-defined variables
 
-- target_data_type:
-  
-  This variable allows to access to the type of the records to be created in a easy way. So, if we set the field Target Data Type of the parser as Test|Conversation, in the code we can refers to it as `target_data_type` instead of `Cenit.namespace('Test').data_type('Conversation')`
+| Variable         | Semantics                                                                                                                                                                                                                                                                                                         | Pre-conditions to use it                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| data             | The data obtained from a request is stored in the variable "data", in other words, after getting the response from the API, Cenit implicitly fill the variable data with the response content and make it available in the parser translator. It should be transformed to Json:  `parsed_data = JSON.parse(data)` | None                                                 |
+| target_data_type | This variable allows to access to the type of the records to be created in a easy way. So, if we set the field Target Data Type of the parser as Test\|Conversation, in the code we can refers to it as:   `target_data_type` instead of:  `Cenit.namespace('Test').data_type('Conversation')`                    | The field target data type was set in the translator |
 
 A simple JSON importer can be defined by the line of code below:
 
