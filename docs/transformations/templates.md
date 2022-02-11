@@ -31,17 +31,16 @@ After selecting the kind of template you can start filling every field.
 
 - Code:
   
-  Define the algorithm to format the data  which will be sent outside Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a template is handled by Cenit as a [Snippet](compute/snippets.md).
+  Define the algorithm to format the data  which will be sent outside Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a template is handled by Cenit as a [Snippet](compute/snippets.md). It doesn't mean you are forced to create or edit a snippet when coding, you may just modify the code field and Cenit implicitly updates the linked snippet.
 
-The main goal of a transformation is to manipulate data. The objective of a template translator is to format the data that an [Export Flow](workflows/flows.md#export-flow) will send to an API after the transformation. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code:
+The main goal of a transformation is to manipulate data. The objective of a template translator is to format the data that an [Export Flow](workflows/flows.md#export-flow) will send to an API after the transformation. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code. The most important pre-defined variables are described in the table below.
 
-- source or sources:
-  
-  If the field Bulk Source is false, the variable "source" allows to access to the record to be formatted. If it's true, the variable "sources" contains the enumeration of records to be formatted.
+##### Pre-defined variables
 
-- source_data_type:
-  
-  This variable allows to access to the type of the records to be formatted, in an easy way. So, if we set the field Source Data Type of the converter as Test|SlackMessage, in the code we can refer to it as `source_data_type` instead of `Cenit.namespace('Test').data_type('SlackMessage')`
+| Variable | Semantics                                                                                                                                                                                                                                                                                                                                                                                                                                  | Pre-conditions to use it       |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
+| source   | If the field Bulk Source is false, the variable "source" allows to access to the record to be formatted and exported, in other words, before executing the template translator, Cenit implicitly fill the variable "source" with the record sent to the export flow and make it available in the translator.                                                                                                                               | The field Bulk Source is false |
+| sources  | If the field Bulk Source is true, the variable "sources" contains the enumeration of records to be formatted and exported, in other words, before executing the template translator, Cenit implicitly fill the variable "sources" with an array which contain all the records sent to the export flow and make it available in the translator, so by iterating over the variable "sources" we can process every record in the enumeration. | The field Bulk Source is true  |
 
 The simplest way to configure a Ruby template is by invoking the build-in format methods (to_hash, to_json, share_hash, to_xml, to_edi) on the local variable `source`, which represent the source record the template is being applied to. For example, a simple non bulkable JSON exporter can be defined by the following transformation:
 

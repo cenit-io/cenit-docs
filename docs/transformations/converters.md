@@ -1,10 +1,7 @@
 ---
-
 sidebar_position: 3
 
 ---
-
-
 
 # Converters
 
@@ -38,19 +35,20 @@ After selecting the kind of parser you can start filling every field.
 
 - Code:
   
-  Define the algorithm to receive the requested data and store it in Cenit. In case of a Ruby Converter, it is written in a DSL based on the Ruby Programming Language. Other formats are available depending on the type of converter created. The code of a converter is handled by Cenit as a [Snippet](compute/snippets.md).
+  Define the algorithm to receive the requested data and store it in Cenit. In case of a Ruby Converter, it is written in a DSL based on the Ruby Programming Language. Other formats are available depending on the type of converter created. The code of a converter is handled by Cenit as a [Snippet](compute/snippets.md). It doesn't mean you are forced to create or edit a snippet when coding, you may just modify the code field and Cenit implicitly updates the linked snippet.
 
-The main goal of a transformation is to manipulate data. The objective of a converter translator is to transform data from one type to another. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code:
+The main goal of a transformation is to manipulate data. The objective of a converter translator is to transform data from one type to another. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code. The most important pre-defined variables are described in the table below.
 
-- source or sources:
-  
-  If the field Source Handler is false, the variable "source" allows to access to the record to be transformed. If it's true, the variable "sources" contains the enumeration of records to be transformed, so iterating over the variable "sources" we can transform every record in the enumeration.
+##### Pre-defined variables
 
-- target:
-  
-  This variable allows to configure the new record to be created from the source record.
+| Variable         | Semantics                                                                                                                                                                                                                                                                                                                                                                                                                                | Pre-conditions to use it                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| source           | If the field Source Handler is false, the variable "source" allows to access to the record to be transformed, in other words, before executing the converter translator, Cenit implicitly fill the variable "source" with the record sent to the converter flow and make it available in the translator.                                                                                                                                 | The field Source Handler is false                                       |
+| sources          | If the field Source Handler is true, the variable "sources" contains the enumeration of records to be transformed, in other words, before executing the converter translator, Cenit implicitly fill the variable "sources" with an array which contain all the records sent to the converter flow and make it available in the translator, so by iterating over the variable "sources" we can transform every record in the enumeration. | The field Source Handler is true                                        |
+| target           | If the field Source Handler is false and the converter is able to handle only one record, this variable allows to configure the new record to be created from the source record, that means you don't need to explicitly use a statement of type create_from_json to create a record for the target data type, by setting the properties to the object "target", Cenit implicitly creates the record.                                    | The field Source Handler is false                                       |
+| target_data_type | This variable allows to access to the type of the records to be created in a easy way. So, if we set the field Target Data Type of the converter as Test\|SlackMessage, in the code we can refers to it as: `target_data_type` instead of: `Cenit.namespace('Test').data_type('SlackMessage')`                                                                                                                                           | The target data type was set, it's required in the converter definition |
 
-- target_data_type:
+When these variables are used together, the code becomes simpler. For example:
 
 ```ruby
 target.full_name = source.name
@@ -58,7 +56,7 @@ target.birthday = source.bday
 target.age = "#{source.age} years old"
 ```
 
-This code creates a new record with properties full_name and birthday instead of name and bday. In case of the age, the property has the same name but now is a string containing the original age value followed by "years old". You should notice the Source Handler field should be set false in order to access the variable source.
+This code creates a new record with properties full_name and birthday instead of name and bday. In case of the age, the property has the same name but now is a string containing the original age value followed by "years old". You should notice the Source Handler field should be set false in order to access the variable source and also notice a statement of type create_from_json is missing because it's optional when using the pre-defined variable "target".
 
 When processing several records, the Source Handler field should be set true in order to access the variable sources in the code which would be like the one below:
 
@@ -100,11 +98,11 @@ When coding the transformation, both variables: source and target, allow to acce
 
 ![Converter Ruby Code](https://user-images.githubusercontent.com/54523080/151644407-96b1db3f-efcd-42eb-881d-073a3a2a3827.png)
 
-When processing is finished, a new record is created from the target variable.
+When processing is finished, a new record is created from the target variable and no statement of type create-from_json is required.
 
 ![Converter Ruby Code2](https://user-images.githubusercontent.com/54523080/151645797-5384bd77-711e-4163-a4e6-1037e00d0e70.png)
 
-You should notice the pre-defined variable sources is used instead of source. The variable target is not available either. Unlike the previous example where a single record is created automatically from target, in case of iterating, you need to explicitly create the record. By specifying the primary_field you guarantee same records could be updated instead of creating new ones.
+You should notice the pre-defined variable sources is used instead of source. The pre-defined variable target is not available either. Unlike the previous example where a single record is created automatically from target, in case of iterating, you need to explicitly create the record by using a statement of type create_from_json. By specifying the primary_field you guarantee same records could be updated instead of creating new ones.
 
 #### Liquid Converter
 

@@ -1,10 +1,7 @@
 ---
-
 sidebar_position: 5
 
 ---
-
-
 
 # Updaters
 
@@ -22,7 +19,7 @@ After selecting the kind of parser you can start filling every field.
 
 - Target Data Type:
   
-  It defines the type of the records to be updated. You can select a data type previously defined or define one by pressing the + button. If no target data type is defined, then the translator is supposed to be able to import data into any data type.
+  It defines the type of the records to be updated. You can select a data type previously defined or define one by pressing the + button. If no target data type is defined, then the translator is supposed to be able to update data of any data type.
 
 - Discard Events:
   
@@ -34,17 +31,17 @@ After selecting the kind of parser you can start filling every field.
 
 - Code:
   
-  Define the algorithm to update the data stored it in Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a parser is handled by Cenit as a [Snippet](compute/snippets.md).
+  Define the algorithm to update the data stored it in Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a parser is handled by Cenit as a [Snippet](compute/snippets.md). It doesn't mean you are forced to create or edit a snippet when coding, you may just modify the code field and Cenit implicitly updates the linked snippet.
 
-The main goal of a transformation is to manipulate data. The objective of an updater translator is to update one or more data type records. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code:
+The main goal of a transformation is to manipulate data. The objective of an updater translator is to update one or more data type records. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code. The most important pre-defined variables are described in the table below.
 
-- target or targets:
-  
-  If the field Source Handler is false, the variable "target" allows to access to the record to be updated. If it's true, the variable "targets" contains the enumeration of records to be updated, so iterating over the variable "targets" we can update every record in the enumeration.
+##### Pre-defined variables
 
-- target_data_type:
-  
-  This variable allows to access to the type of the records to be updated, in an easy way. So, if we set the field Target Data Type of the converter as Test|SlackMessage, in the code we can refers to it as `target_data_type` instead of `Cenit.namespace('Test').data_type('SlackMessage')`
+| Variable         | Semantics                                                                                                                                                                                                                                                                                                                                                                                                                     | Pre-conditions to use it          |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| target           | If the field Source Handler is false and the updater is able to handle only one record, this variable allows to directly modify the record to be updated, that means you don't need to explicitly use a statement of type create_from_json to update a record for the target data type, by setting the properties to the object "target", Cenit implicitly updates the record.                                                | The field Source Handler is false |
+| targets          | If the field Source Handler is true, the variable "targets" contains the enumeration of records to be updated, in other words, before executing the updater translator, Cenit implicitly fill the variable "targets" with an array which contain all the records sent to the updater flow and make it available in the translator, so by iterating over the variable "targets" we can update every record in the enumeration. | The field Source Handler is true  |
+| target_data_type | This variable allows to access to the type of the records to be updated, in an easy way. So, if we set the field Target Data Type of the converter as Test\|SlackMessage, in the code we can refers to it as `target_data_type` instead of `Cenit.namespace('Test').data_type('SlackMessage')`                                                                                                                                | The target data type was set      |
 
 When Source Handler is false the updater is able to handle only one record. In this case, the pre-defined variable target is available and allow to update the record in an easy way. You just need to access from target to every property to be updated and that's it. For example, if we want to update the property text of a SlackMessage record, the code is as simple as:
 
@@ -58,12 +55,14 @@ When Source Handler is true the updater is enabled to process multiple records. 
 
 ```ruby
 targets.each do |target|
+
   target.text =  "You got a message: #{target.text}"
-  target_data_type.create_from_json(target.to_json, primary_field: "id")
+  target_data_type.create_from_json(target.to_json, primary_field: "id")    
+
 end
 ```
 
-The parameter primary_field is optional. That means you are going to get the same result by calling the create_from_json method this way:
+You should notice the pre-defined variable targets is used instead of target. The pre-defined variable target is not available, so you must not mislead the variable target in the example (a loop variable) with the pre-defined one. Unlike the previous example where a single record is created automatically from target, in case of iterating, you need to explicitly update the record by using a statement of type create_from_json. The parameter primary_field is optional. That means you are going to get the same result by calling the create_from_json method this way:
 
 `target_data_type.create_from_json(target.to_json)`
 
