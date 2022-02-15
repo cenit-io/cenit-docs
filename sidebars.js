@@ -53,6 +53,11 @@ const sidebars = {
     },	
 	{
       type: 'category',
+      label: 'Compute',
+      items: ['compute/compute', 'compute/algorithms', 'compute/snippets', 'compute/applications'],
+    },		
+	{
+      type: 'category',
       label: 'Monitors',
       items: ['monitors/monitors', 'monitors/system_notifications', 'monitors/tasks'],
     },		
