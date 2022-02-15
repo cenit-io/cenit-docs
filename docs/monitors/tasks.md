@@ -19,7 +19,7 @@ Cenit shows the tasks ordered by date and time in a decreasing way, that means n
 
 ![Task lists](https://user-images.githubusercontent.com/54523080/153329438-40eb19ed-95ab-455e-806c-90b0d831324e.png)
 
-In the Task list, when you click a specific type of task, a new window will be opened and a list of tasks of the same type will be shown. 
+In the Task list, when you click a specific type of task, a new window will be opened and a list of tasks of the same type will be shown. For example, by clicking Flow Execution:
 
 ![Task list click flow](https://user-images.githubusercontent.com/54523080/153333887-0c05c734-1a23-460b-bc23-dbe06088f4c3.png)
 
@@ -57,7 +57,7 @@ It's even easier if you click the flow name linked to one task in the list of fl
 
 In case of algorithms executions you may proceed the same way.
 
-#### Task scheduling
+## Task scheduling
 
 Tasks are particularly important if we consider a task is able to be scheduled. As mentioned in the [Flows](workflows/flows.md) section, you can associate a [Sheduler Event](workflows/schedulers.md) to a flow. However, an algorithm can not be associated to a Scheduler. So, if you want to schedule an algorithm you need to execute it first in order to generate a task, then you need to schedule that task.
 
