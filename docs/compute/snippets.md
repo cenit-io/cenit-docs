@@ -17,7 +17,7 @@ As mentioned before, when creating a data type or algorithm, Cenit implicitly cr
 
 ![snippets  edit button](https://user-images.githubusercontent.com/54523080/153987991-f5195816-6c18-4e12-b58c-80723ad33e2a.png)
 
-and the window for editing the snippet is shown:
+The window for editing the snippet is shown:
 
 ![snippets edit1](https://user-images.githubusercontent.com/54523080/153988018-e8cdab44-0490-402d-a966-1e14f98a2cad.png)
 
@@ -35,13 +35,13 @@ You should notice the window above only shows the snippet details. For editing t
 
 ![snippets edit1](https://user-images.githubusercontent.com/54523080/153988018-e8cdab44-0490-402d-a966-1e14f98a2cad.png)
 
-Editing the snippet code is fine. However, editing the code directly in the father window use to be more convenient.  For example, when editing the snippet linked with a Converter Translator the is a lot of context to be aware of. If you decide to edit the code in the snippet as shown below
+Editing the snippet code is fine. However, editing the code directly in the father window use to be more convenient.  For example, when editing the snippet linked with a Converter Translator, there is a lot of context to be aware of. If you decide to edit the code in the snippet as shown below:
 
 ![snippet edit code in snippet](https://user-images.githubusercontent.com/54523080/153993563-e13fbabc-482c-4122-80bd-9dc906fef410.png)
 
 some questions might arise:
 
-- Would I used the variable "source" or "sources"?
+- Would I use the variable "source" or "sources"?
 
 - Which is the source data type?
 
@@ -55,9 +55,9 @@ The context issue is present not only when dealing with translators, but also wi
 
 #### Editing shared snippets
 
-When a father element and, consequently, its snippet is shared with other tenants, editing the snippet bring about the creation of a new snippet. 
+When a father element and, consequently its snippet, are shared with other tenants, editing the snippet bring about the creation of a new snippet. 
 
-For example, we shared an algorithm an its snippet  to all the user's tenants, as shown in both pictures below where you can see the algorithm json_sent is shared in tenants JoeTest and JoeSlack.
+For example, we shared an algorithm an its snippet  to all the user's tenants, as shown in both pictures below. You can notice there that the algorithm json_sent is shared in tenants JoeTest and JoeSlack.
 
 ![snipped algorithm tenant 1 edit button](https://user-images.githubusercontent.com/54523080/153999429-a796b006-9d92-4217-8cae-7498dd7121e3.png)
 
@@ -69,7 +69,7 @@ When editing the shared algorithm a warning is shown in the code warning area. T
 
 ![snipped algorithm tenant 2 edit window](https://user-images.githubusercontent.com/54523080/153999461-d43b91db-0822-420e-82f2-0a428c78ece7.png)
 
-So we modified the code in tenant JoeSlack and save as shown  below
+So we modified the code in tenant JoeSlack and save as shown  below:
 
 ![snipped algorithm tenant 2 edit window change](https://user-images.githubusercontent.com/54523080/153999468-2fd4716a-0f8f-4785-aa53-b0c74583d5c2.png)
 
