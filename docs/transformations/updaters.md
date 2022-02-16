@@ -53,11 +53,11 @@ You should notice when processing is finished, the record is updated from the ta
 
 When Source Handler is true the updater is enabled to process multiple records. In this case, the pre-defined variable targets is available and allow to update an enumeration of records. Now a few more logic is needed. For example, if we want to update several SlackMessage records, the code would be:
 
-```
+```ruby
 targets.each do |target|
 
-    target.text =  "You got a message: #{target.text}"
-    target_data_type.create_from_json(target.to_json, primary_field: "id")    
+  target.text =  "You got a message: #{target.text}"
+  target_data_type.create_from_json(target.to_json, primary_field: "id")    
 
 end
 ```

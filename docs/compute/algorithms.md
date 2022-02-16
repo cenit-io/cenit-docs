@@ -146,9 +146,9 @@ you need to enter the parameter's values and then press save, for example:
 
 **Algorithm execution via Code, from another algorithm.**
 
-An algorithm can be called from another algorithm or transformation or any other snippet.
+An algorithm can be called from another algorithm or from a transformation or snippet.
 
-When both the algorithm called and the algorithm making the call belongs to the same namespace, calling an algorithm is as simple as using its name followed by empty parenthesis, if it doesn't expect parameters, for example
+When the algorithm called and the algorithm making the call, belong to the same namespace, calling an algorithm is as simple as using its name followed by empty parenthesis, when it not expects parameters, for example:
 
 `algorithm_r()` 
 
@@ -160,7 +160,7 @@ When the algorithms expect the parameter's values, then you need to specify the 
 
 ![algorithm call 2](https://user-images.githubusercontent.com/54523080/153811246-6e03d5d9-98d9-4ab0-a892-9d479a3db2cb.png)
 
-When the algorithms to be called and the algorithm which makes the call belong to different namespaces the you need to make the call in an explicit way, for example:
+When the algorithms to be called and the algorithm which makes the call belong to different namespaces, then you need to make the call in an explicit way, for example:
 
 `Cenit.namespace('Test').algorithm('algorithm_r').run()`
 
@@ -188,7 +188,7 @@ As a result of an algorithm execution, some data can be created, so the algorith
 
 **Returning a value**
 
-Algorithms optionally return a value, so they can be used as functions. If you want to return a value, you don't need to specify an explicit return statement since Ruby automatically returns the last evaluated expression. So, for example, the code below return a  json object
+Algorithms optionally return a value, so they can be used as functions. If you want to return a value, you don't need to specify an explicit return statement since Ruby automatically returns the last evaluated expression. So, for example, the code below return a  json object:
 
 ```
      data = {                
@@ -210,7 +210,7 @@ An explicit return statement  can be used in order to stop the algorithm executi
      return data.to_json
 ```
 
-Besides, by returning nil, you may use the return statement to explicitly make clear the algorithm is not intended to return any value, as shown in the example below
+Besides, by returning nil, you may use the return statement to explicitly make clear the algorithm is not intended to return any value, as shown in the example below:
 
 ```
  data = {                
@@ -225,7 +225,7 @@ Besides, by returning nil, you may use the return statement to explicitly make c
 
 **Storaging data type records in Cenit**
 
-If the algorithm is not intended to be reused, it doesn't need to return the output data, it can store the output data directly as a datatype record instead, as shown in the example below
+If the algorithm is not intended to be reused, it doesn't need to return the output data, it can store the output data directly as a datatype record instead, as shown in the example below:
 
 ```
  data = {                
@@ -239,7 +239,7 @@ If the algorithm is not intended to be reused, it doesn't need to return the out
 
 **Sending data to an API**
 
-If the algorithm is not intended to be reused, it doesn't need to return the output data, it can send data directly to an API instead, as shown in the example below
+If the algorithm is not intended to be reused, it doesn't need to return the output data, it can send data directly to an API instead, as shown in the example below:
 
 ```
  data = {                

@@ -110,13 +110,11 @@ We can modify the algorithms, one by one, by using the edit button and changing 
 
 You should note the target data type is not a data type we defined. It's a pre-defined Cenit Data Type related to the algorithm resource, the same we explored in the previous example. The code for our updater would be the one below:
 
-```
+```ruby
 targets.each do |target|
-
-      target.name =  "#{target.name}_javascript"
-      target.language =  "javascript"
-      target_data_type.create_from_json(target.to_json, primary_field: "id") 
-
+  target.name =  "#{target.name}_javascript"
+  target.language =  "javascript"
+  target_data_type.create_from_json(target.to_json, primary_field: "id") 
 end
 ```
 
