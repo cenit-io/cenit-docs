@@ -9,7 +9,7 @@ The events in Cenit allow to activate the execution of a flow or an algorithm ta
 
 - Observers, also known as Data Events, which are triggered when specific data is created or updated in Cenit.
 
-- [Schedulers](workflows/observers.md) depends only on conditions related to date and time to be triggered and time intervals if we want to repeat it periodicaly.
+- [Schedulers](workflows/observers.md) depends only on conditions related to date and time to be triggered. A Scheduler handles time intervals which can be useful if we want to repeat it periodically.
 
 Observer Events listen for property changes on records. The Workflow/Observers submenu allows to define new Observer as well as managing the observers previously defined.
 
