@@ -29,7 +29,7 @@ const sidebars = {
 	{
       type: 'category',
       label: 'Security',
-      items: ['security/security', 'security/authorization', 'security/authorization_definition', 'security/authorization_clients', 'security/authorization_providers'],
+      items: ['security/security', 'security/authorization', 'security/authorization_definition', 'security/authorization_clients', 'security/authorization_providers', 'security/authorization_concepts'],
     },
 	{
       type: 'category',
