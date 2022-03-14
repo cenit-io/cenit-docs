@@ -1,5 +1,4 @@
 ---
-
 sidebar_position: 4
 
 ---
@@ -30,11 +29,11 @@ Clicking the + button will lead you to create a provider the same way you can do
 
 After associating a provider to the client, you must set the identifier and secret parameters. You also need to assign the client to a Namespace and enter a Name that allows to link it with an Authorization.
 
-#### List of providers
+#### List of clients
 
 After pressing the Save button, the client appears in the client list.
 
-![](C:\Users\joe\AppData\Roaming\marktext\images\2022-01-13-01-52-04-image.png)
+![clients list](https://user-images.githubusercontent.com/54523080/158192035-317a3c7d-e5dc-4728-8d01-f215a1142274.png)
 
 #### Managing a client
 
