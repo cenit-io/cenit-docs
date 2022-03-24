@@ -1,5 +1,4 @@
 ---
-
 sidebar_position: 3
 
 ---
@@ -10,48 +9,40 @@ As mentioned in the [Connections](gateway/connection.md) section, when dealing w
 
 The resources are the final step in a flow, implemented like a request HTTP to an endpoint, for sending or receiving data. They allow to define an HTTP Method and its parameters. 
 
-The submenu [Resources](gateway/resources.md) allows to define new resources or managing the existing ones.
+The submenu [Resource Paths](gateway/resources.md) allows to define new resources or managing the existing ones.
 
-The [Connection Example](gateway/connection.md?id=connection-example) in the [Connections](gateway/connection.md) section, refers the definition of  the method conversations.list with its parameter limit as a resource. So, let's see how doing that.
+The [Connection Example](gateway/connection.md?id=connection-example) in the [Connections](gateway/connection.md) section, refers the definition of  the method conversations.list, with its parameter limit as a resource. So, let's see how doing that.
 
 #### Add New
 
-For creating a new Resource, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
+For creating a new Resource Path, click the New button (+) in the [Resource Paths]() inside [Generic Menu](generic/generic_menu_options_.md), and fill every input field, as shown in figure bellow:
+
+![Filling a resource path](https://user-images.githubusercontent.com/99367633/159992059-17ebae0b-1587-4ad4-9dbd-6a38981d0a3a.png)
 
 Every Resource includes some common fields along with the specific object data for the event, these fields are:
 
-- path:
-  
-  It defines URL after the connection URL to make the request. Connection URL + Resource URL, define the entire URL petition.
+- Namespace: The name of the namespace you are using.
 
-- Parameters:
-  
-  An array of Parameters needed for the petition. They will be part of the petition, usually are sent after: "?" character in the URL.
+- Name: The name of the resource to be created or getting.
 
-- Headers:
-  
-  An array of Headers needed for the petition.
+- Path: It defines URL after the connection URL to make the request. Connection URL + Resource URL, define the entire URL petition.
 
-- Template parameters:
-  
-  Variables to fill in the resource path, parameters or headers defined in the`{{variable}}` way. Their values ussually are filled via code.
+- Method: The operation to do with the resource, for example: GET, POST.
 
-- Operations:
-  
-  Sometimes the same method, and consequently the entire URL, can be used to execute different actions depending on the http method. That means you can send a get request to an URL and send a post request to the same URL and obtain different results. Therefore, you should add one or more operations to the resource. Every operation could need different parameters that you must define when adding the operation. 
+- Description: A text field to describe the purpose of the method for this resource, por example: "this method retrieves all the messages existing in the channel specified".
 
-For creating a new Resource, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
+- Credentials: In Credentials, it is not necessary to specify an authorization if you want to use the same one already defined in the Connection. We note that when defining an authorization at this point, the system will consider it, above the authorization defined in the Connection. It is enough to mark the check "Authorization Handler" as true in order to consider the authorization defined previously in the Connection.
 
-![resource new](https://user-images.githubusercontent.com/54523080/150006305-e3d9b5e6-f00c-4cf8-838a-e94838304a2e.png)
+- Parameters: An array of Parameters needed for the petition. They will be part of the petition, and usually are sent after: "?" character in the URL.
 
-You may set as many operations as you need, by pressing the + button repeatedly. In our example there is only one, with method get.
+- Headers: An array of Headers needed for the petition, according of the definition of the method in the API.
 
-![resource new parameters](https://user-images.githubusercontent.com/54523080/150008417-8613d0c8-a338-42fc-ad1c-1053fb4ee8df.png)
+- Template parameters: Variables to fill in the resource path, parameters or headers defined in the`{{variable}}` way. Their values ussually are filled via code.
 
-Depending of the headers and parameters a method needs, you must fill those fields. In our example, we need to send the token which was already set as a header when declaring the connection and the parameter limit with value 10. We must define limit as a parameter with key limit and value 10. We could define limit as a template parameter instead and we will be able to set its value via code later. 
+Depending on the headers and parameters a method needs, you must fill those fields. In our example, we need to send the token which was already set as a header when declaring the connection and the parameter limit with value 10. We must define limit as a parameter with key limit and value 10. We could define limit as a template parameter instead, and we will be able to set its value via code later. 
 
 ![parameters](https://user-images.githubusercontent.com/54523080/149887939-8a2f3b27-314c-4423-b1dc-9200f00b8216.png)
 
-After completing the resource declaration and pressing the save button, you can see the new resource on the list of resources and you can manage it as well as you can do with other elements in Cenit.
+After completing the resource declaration and pressing the save button, you can see the new resource on the list of resource paths and you can manage it as well as you can do with other elements in Cenit:
 
-![resources list](https://user-images.githubusercontent.com/54523080/150022311-465a14cf-6ea6-41fe-8c35-2a3dbcd27a30.png)
+![Lista de resource paths](https://user-images.githubusercontent.com/99367633/159995736-c8d85d9e-d0a2-49cb-8652-821a28610fbe.png)
