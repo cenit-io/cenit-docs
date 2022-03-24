@@ -55,6 +55,11 @@ const sidebars = {
       type: 'category',
       label: 'Compute',
       items: ['compute/compute', 'compute/algorithms', 'compute/snippets', 'compute/applications'],
+    },
+	{
+      type: 'category',
+      label: 'Integrations',
+      items: ['integrations/integrations', 'integrations/collections', 'integrations/shared_collections'],
     },		
 	{
       type: 'category',
