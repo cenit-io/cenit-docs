@@ -121,7 +121,7 @@ When all items are reviewed, agree by clicking the button in the bottom right co
 When there is a finished integration job that you want to share with other tenants, Cenit allows you to export the collection in a Json type file, which is the one used for future import or pull import operations explained above.
 To share collections there is also the possibility of using the "Share" action that is explained in the [Shared Collections](integrations/shared_collections.md) section.
 
-Sometimes you could have the needed to export your collection without shared to another account or tenant.
+Sometimes you could have the need to export your collection without shared to another account or tenant.
 
 To export collections do it in the Menu: Integrations/Collections.
 
