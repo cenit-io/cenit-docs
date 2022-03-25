@@ -34,7 +34,7 @@ const sidebars = {
 	{
       type: 'category',
       label: 'Gateway',
-      items: ['gateway/gateway', 'gateway/connection', 'gateway/resources'],
+      items: ['gateway/gateway', 'gateway/connection', 'gateway/resource_paths'],
     },	
 	{
       type: 'category',

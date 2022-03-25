@@ -9,7 +9,7 @@ The Import Flow gets information from an API as well as the Export Flow sends da
 
 `https://<baseURL>/<method>`
 
-The API URL  `https://<baseURL>`  and the method's path  `<method>`  make up the endpoint, the whole URL where the request is sent. That means the same base URL can be combined with every method in one API to get multiple endpoints. Therefore, when dealing with an API in Cenit, the base URL should be defined as a Connection, only once, and you should define a resource in [Resource Paths](gateway/resources.md)  for every method used; that way we separate in Cenit the base URL and the methods.
+The API URL  `https://<baseURL>`  and the method's path  `<method>`  make up the endpoint, the whole URL where the request is sent. That means the same base URL can be combined with every method in one API to get multiple endpoints. Therefore, when dealing with an API in Cenit, the base URL should be defined as a Connection, only once, and you should define a resource in [Resource Paths](gateway/resource_paths.md)  for every method used; that way we separate in Cenit the base URL and the methods.
 
 Sending requests to an API is not as simple as accessing an URL in a web browser. Sometimes you need to consider http headers and some parameters in order to send the petition properly. So, a connection consists of an URL and a set of headers, parameters, and template parameters.
 
@@ -31,7 +31,7 @@ and the header below should be provided:
 Authorization: Bearer {access token here}
 ```
 
-As mentioned before, the connection contains only the base URL, which is https://slack.com/api/ in this case, and the method conversations.list with its parameter limit, must be defined as a resource in [Resource Paths ](gateway/resources.md). Since the access token is a required parameter for every method, we're are going to include it in the definition of the connection, so it will be available to every resource.
+As mentioned before, the connection contains only the base URL, which is https://slack.com/api/ in this case, and the method conversations.list with its parameter limit, must be defined as a resource in [Resource Paths ](gateway/resource_paths.md). Since the access token is a required parameter for every method, we're are going to include it in the definition of the connection, so it will be available to every resource.
 
 #### Add New
 

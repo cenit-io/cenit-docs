@@ -67,7 +67,7 @@ After selecting the parser translator, new fields appear in order to set the par
 
 - Webhook:
   
-  It defines the [Resource](gateway/resources.md) and operation the flow is going to use to send the request. You can select a resource previously created or create one by pressing the + button. When defining the webhook  you should review the API Specification meticulously in order to guarantee the request could be sent properly later.
+  It defines the [Resource Path](gateway/resources.md)  the flow is going to use to send the request. You can select a resource previously created or create one by pressing the + button. When defining the webhook  you should review the API Specification meticulously in order to guarantee the request could be sent properly later.
 
 - Authorization:
   
@@ -217,7 +217,7 @@ After selecting the parser translator, new fields appear in order to set the par
 
 - Webhook:
   
-  It defines the [Resource](gateway/resources.md) and operation the flow is going to use to send the request. You can select a resource previously created or create one by pressing the + button. When defining the webhook you should review the API Specification meticulously in order to guarantee the request could be sent properly later.
+  It defines the [Resource Path](gateway/resources.md)  the flow is going to use to send the request. You can select a resource previously created or create one by pressing the + button. When defining the webhook you should review the API Specification meticulously in order to guarantee the request could be sent properly later.
 
 - Authorization:
   
