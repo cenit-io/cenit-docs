@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Resource Paths
 
-As mentioned in the [Connections](gateway/connection.md) section, when dealing with an API in Cenit, the base URL should be defined as a Connection, only once, and you should define a Resource for every method used; that way we separate in Cenit the base URL and the methods. Both, Connection and Resources, make up the endpoint, the whole URL where the request is sent.
+As mentioned in the [Connections](gateway/connection.md) section, when dealing with an API in Cenit, the base URL should be defined as a Connection, only once, and you should define a Resource Path for every method used; that way we separate in Cenit the base URL and the methods. Both, Connection and Resources Path, make up the endpoint, the whole URL where the request is sent.
 
 The resources are the final step in a flow, implemented like a request HTTP to an endpoint, for sending or receiving data. They allow to define an HTTP Method and its parameters. 
 

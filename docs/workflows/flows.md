@@ -273,6 +273,6 @@ And you can check in the notifications if the record of the source data type was
 
 ![export completed notification](https://user-images.githubusercontent.com/54523080/150475839-98edbb46-8619-462a-abd9-0bf1d67f80d7.png)
 
-In practice, you can check if the message was successfully exported if you look into the slack channel where it was sent
+In practice, you can check if the message was successfully exported if you search for new messages into the slack channel where it was sent
 
 ![message slack](https://user-images.githubusercontent.com/54523080/150476157-03fd36ae-17b8-4eed-a2db-2595d6890a8b.png)
