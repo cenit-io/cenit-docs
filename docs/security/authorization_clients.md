@@ -27,7 +27,7 @@ However, you can also create the provider from the new client interface by click
 
 Clicking the + button will lead you to create a provider the same way you can do it when you use the new action in the [Authorization Providers](security/authorization_providers.md) submenu.
 
-After associating a provider to the client, you must set the identifier and secret parameters. You also need to assign the client to a Namespace and enter a Name that allows to link it with an Authorization.
+After associating a provider to the client, you must set the identifier and secret parameters. You also need to assign the client a Name that allows to link it with an Authorization. As a client always contains a provider, it takes the provider's namespace, therefore, no namespace needs to be specified in the client definition. 
 
 #### List of clients
 
