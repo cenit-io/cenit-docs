@@ -33,7 +33,7 @@ Every Resource includes some common fields along with the specific object data f
 
 - Credentials: In Credentials, it is not necessary to specify an authorization if you want to use the same one already defined in the Connection. We note that when defining an authorization at this point, the system will consider it, above the authorization defined in the Connection. It is enough to mark the check "Authorization Handler" as true in order to consider the authorization defined previously in the Connection.
 
-- Parameters: An array of Parameters needed for the petition. They will be part of the petition, and usually are sent after: "?" character in the URL.
+- Parameters: An array of Parameters needed for the petition. They will be part of the petition and they could be sent  as a query string, after the "?" character in the URL, in case of a GET request or inside the request body when another http method is used. 
 
 - Headers: An array of Headers needed for the petition, according of the definition of the method in the API.
 
