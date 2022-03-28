@@ -7,6 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Cenit IO - Docs',
+  staticDirectories: ['public', 'static'],
   tagline: 'Open iPaaS',
   url: 'https://docs.cenit.io',
   baseUrl: '/',
