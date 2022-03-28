@@ -17,7 +17,7 @@ You need to obtain data from a system A and save it in Cenit, where that informa
 
 In order to implement that integration in Cenit, we define 3 processes: A, B and C. Each of these processes is usually traduced in Cenit as a flow.
 
-Before designing any process or flow, you should set the API's [authorization](security/authorization.md) and [connection](gateway/connection.md) in Cenit, in order to  allow for making requests to APIs A and B. You also  need to define the [resources/operations](gateway/resource_paths.md)  for accessing each endpoint. 
+Before designing any process or flow, you should set the API's [authorization](security/authorization.md) and [connection](gateway/connection.md) in Cenit, in order to  allow for making requests to APIs A and B. You also  need to define the [resources](gateway/resource_paths.md)  for accessing each endpoint. 
 
 > See more information about that in: [Security Menu/Authorizations](security/authorization.md) and [Gateway/Connection](gateway/connection.md)
 
