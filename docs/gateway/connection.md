@@ -31,7 +31,7 @@ and the header below should be provided:
 Authorization: Bearer {access token here}
 ```
 
-As mentioned before, the connection contains only the base URL, which is https://slack.com/api/ in the case of the example, and the method conversations.list with its parameter limit, must be defined as a resource in [Resource Paths ](gateway/resource_paths.md). Since the access token is a required parameter for every method, we're are going to include it in the definition of the connection, so it will be available to every resource.
+As mentioned before, the connection contains only the base URL, which is https://slack.com/api/ in the case of the example, and the method conversations.list with its parameter limit, must be defined as a resource in [Resource Paths](gateway/resource_paths.md). Since the access token is a required parameter for every method, we're are going to include it in the definition of the connection, so it will be available to every resource.
 
 #### Add New
 
