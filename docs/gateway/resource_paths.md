@@ -9,13 +9,13 @@ As mentioned in the [Connections](gateway/connection.md) section, when dealing w
 
 The resources are the final step in a flow, implemented like a request HTTP to an endpoint, for sending or receiving data. They allow to define an HTTP Method and its parameters. 
 
-The submenu [Resource Paths](gateway/resources.md) allows to define new resources or managing the existing ones.
+The submenu Gateway/Resource Paths allows to define new resources or managing the existing ones.
 
 The [Connection Example](gateway/connection.md?id=connection-example) in the [Connections](gateway/connection.md) section, refers the definition of  the method conversations.list, with its parameter limit as a resource. So, let's see how doing that.
 
 #### Add New
 
-For creating a new Resource Path, click the New button (+) in the [Resource Paths]() inside [Generic Menu](generic/generic_menu_options_.md), and fill every input field, as shown in figure bellow:
+For creating a new Resource Path, in the Resource Paths list, click the New button (+)  inside the [Generic Menu](generic/generic_menu_options_.md), and fill every input field, as shown in figure bellow:
 
 ![Filling a resource path](https://user-images.githubusercontent.com/99367633/159992059-17ebae0b-1587-4ad4-9dbd-6a38981d0a3a.png)
 

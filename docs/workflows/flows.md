@@ -67,7 +67,7 @@ After selecting the parser translator, new fields appear in order to set the par
 
 - Webhook:
   
-  It defines the [Resource Path](gateway/resources.md)  the flow is going to use to send the request. You can select a resource previously created or create one by pressing the + button. When defining the webhook  you should review the API Specification meticulously in order to guarantee the request could be sent properly later.
+  It defines the [Resource Path](gateway/resource_path.md)  the flow is going to use to send the request. You can select a resource previously created or create one by pressing the + button. When defining the webhook  you should review the API Specification meticulously in order to guarantee the request could be sent properly later.
 
 - Authorization:
   
@@ -79,7 +79,7 @@ After selecting the parser translator, new fields appear in order to set the par
 
 - Connection Role:
   
-  It is used to relate the connection with the webhook (resource/operation)  in order to make up the whole URL. In Cenit you can use more than one connection in the same namespace or even use a connection from another namespace. Those cases force you to use a connection role, that allows to associate a connection with the resources/operation to combine them for obtaining the URL. This field is optional, but you should consider using it as a way to clarify what connection and webhook are used to make up the URL
+  It is used to relate the connection with the webhook in order to make up the whole URL. In Cenit you can use more than one connection in the same namespace or even use a connection from another namespace. Those cases force you to use a connection role, that allows to associate a connection with the resources/operation to combine them for obtaining the URL. This field is optional, but you should consider using it as a way to clarify what connection and webhook are used to make up the URL
   
   Since there is no field for setting the connection individually, a question might arise:  How does the flow know which connection to use?
   
