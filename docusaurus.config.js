@@ -42,12 +42,12 @@ const config = {
     ({
       navbar: {
         title: 'Cenit I0 - Docs',
-        logo: {
-          alt: 'Cenit I0 - Docs Logo',
-          src: 'img/logo2.svg',
-          width: 28,
-          // height: 32,
-        },
+        // logo: {
+        //   alt: 'Cenit I0 - Docs Logo',
+        //   src: 'img/logo2.svg',
+        //   width: 28,
+        //   // height: 32,
+        // },
         items: [
           {
             type: 'doc',
@@ -55,7 +55,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/cenit-io/cenit-docs',
             label: 'GitHub',
@@ -72,6 +72,10 @@ const config = {
               {
                 label: 'Tutorial',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Roadmap',
+                href: 'https://cenit.frill.co/roadmap',
               },
             ],
           },
