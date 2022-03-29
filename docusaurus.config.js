@@ -100,6 +100,10 @@ const config = {
             title: 'More',
             items: [
               {
+                href: 'https://cenit.frill.co/b/6m4lrkv4/feature-ideas',
+                label: 'Feature ideas',
+              },
+              {
                 label: 'Suggest a feature',
                 href: 'https://github.com/cenit-io/cenit/issues/new?assignees=&labels=&template=feature_request.md&title=',
               },
