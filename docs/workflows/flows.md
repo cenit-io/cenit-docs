@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Flows define how data is routed between endpoints in order to automate your operations. 
 
-The [Basic Integration](basic_integration.md) section explains an integration is generally composed of three flows: [Import Flow](workflows/import_flows),  [Converter Flow](workflows/converter_flows) and  [Export Flow](workflows/export_flows). 
+The [Basic Integration](basic_integration.md) section explains an integration is generally composed of three flows: [Import Flow](workflows/import_flows.md),  [Converter Flow](workflows/converter_flows.md) and  [Export Flow](workflows/export_flows.md). 
 
 An Import Flow gets data from an API A and stores it in Cenit in a data type adecuated for this object in A, by using a [Parser Translator](transformations/parsers.md). 
 

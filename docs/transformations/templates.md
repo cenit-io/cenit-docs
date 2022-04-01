@@ -33,7 +33,7 @@ After selecting the kind of template you can start filling every field.
   
   Define the algorithm to format the data  which will be sent outside Cenit. It is written in a DSL based on the Ruby Programming Language. The code of a template is handled by Cenit as a [Snippet](compute/snippets.md). It doesn't mean you are forced to create or edit a snippet when coding, you may just modify the code field and Cenit implicitly updates the linked snippet.
 
-The main goal of a transformation is to manipulate data. The objective of a template translator is to format the data that an [Export Flow](workflows/flows.md#export-flow) will send to an API after the transformation. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code. The most important pre-defined variables are described in the table below.
+The main goal of a transformation is to manipulate data. The objective of a template translator is to format the data that an [Export Flow](workflows/export_flows.md) will send to an API after the transformation. In order to facilitate the data management, some pre-defined variables are available to access data from the translator code. The most important pre-defined variables are described in the table below.
 
 ##### Pre-defined variables
 

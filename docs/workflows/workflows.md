@@ -8,11 +8,11 @@ In a [Basic Integration](basic_integration.md), where you want to send data from
 
 In order to implement that integration in Cenit, we must define 3 processes called [Flows](workflows/flows.md): 
 
-- the [Import Flow](workflows/import_flows), that converts data from System A to an appropiate data type in Cenit,
+- the [Import Flow](workflows/import_flows.md), that converts data from System A to an appropiate data type in Cenit,
 
-- the [Converter Flow](workflows/converter_flows), that converts the data stored in Cenit from System A to the appropriate data type for System B, 
+- the [Converter Flow](workflows/converter_flows.md), that converts the data stored in Cenit from System A to the appropriate data type for System B, 
 
-- the [Export Flow](workflows/export_flows), that exports data of data type B stored in Cenit to System B. 
+- the [Export Flow](workflows/export_flows.md), that exports data of data type B stored in Cenit to System B. 
 
 Each type of workflow needs some elements to be defined, to be able to fulfill the mission that is destined for it: [connections](gateway/connection.md), [authorizations](security/authorization_definition.md), [transformations](transformations/transformations.md) , [algorithms](compute/algorithms.md) and [data types](data/data.md).
 

@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Connection
 
-The [Import Flow](workflows/import_flows) gets information from an API as well as the [Export Flow](workflows/export_flows) sends data to another API. For communicating with those APIs, Cenit needs to know where to send the request. The APIs generally provide a collection of methods with the same base URL, something like:
+The [Import Flow](workflows/import_flows.md) gets information from an API as well as the [Export Flow](workflows/export_flows.md) sends data to another API. For communicating with those APIs, Cenit needs to know where to send the request. The APIs generally provide a collection of methods with the same base URL, something like:
 
 `https://<baseURL>/<method>`
 
