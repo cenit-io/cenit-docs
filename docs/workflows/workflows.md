@@ -1,15 +1,28 @@
 ---
-
 sidebar_position: 1
 
 ---
 
-
-
 # Workflows
 
-In a [Basic Integration](basic_integration.md) where you want to send data from a system A to a system B, you  need to obtain data from a system A and save it in Cenit, where that information is stored. Later, those records of type A, will be mapped to records of type B, where B is a valid data type for the system B. The information of type B is also stored in CENIT and afterwards sent to the system B. In order to implement that integration in Cenit, we define 3 processes called [Flows](workflows/flows.md): the [Import Flow](workflows/flows.md#import-flow), the [Converter Flow](workflows/flows.md#converter-flow) and the [Export Flow](workflows/flows.md#export-flow).
+In a [Basic Integration](basic_integration.md), where you want to send data from a system A to a system B, you  need to obtain data from the System A and save it in Cenit. Later, those records of type A, will be mapped to records of type B, where B is a valid data type for the System B. 
 
-The workflows group together a set of resources: connections, translators , algorithms and data, that control the petitions in a flow structure. The Workflow Menu allows to define [Flows](workflows/flows.md), and the elements related to them, such as: Data Events and Notifications.
+In order to implement that integration in Cenit, we must define 3 processes called [Flows](workflows/flows.md): 
 
-![workflow menu](https://user-images.githubusercontent.com/54523080/150194769-5eed19e8-8b46-4593-ae8f-bac60b71ae49.png)
+- the [Import Flow](workflows/import_flows), that converts data from System A to an appropiate data type in Cenit,
+
+- the [Converter Flow](workflows/converter_flows), that converts the data stored in Cenit from System A to the appropriate data type for System B, 
+
+- the [Export Flow](workflows/export_flows), that exports data of data type B stored in Cenit to System B. 
+
+Each type of workflow needs some elements to be defined, to be able to fulfill the mission that is destined for it: [connections](gateway/connection.md), [authorizations](security/authorization_definition.md), [transformations](transformations/transformations.md) , [algorithms](compute/algorithms.md) and [data types](data/data.md).
+
+These conveniently defined elements make up the structure of a flow. 
+
+Each flow is executed manually or in a controlled way by means of [Data Events](workflows/data_events.md) or [Schedulers](workflows/schedulers.md). 
+
+Another way to configure a flow consists of the use of Hooks.
+
+The figure bellow shows the Workflow Menu. 
+
+![Menu Workflows](https://user-images.githubusercontent.com/99367633/161071948-7238d99d-7c01-4527-bd96-f5bcc2c67b7f.png)
