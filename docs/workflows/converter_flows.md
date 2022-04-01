@@ -6,7 +6,7 @@ sidebar_position: 4
 
 The Converter Flow generally works this way:
 
-- This flow is usually triggered by an [Data Event](workflows/data_events.md), so when a new record of type A is created or updated in Cenit, the flow will be executed. The type A should be set as the event's data type parameter.
+- This flow is usually triggered by a [Data Event](workflows/data_events.md), so when a new record of type A is created or updated in Cenit, the flow will be executed. The type A should be set as the event's data type parameter.
 - When the data event triggers the flow, the data stored in Cenit by the previous flow is converted from a data type A to a data type B. The data type B defines the structure expected by the API B. This mapping process is done by a [Converter Translator](transformations/converters.md).
 - Two Cenit [Data Types](data/document_types.md) should be defined and associated with the translator as source data type (previously called A) and target data type(previously called B). The records of the target data type will be also stored in Cenit by the translator.
 - If it is defined, a piece of code referred as After Process Callback is executed when all the process in the flow execution have been completed.

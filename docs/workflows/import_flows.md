@@ -7,7 +7,7 @@ sidebar_position: 3
 The Import Flow generally works this way:
 
 - This flow is usually triggered by a [Scheduler Event](workflows/schedulers.md).
-- If it is defined, a piece of code referred as Before Submit is executed before sending the request.
+- If it's defined, a piece of code referred as Before Submit is executed before sending the request.
 - Cenit requests the data to a System A via API by using a connection and a resource.
 - After getting the response, a [Parser Translator](transformations/parsers.md) stores the data obtained from API A into Cenit. A Cenit [Data Type](data/document_types.md) should be defined and associated with the translator as target data type.
 - If it is defined, a piece of code referred as After Process Callback is executed when all the process in the flow execution have been completed.
