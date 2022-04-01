@@ -3,7 +3,7 @@ sidebar_position: 3
 
 ---
 
-# Users.
+# Users
 
 Only administrators can add new users.
 
