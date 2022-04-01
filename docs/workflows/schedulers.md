@@ -4,23 +4,19 @@ sidebar_position: 7
 
 # Schedulers
 
-The events in Cenit allow to activate the execution of a flow or an algorithm task. Cenit deals with two kinds of events: 
+Scheduler is the type of event related to date and time to be triggered in order to execute a flow. 
 
-- [Observers](workflows/observers.md), also known as Data Events, which are triggered when specific data is created or updated in Cenit.
+A Scheduler handles time intervals which can be useful if we want to repeat it periodically.
 
-- Schedulers depends only on conditions related to date and time to be triggered. A Scheduler handles time intervals which can be useful if we want to repeat it periodically.
-
-Schedulers are events triggered on a certain moment and can be optionally recurrent. The Workflow/Schedulers submenu allows to define new Scheduler as well as managing the schedulers previously defined.
+Schedulers are events triggered on a certain moment and can be optionally recurrent. The Workflow/Schedulers submenu allows to define a new Scheduler as well as managing the schedulers previously defined.
 
 #### Add New
 
 For creating a new scheduler, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
 
-![scheduler new](https://user-images.githubusercontent.com/54523080/150603309-4b2fb26b-01e7-4a1e-8336-a74fe0d17a9d.png)
+![New scheduler](https://user-images.githubusercontent.com/99367633/161334161-b772b5f2-7584-4642-9cff-4d286c2e2a5a.png)The definition of the Scheduler is pretty easy, yo just need to fill a few fields and activate it.
 
-The definition of the Scheduler is pretty easy, yo just need to fill a few fields and activate it.
-
-![scheduler fields](https://user-images.githubusercontent.com/54523080/150603965-2129adb0-1f13-430f-9069-1de653297770.png)
+![Schedule fileds](https://user-images.githubusercontent.com/99367633/161334337-065e23f5-fa7a-4bce-a545-a2ad04bf4cdb.png)
 
 - Namespace and Name:
   
@@ -58,13 +54,11 @@ The definition of the Scheduler is pretty easy, yo just need to fill a few field
   
   - ENDING AT: Allow to enter the exact date and time you want the event to stop ocurring.
 
-The pictures below shows some examples of scheduler definitions
+The pictures below shows some examples of scheduler definitions.
 
-This event is triggered every day at 6am since January 20, 2022:
+This event is triggered every day at 6 am since April 4th, 2022 at 14:17 :
 
-![scheduler daily](https://user-images.githubusercontent.com/54523080/150627663-bc416c5e-540c-4e69-bb81-66f9edf31d3d.png)
-
-This event might be triggered on January 25 every year but it has starting and ending date on January 2022, so it is triggered only once  on January 25, 2022 at 6am:
+![Daily scheduler](https://user-images.githubusercontent.com/99367633/161336092-481236c1-53e3-423d-82b1-34c9c277cc81.png)This event might be triggered on January 25 every year but it has starting and ending date on January 2022, so it is triggered only once  on January 25, 2022 at 6am:
 
 ![scheduler one time](https://user-images.githubusercontent.com/54523080/150627665-40c2a195-c343-4a5e-bd44-c83cdb42994c.png)
 
@@ -72,11 +66,9 @@ This event is triggered twice a month on days 1 and 15 at 6am since it is activa
 
 ![scheduler twice a month](https://user-images.githubusercontent.com/54523080/150627667-5e7cc56d-65a7-4f67-94ba-ff59936b51be.png)
 
-Strictly speaking, none of those schedulers ever occur, as you may see in the picture below, none of them is activated.
+Strictly speaking, none of those schedulers ever occur, as you may see in the picture below, because none of them is activated.
 
-![sheduler list](https://user-images.githubusercontent.com/54523080/150628068-f6244343-3a06-4bfb-80d4-8ac63085ff78.png)
-
-You can manage schedulers from the list the same way you do with every other element in Cenit. 
+![List of schedulers](https://user-images.githubusercontent.com/99367633/161336639-3eb4df54-fb38-43b3-a992-f76e8bc11850.png)You can manage schedulers from the list, in the same way you do with every other element in Cenit. 
 
 #### Notice
 
