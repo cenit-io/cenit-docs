@@ -7,6 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Cenit IO - Docs',
+  staticDirectories: ['public', 'static'],
   tagline: 'Open iPaaS',
   url: 'https://docs.cenit.io',
   baseUrl: '/',
@@ -23,14 +24,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/cenit-io/cenit-docs/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/cenit-io/cenit-docs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/cenit-io/cenit-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -44,12 +42,12 @@ const config = {
     ({
       navbar: {
         title: 'Cenit I0 - Docs',
-        logo: {
-          alt: 'Cenit I0 - Docs Logo',
-          src: 'img/logo2.svg',
-          width: 28,
-          // height: 32,
-        },
+        // logo: {
+        //   alt: 'Cenit I0 - Docs Logo',
+        //   src: 'img/logo2.svg',
+        //   width: 28,
+        //   // height: 32,
+        // },
         items: [
           {
             type: 'doc',
@@ -57,7 +55,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/cenit-io/cenit-docs',
             label: 'GitHub',
@@ -66,7 +64,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
@@ -74,6 +72,10 @@ const config = {
               {
                 label: 'Tutorial',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Roadmap',
+                href: 'https://cenit.frill.co/roadmap',
               },
             ],
           },
@@ -98,12 +100,16 @@ const config = {
             title: 'More',
             items: [
               {
+                href: 'https://cenit.frill.co/b/6m4lrkv4/feature-ideas',
+                label: 'Feature ideas',
+              },
+              {
                 label: 'Suggest a feature',
-                to: 'https://github.com/cenit-io/cenit/issues/new',
+                href: 'https://github.com/cenit-io/cenit/issues/new?assignees=&labels=&template=feature_request.md&title=',
               },
               {
                 label: 'Report an issue',
-                href: 'https://github.com/cenit-io/cenit/issues/new',
+                href: 'https://github.com/cenit-io/cenit/issues/new?assignees=&labels=&template=bug_report.md&title=',
               },
             ],
           },

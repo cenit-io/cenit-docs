@@ -21,29 +21,29 @@ Defining a Data Type is as simple as setting its schema, which is usually a JSON
 
 For creating a new Data Type you must set the namespace it belong to, a name for the data type and its schema, for instance:
 
-```
+```json
 {
- "type": "object",
- "properties": {
- "id": {
- "type": "string"
- },
- "name": {
- "type": "string"
- },
- "created": {
- "type": "integer"
- },
- "creator": {
- "type": "string"
- },
- "is_member": {
- "type": "boolean"
- },
- "num_members": {
- "type": "integer"
- }
- }
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "created": {
+      "type": "integer"
+    },
+    "creator": {
+      "type": "string"
+    },
+    "is_member": {
+      "type": "boolean"
+    },
+    "num_members": {
+      "type": "integer"
+    }
+  }
 }
 ```
 
