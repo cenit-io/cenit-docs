@@ -1,10 +1,7 @@
 ---
-
 sidebar_position: 3
 
 ---
-
-
 
 # Authorization Definition
 
@@ -14,63 +11,64 @@ In order to enable Cenit for accessing an API's protected resource you need to c
 
 The Security/Authorizations  submenu allows to define new authorization as well as managing the previously defined ones.
 
-#### Add New
+#### Add New Authorization
 
-For creating a new authorization, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md), then select the type of authorization, usually OAuth 2.0 Authorization, and fill every input field.
+For creating a new authorization, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md): 
 
-![authorizations](https://user-images.githubusercontent.com/54523080/149284081-9f5e709f-e02e-4415-a5ce-f66c30cf8d82.png)
-![authorizations type](https://user-images.githubusercontent.com/54523080/149284092-92280585-c73a-497f-a25d-ee3dad75b25c.png)
+![Add Authorization](https://user-images.githubusercontent.com/99367633/160901377-82f7f9f2-b707-4a4d-a064-da91464b2e60.png)
 
-When setting the client you can select a provider previously defined or you can create the client from the new authorization interface by clicking the button + in the client field as explained in [Authorization Clients](security/authorization_clients.md) section when selecting its provider.
+Then select the type of authorization, usually OAuth 2.0 Authorization, and fill every input field.![Pick Authorization](https://user-images.githubusercontent.com/99367633/160901804-038de6b9-622c-4521-bc22-f32d945b1603.png)
 
-![authorizations selecting client](https://user-images.githubusercontent.com/54523080/149286182-fad0fac0-0eea-4186-8f2a-71209f423152.png)
+When setting the authorization client, you can select an authorization provider previously defined, or you can create the client from the new authorization interface by clicking the button + in the client field, as explained in [Authorization Clients](security/authorization_clients.md) section.
 
 You need to assign the authorization to a Namespace and setting its Name.
 
-![scopes](https://user-images.githubusercontent.com/54523080/149365480-dcdd8206-001e-4df2-a9c9-464c877443e4.png)
+![Selecting client](https://user-images.githubusercontent.com/99367633/160902427-a2975a5d-9e65-41f3-bc67-63a3c63fdef0.png)
 
-Then you need to add the scopes to the list, one by one by pressing the + button that appears now previous to the x button. In the image below you should note the + button refers to add a new scope to the list and the x button means deleting the entire list.
+Then you need to add the scopes to the list, one by one by pressing the + button that appears in the next figure:
 
-![scopes add](https://user-images.githubusercontent.com/54523080/149367652-3da2716b-8038-4418-9130-7d2df2665a3a.png)
+![Adding scopes](https://user-images.githubusercontent.com/99367633/160903272-43db7587-8b0e-4ed0-811b-c656f87512fe.png)
 
 By pressing the + button repeatedly you can add the scopes, one by one.
 
-![scopes add one](https://user-images.githubusercontent.com/54523080/149368985-7c352e93-288b-4c5d-872e-ef0b0139acbb.png)
+In the image below, you should note the + button refers to add a new scope to the list and the x button allows to delete some scope.
 
-You must select the provider linked to the authorization and type the scope name. The description field is optional. After pressing the save button you are ready to add another scope. You can see the elements in the scope list while you are adding every scope needed.
+![Scopes all](https://user-images.githubusercontent.com/99367633/160904274-5ce45343-c683-4daa-8c2c-80973144884d.png)
 
-![scopes list](https://user-images.githubusercontent.com/54523080/149370137-75bc2f80-1a00-4a9c-b490-88bef5220dbc.png)
+You can see the elements in the scope list while you are adding every scope needed.
 
-After completing the scope list and filling the other fields you can finish  the authorization creation by pressing the save button.
+After completing the scope list and filling the other fields, you can finish  the authorization creation by pressing the save button.
 
-![authorization save](https://user-images.githubusercontent.com/54523080/149371182-64dcb037-20b1-4e48-8a21-f5f66d9e5342.png) 
+At this time, the system confirms the creation of the authorization:
 
-When the authorization is saved you can see the new authorization in the list and you can manage it as well as you can do with other elements in Cenit.
+![Authorization view](https://user-images.githubusercontent.com/99367633/160908216-eff84249-5a46-4d64-a7ca-a16594cb748f.png)By selecting the button show in the previous figure, you can see the authorization details.
 
-![authorization list](https://user-images.githubusercontent.com/54523080/149374258-aa1865b6-4e56-4bb8-9cb3-a20c971305b9.png)
+![Unauthorized](https://user-images.githubusercontent.com/99367633/160908843-0ad662d0-6006-4b58-ad76-ac67529e047f.png)
 
-By selecting the authorization and clicking the button show, you can see the authorization details.
-
-![authorization not authorized](https://user-images.githubusercontent.com/54523080/149380595-e5a37ce8-f831-4520-ab35-f1eff5af6e21.png)
-
-The image above shows shows the recently created authorization in detail. You should note an important issue: it hasn't been authorized. So a final step is needed in order to complete the authorization definition: to authorize.
+The image above shows the recently created authorization in detail. You should note an important issue: it hasn't been authorized. So, a final step is needed in order to complete the authorization definition: to **authorize.**
 
 #### Authorize
 
-The authorization creation process can be completed by selecting the authorization in the list and pressing the Authorize button.
+When you refresh the list of authorizations, the system shows all authorizations created:
 
-![authorization authorize](https://user-images.githubusercontent.com/54523080/149390636-3568da44-d1f2-4e31-b364-1bee358930e7.png)
+![New authorization](https://user-images.githubusercontent.com/99367633/160909212-9a328b46-4ebf-4522-a251-c533d999840c.png)
 
-The authorization process involves the resource owner, so we probably be redirected to the application we're asking for permission. So, we could be redirected to different URLs depending on the resource authorization endpoint.
+The authorization creation process can be completed by selecting the authorization in the list and pressing the Authorize button.  In the example, we are going to authorize the authorization named ANAPRUEBA.![Test AnaPrueba](https://user-images.githubusercontent.com/99367633/160914181-43d09075-10d2-4044-b3f5-58337a55839f.png)The authorization process involves the resource owner, so we probably be redirected to the application we're asking for permission. 
 
-![authorization authorize redirection](https://user-images.githubusercontent.com/54523080/149393015-e556cd43-d8fd-4e4b-91dc-3959a72a7981.png)
+So, we could be redirected to different URLs depending on the resource authorization endpoint.
 
-The example of authorization shows a redirection to de Slack API authorization endpoint, so after pressing the button Authorize we are redirected to slack as shown in the image below.
+After pressing the button Authorize, we are redirected to Slack APP, as shown in the images below.
 
-![authorization authorize slack](https://user-images.githubusercontent.com/54523080/149393441-f51d948c-9447-4289-b9da-f07f28df9898.png)
+![Slack](https://user-images.githubusercontent.com/99367633/160911280-ff7ae61b-4b2f-4e38-8112-e4c1c1330155.png)
+
+You must select the workspace where you created an APP, from which you have the ID Client and ID Secret previously.
+
+![Permitir](https://user-images.githubusercontent.com/99367633/160912769-0da08549-3d48-4780-8252-015747076b60.png)
+
+![Test passed](https://user-images.githubusercontent.com/99367633/160913168-331bbc61-7244-45fc-a568-3a3888722e0b.png)
 
 When the authorization is completed, we can show the authorization details again and we're going to see it was authorized successfully.
 
-![authorization authorize show](https://user-images.githubusercontent.com/54523080/149393687-f82ab53b-ea3c-4883-931f-c24f09d7716e.png)
+![Authorized!](https://user-images.githubusercontent.com/99367633/160913708-1473291c-a7d1-4a58-8da4-da3a222b334e.png)The authorized check mark indicates we're ready to send requests by using the authorization defined, or rather we got permission to do it. 
 
-The authorized check mark indicates we're ready to send requests by using the authorization defined, or rather we got permission to do it. Of course we need to know the URL we're going to send the request to, so we should define a [Connection](gateway/connection.md).
+Of course we need to know the URL we're going to send the request to, so we should define a [Connection](gateway/connection.md).

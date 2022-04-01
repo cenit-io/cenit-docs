@@ -9,17 +9,17 @@ By defining an authorization client you can set the identifier and secret. To kn
 
 The Security/Authorization Clients submenu allows to define a new client as well as managing the previously defined ones.
 
-#### Add New
+## Add New Authorization Client
 
-For creating a new client, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md), then select the type of client, usually Remote OAuth Client and fill every input field.
+For creating a new client, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md): 
 
-![clients](https://user-images.githubusercontent.com/54523080/149278072-035490a9-cea0-4537-979a-77157751f3f0.png)
+![New authorization client](https://user-images.githubusercontent.com/99367633/160873169-a84d86dc-7320-43cd-829a-9801314ae214.png)
 
-![client type](https://user-images.githubusercontent.com/54523080/149278250-df6b4f50-690f-40af-a355-e51359639912.png)
+Then, select the type of client, usually Remote OAuth Client, and fill every input field.
 
-When setting the provider you can select a provider previously defined.
+![New authorization client](https://user-images.githubusercontent.com/99367633/160873693-27dfc56a-2f0c-4c31-ac10-7234796c8294.png)When setting the provider you can select a provider previously defined.
 
-![client selecting provider](https://user-images.githubusercontent.com/54523080/149278579-c289e05a-9d6f-4f1e-8bcf-0cc04136d6dc.png)
+![Setting the provider](https://user-images.githubusercontent.com/99367633/160879399-45d1dee9-e4d8-40cf-a284-e1a4b1d78ed6.png)
 
 However, you can also create the provider from the new client interface by clicking the + button in the provider field as explained in [Generic Form Elements](generic/generic_action_form.md)
 
@@ -27,14 +27,16 @@ However, you can also create the provider from the new client interface by click
 
 Clicking the + button will lead you to create a provider the same way you can do it when you use the new action in the [Authorization Providers](security/authorization_providers.md) submenu.
 
-After associating a provider to the client, you must set the identifier and secret parameters. You also need to assign the client a Name that allows to link it with an Authorization. As a client always contains a provider, it takes the provider's namespace, therefore, no namespace needs to be specified in the client definition. 
+After associating a provider to the client, you must set the identifier and secret parameters. You also need to assign the client to a Namespace and enter a Name that allows to link it with an Authorization.
 
-#### List of clients
+## List of clients
 
 After pressing the Save button, the client appears in the client list.
 
-![clients list](https://user-images.githubusercontent.com/54523080/158192035-317a3c7d-e5dc-4728-8d01-f215a1142274.png)
+## ![List of clients](https://user-images.githubusercontent.com/99367633/160879800-1a015394-2e27-434d-806c-aaff4a558a21.png)Managing an authorization client
 
-#### Managing a client
+You can manage an authorization client by selecting it and pressing one of the buttons in the [Generic Menu](generic/generic_menu_options_.md). For example, the next figure shows an authorization client to be edited:
 
-You can manage a client by selecting it and pressing one of the buttons in the [Generic Menu](generic/generic_menu_options_.md)
+![Manage clients](https://user-images.githubusercontent.com/99367633/160880483-f64d362d-5bc4-4049-b81b-06291dd64709.png)
+
+Similarly, other operations can be performed on that authorization client.

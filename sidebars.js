@@ -24,7 +24,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Administration',
-      items: ['administration/administration', 'administration/tenants'],
+      items: ['administration/administration', 'administration/tenants''administration/users'],
     },
 	{
       type: 'category',
@@ -44,7 +44,7 @@ const sidebars = {
 	{
       type: 'category',
       label: 'Workflows',
-      items: ['workflows/workflows', 'workflows/flows', 'workflows/observers', 'workflows/schedulers'],
+      items: ['workflows/workflows', 'workflows/flows', 'workflows/import_flows','workflows/converter_flows','workflows/export_flows','workflows/data_events', 'workflows/schedulers'],
     },	
 	{
       type: 'category',
