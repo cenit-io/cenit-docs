@@ -24,4 +24,4 @@ Another way to configure a flow consists of the use of Hooks.
 
 The figure bellow shows the Workflow Menu. 
 
-![Menu Workflows](https://user-images.githubusercontent.com/99367633/161071948-7238d99d-7c01-4527-bd96-f5bcc2c67b7f.png)
+![Nuevo Menu Workflow](https://user-images.githubusercontent.com/99367633/162025734-4f6bd241-e7d6-4b8d-bec7-9006cfd1c760.png)

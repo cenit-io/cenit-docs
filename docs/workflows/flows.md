@@ -52,7 +52,7 @@ The figure bellow shows a flow in pending status.
 
 Status of flows can observed in [System Notifications](monitors/system_notifications.md) as well.
 
-You can test some flow is picking a record of the datatype you want to process (go to Data/Objetc types and list the records of this datatype), and select the button "send to flow". 
+You can test some flow is picking a record of the datatype you want to process (go to Data/Object types and list the records of this datatype), and select the button "send to flow". 
 
 ![Send to flow](https://user-images.githubusercontent.com/99367633/161110529-1f2f106b-cd2c-4bf0-9e5d-0d4e58b57328.png)
 
