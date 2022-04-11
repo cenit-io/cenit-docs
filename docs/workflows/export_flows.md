@@ -20,7 +20,7 @@ The submenu Flows allow to create a new flow by clicking the New button (+) in t
 
 - Event:
   
-  It defines the event which triggers the execution of the flow. You can select an event previously created or create one by pressing the + button. The Export Flow is usually triggered by a [Data Event](workflows/data_events_.md).
+  It defines the event which triggers the execution of the flow. You can select an event previously created or create one by pressing the + button. The Export Flow is usually triggered by a [data event](workflows/data_events.md).
 
 - Translator:
   
