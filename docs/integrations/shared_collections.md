@@ -3,7 +3,7 @@ sidebar_position: 3
 
 ---
 
-# Shared Collections.
+# Shared Collections
 
 Sharing collections is a way to make a collection available to all tenants.
 First of all, let's compare this operation with export and then import or pull import. When importing a collection, a user A can use the elements of the collection whose file has been created by another user B and the user B delivered that file, for instance my_collection.json, to the user A. In other words, the collection to be imported is available only to those users which got the file my_collection.json  in advance.
