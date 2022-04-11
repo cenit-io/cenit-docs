@@ -88,11 +88,11 @@ const config = {
               },
               {
                 label: 'Slack',
-                href: 'https://cenitio.slack.com/join/shared_invite/zt-10zluubzr-42nktMgCndc5I1JFtG0uZA#/shared-invite/email',
+                href: 'https://join.slack.com/t/cenitio/shared_invite/zt-16z88smty-4B9SPlL0ro~53ctg1TqZZw',
               },
               {
                 label: 'Youtube',
-                href: 'https://www.youtube.com/playlist?list=PLY25EbO7w_Nbr5rXq5xuqaJxxxm8pmf4u',
+                href: 'https://www.youtube.com/c/CenitIO',
               },
             ],
           },
