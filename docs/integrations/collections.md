@@ -7,6 +7,8 @@ sidebar_position: 2
 
 A collection is a way to organize a group of elements of an integration. By grouping those elements, you are able to manage them all at once, in order to export the collection, import it or share it with another account or tenant.
 
+You can perform operations on collections using the Cenit IO API V2. To do this, see the specification of this API regarding [collections](https://cenit-io.github.io/api-v2-specs/#tag/Collections).
+
 To go the Collection Section, please head over: Integration Menu/ Collections.
 
 ![Collections Menu](https://user-images.githubusercontent.com/99367633/159567476-f56cdd59-9b6f-49af-b5fc-586a6d602381.png)

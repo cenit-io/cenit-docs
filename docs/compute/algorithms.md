@@ -7,6 +7,8 @@ sidebar_position: 2
 
 The [Basic Integration](basic_integration.md) section explains how you can achieve a basic integration in Cenit. In order to get data from an API A and send it to another API B the process or flows should be executed. The [Flows](workflows/flows.md) define how data is routed between endpoints and all integrations in order to automate your operations. Every kind of flow has a different role in the integration, which is implemented on its translator also known as transformation. A Transformation is an algorithm with a specific purpose: it defines a logic for data manipulation. However, you may define other pieces of code which can be used for general purposes. Cenit refers to them as Algorithms.
 
+You can perform operations on algorithms using the Cenit IO API V2. To do this, see the specification of this API regarding [algorithms](https://cenit-io.github.io/api-v2-specs/#tag/Algorithms).
+
 The Compute/Algorithms submenu allows to define new Algorithms as well as managing the algorithms previously defined.
 
 #### Add New

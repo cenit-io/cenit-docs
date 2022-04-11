@@ -10,6 +10,8 @@ First of all, let's compare this operation with export and then import or pull i
 
 On the other hand, a shared collection is available to every user, so all users will be able to import a shared collection to their tenants by using the Pull action. After pulling the shared collection, they can reuse its elements as they were created or they can be modified them according to the needs of a user in a particular tenant.
 
+You can perform operations on shared collections using the Cenit IO API V2. To do this, see the specification of this API regarding [shared collections](https://cenit-io.github.io/api-v2-specs/#tag/Shared-Collections).
+
 In order to share a collection, you must go to the Integration Menu/Collections and select the desired collection to share it. 
 
 ![image](https://user-images.githubusercontent.com/54523080/159975735-9192b942-d048-4a7d-bdd9-d4f8e6cbf600.png)

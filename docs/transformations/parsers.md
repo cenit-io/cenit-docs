@@ -7,7 +7,7 @@ sidebar_position: 2
 
 When implementing a basic integration, we usually need to Import outside data into Cenit. Parser translators create data type records in Cenit from outside data. It deals with only one data type, the type of the data to be created, which is referred in the parser as target data type.
 
-#### Add New
+You can manipulate parsers via CENIT IO API V2. In order to do that, see specifications for this API in the section [Parsers](https://cenit-io.github.io/api-v2-specs/#tag/Parsers).
 
 The submenu Transformations/Parsers allow to create a new parser translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting Ruby Parser, which refers to a parser written in a DSL based on the Ruby Programming Language, so the logic of the parser translator is described in ruby style.
 

@@ -7,6 +7,8 @@ sidebar_position: 3
 
 Cenit uses the "Snippet" concept to refer pieces of code of algorithms, translators and data types definition. When you create a data type or any kind of algorithm, Cenit let you know a snippet will be implicitly created to store the data type schema or the algorithm code.
 
+You may also manipulate snippets via Cenit IO API V2. See the spec for [snippets](https://cenit-io.github.io/api-v2-specs/#tag/Snippets) in Cenit IO API V2 Specifications.
+
 ![snippets](https://user-images.githubusercontent.com/54523080/153953960-c3388d5d-4d97-422e-9d67-f1dd42e52daf.png)
 
 The Compute/Snippets submenu allows to manage the snippets.

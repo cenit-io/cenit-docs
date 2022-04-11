@@ -13,6 +13,8 @@ The submenu Gateway/Resource Paths allows to define new resources or managing th
 
 The [Connection Example](gateway/connection.md?id=connection-example) in the [Connections](gateway/connection.md) section, refers the definition of  the method conversations.list, with its parameter limit as a resource. So, let's see how doing that.
 
+You may also perform operations on resource paths via CENIT IO API V2. To do that, see more details in the section [Resource Paths]([CenitIO APIv2 Specifications](https://cenit-io.github.io/api-v2-specs/#tag/Resource-Paths) of this API Spec.
+
 #### Add New
 
 For creating a new Resource Path, in the Resource Paths list, click the New button (+)  inside the [Generic Menu](generic/generic_menu_options_.md), and fill every input field, as shown in figure bellow:
