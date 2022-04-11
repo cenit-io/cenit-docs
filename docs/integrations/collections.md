@@ -147,7 +147,7 @@ Go to the Tasks view in the Menu Monitors in order to see the task:
 
 ![Exportacion realizada](https://user-images.githubusercontent.com/99367633/159814456-486c4821-f589-4ac5-b5fd-9f1f20ec42fe.png)
 
-In [System Notifications](monitors/system_notifications.md), you will select the appropiate notification, open it and observe the JSON created as an attachment that you can download:[]()
+In [System Notifications](monitors/system_notifications.md), you will select the appropiate notification, open it and observe the JSON created as an attachment that you can download:
 
 ![Json selected](https://user-images.githubusercontent.com/99367633/159815092-10ee95fe-7d2a-4915-8d36-78ea3063cb23.png)
 
