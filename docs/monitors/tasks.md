@@ -7,6 +7,8 @@ sidebar_position: 3
 
 Cenit uses the "Task" concept to refer particular processes which took place inside a tenant, for example the execution of an algorithm or a flow, the deletion of one or more records, the transformation of data, etc. Every execution of a flow or an algorithm implicitly generates a Task. A record deletion or a data transformation generates a Task as well.
 
+Tasks can be manipulated via CENIT IO API V2. See the spec for this API in the section [Tasks](https://cenit-io.github.io/api-v2-specs/#tag/Tasks).
+
 The Monitors/Tasks submenu allows to manage the tasks.
 
 ![Tasks menu](https://user-images.githubusercontent.com/54523080/153328868-9980d429-30c0-4ef8-b384-496e017bafc2.png)

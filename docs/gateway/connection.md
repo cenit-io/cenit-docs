@@ -33,6 +33,8 @@ Authorization: Bearer {access token here}
 
 As mentioned before, the connection contains only the base URL, which is https://slack.com/api/ in this case, and the method conversations.list with its parameter limit, must be defined as a resource in [Resource Paths ](gateway/resource_paths.md). Since the access token is a required parameter for every method, we're are going to include it in the definition of the connection, so it will be available to every resource.
 
+You may also perform operations on connections via CENIT IO API V2. To do that, see more details in the section [Connections](https://cenit-io.github.io/api-v2-specs/#tag/Connections) of this API Spec. 
+
 #### Add New
 
 For creating a new Connection, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.

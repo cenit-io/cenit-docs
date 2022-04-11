@@ -7,6 +7,8 @@ sidebar_position: 4
 
 When implementing a basic integration, we usually need to export data outside Cenit. Template translators format data type records stored in Cenit to data which be sent outside. It deals with only one data type, the type of the data to be formatted and sent, which is referred in the template as source data type.
 
+You can manipulate templates via CENIT IO API V2. In order to do that, see specifications for this API in [templates](https://cenit-io.github.io/api-v2-specs/#tag/Templates).
+
 #### Add New
 
 The submenu Transformations/Templates allow to create a new template translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting the type of template you want to define, for example, Ruby Template, which refers to a template written in a DSL based on the Ruby Programming Language, so the logic of the converter translator is described in ruby style. When creating the template translator, you may select the most suitable [Template Model](transformations/templates.md#template-models) depending on the data format you need to export.

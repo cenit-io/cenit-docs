@@ -7,7 +7,9 @@ sidebar_position: 5
 
 When implementing a basic integration, we usually handle outside data being imported into Cenit, transformed data which are  also stored inside Cenit and formatted data exported outside Cenit. Sometimes might be necessary to update one or more records. Updater translators update data type records inside Cenit. It deals with only one data type, the type of the data to be updated, which is referred in the updater as target data type.
 
-#### Add New
+You can manipulate updaters via CENIT IO API V2. In order to do that, see specifications for this API in the section [Updaters](https://cenit-io.github.io/api-v2-specs/#tag/Updaters).
+
+## Add New
 
 The submenu Transformations/Updaters allow to create a new parser translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting Ruby Parser, which refers to a parser written in a DSL based on the Ruby Programming Language, so the logic of the updater translator is described in ruby style.
 

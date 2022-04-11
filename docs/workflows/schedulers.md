@@ -10,7 +10,9 @@ A Scheduler handles time intervals which can be useful if we want to repeat it p
 
 Schedulers are events triggered on a certain moment and can be optionally recurrent. The Workflow/Schedulers submenu allows to define a new Scheduler as well as managing the schedulers previously defined.
 
-#### Add New
+You can perform operations on schedulers using the Cenit IO API V2. To do this, see the specification of this API in section [schedulers](https://cenit-io.github.io/api-v2-specs/#tag/Schedulers).
+
+## Add New
 
 For creating a new scheduler, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
 

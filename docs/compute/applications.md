@@ -7,6 +7,8 @@ sidebar_position: 4
 
 An application provides a way for accessing Cenit IO from outside by defining a set of actions. Each action in the application associates an URL, usually like https://server.cenit.io/app/{app_path}/{action_path}, to a Cenit algorithm which will be executed when a petition to that URL is done. This feature lets the user create his own applications with customized interfaces and use Cenit IO in the background as well as enabling the interaction with a third party application.
 
+If you want to manipulate applications via Cenit IO API V2, see the spec for that API in the section [Applications](https://cenit-io.github.io/api-v2-specs/#tag/Applications).
+
 The Compute/Applications submenu allows to define new Applications as well as managing the applications previously defined.
 
 ![applications menu](https://user-images.githubusercontent.com/54523080/154362706-83fef0f1-3992-4c61-ae0d-0f14a61d259c.png)

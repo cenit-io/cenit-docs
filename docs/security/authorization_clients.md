@@ -7,6 +7,8 @@ sidebar_position: 4
 
 By defining an authorization client you can set the identifier and secret. To know the role of these elements in the authorization process, you can read the [Authorization with OAuth 2.0 Section](security/authorization.md) You must also select a [Provider](security/authorization_providers.md) in order to set the other elements needed in the authorization process. Other optional parameters related to the token request could be set when needed.
 
+You can perform operations on authorization clients by CENIT IO API V2 according to this API Spec in section [Authorization Clients](https://cenit-io.github.io/api-v2-specs/#tag/Authorizations-Clients).
+
 The Security/Authorization Clients submenu allows to define a new client as well as managing the previously defined ones.
 
 ## Add New Authorization Client
