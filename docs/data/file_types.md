@@ -9,6 +9,8 @@ Sometimes the information gotten from an API contains files, such as images, pdf
 
 File Types allow to store files as records. Files content can be validated against a schema. If no schema is defined, then the file content can have any structure.
 
+You can manage file types via CENIT IO API V2. See this API Spec in section [File Types](https://cenit-io.github.io/api-v2-specs/#tag/File-Types)
+
 The File Type submenu allows to define new File Types.
 
 #### Add New File Type

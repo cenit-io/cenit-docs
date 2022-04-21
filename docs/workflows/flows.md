@@ -16,7 +16,9 @@ And finally, the Export Flow sends data stored in Cenit to an external API, by u
 
 The flows should be triggered by events that could be of type [Data Events](workflows/data_events.md), related to changes in data, or [Schedulers](workflows/schedulers.md), which could be programmed to execute at intervals.
 
-#### Add New Flow
+You can perform operations on flows using the Cenit IO API V2. To do this, see the specification of this API in section [flows](https://cenit-io.github.io/api-v2-specs/#tag/Flows).
+
+## Add New Flow
 
 The submenu Flows allow to create a new flow by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md).
 
@@ -52,7 +54,7 @@ The figure bellow shows a flow in pending status.
 
 Status of flows can observed in [System Notifications](monitors/system_notifications.md) as well.
 
-You can test some flow is picking a record of the datatype you want to process (go to Data/Objetc types and list the records of this datatype), and select the button "send to flow". 
+You can test some flow is picking a record of the datatype you want to process (go to Data/Object types and list the records of this datatype), and select the button "send to flow". 
 
 ![Send to flow](https://user-images.githubusercontent.com/99367633/161110529-1f2f106b-cd2c-4bf0-9e5d-0d4e58b57328.png)
 

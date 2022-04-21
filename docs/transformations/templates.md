@@ -7,6 +7,8 @@ sidebar_position: 4
 
 When implementing a basic integration, we usually need to export data outside Cenit. Template translators format data type records stored in Cenit to data which be sent outside. It deals with only one data type, the type of the data to be formatted and sent, which is referred in the template as source data type.
 
+You can manipulate templates via CENIT IO API V2. In order to do that, see specifications for this API in [templates](https://cenit-io.github.io/api-v2-specs/#tag/Templates).
+
 #### Add New
 
 The submenu Transformations/Templates allow to create a new template translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting the type of template you want to define, for example, Ruby Template, which refers to a template written in a DSL based on the Ruby Programming Language, so the logic of the converter translator is described in ruby style. When creating the template translator, you may select the most suitable [Template Model](transformations/templates.md#template-models) depending on the data format you need to export.
@@ -74,7 +76,7 @@ That line of code means the source record doesn't need any formatting at all and
 
 In case of handling multiple records, that is Bulk Source set true, a little more of logic is needed, and the variable sources must be used instead of source:
 
-```
+```ruby
 if (jsons = sources.collect { |source| source.to_json(pretty: true) } ).length == 1
  jsons[0]
 else
@@ -84,11 +86,11 @@ end
 
 When the source record need to be formatted, you're able to do that, previous to return the formatted record, by filling the data to be exported from the source record, for example:
 
-```
+```ruby
 formatted = {
- "text": "You got a #{source.text}",
- "channel": "C02S4LXKFL3"
- }
+  "text": "You got a #{source.text}",
+  "channel": "C02S4LXKFL3"
+}
 
 formatted.to_json
 ```
@@ -111,11 +113,11 @@ So, if you need to format the data to xml, it might be as simple as:
 
 In case of handling multiple records, that is Bulk Source set true, a little more of logic is needed, and the variable sources must be used instead of source:
 
-```
+```ruby
 if sources.count == 1
-    sources.first.to_xml
+  sources.first.to_xml
 else
-      sources.to_xml_array(root: source_data_type.slug)
+  sources.to_xml_array(root: source_data_type.slug)
 end
 ```
 
@@ -129,10 +131,10 @@ Several transformations use template engines as Erubis (ERB), Liquid, Handlebars
 
 Several transformations use template engines as Erubis (ERB), Liquid, Handlebars and XML Stylesheet. When using those transformations, you should notice they are just template engines and so they can be used to produce any kind of content type. For example, Liquid Templates can be used to produce JSON content.
 
-```
+```liquid
 {
-      "text": "You got a {{text}}",
-      "channel": "C02S4LXKFL3"
+  "text": "You got a {{text}}",
+  "channel": "C02S4LXKFL3"
 }
 ```
 
@@ -142,10 +144,10 @@ Learn more about liquid templates in [Introduction – Liquid template language]
 
 Several transformations use template engines as Erubis (ERB), Liquid, Handlebars and XML Stylesheet. When using those transformations, you should notice they are just template engines and so they can be used to produce any kind of content type. For example, Handlebars Templates can be used to produce JSON content.
 
-```
+```handlebars
 {
-      "text": "You got a {{text}}",
-      "channel": "C02S4LXKFL3"
+  "text": "You got a {{text}}",
+  "channel": "C02S4LXKFL3"
 }
 ```
 
@@ -159,9 +161,12 @@ Several transformations use template engines as Erubis (ERB), Liquid, Handlebars
 
 When using transformations such as XSLT templates, you should consider they are just template engines and so they can be used to produce any kind of content type, for example, JSON content.
 
-Even if records are not stored in XML format an XSLT transformation is possible for Cenit by following the steps below :  
-1.Format the source record into XML if necessary.  
-2.Applies the XSLT transformation to the XML formatted record.  
-3.Create a target data from the transformed XML document.
+Even if records are not stored in XML format an XSLT transformation is possible for Cenit by following the steps below:  
+
+1. Format the source record into XML if necessary.  
+
+2. Applies the XSLT transformation to the XML formatted record.  
+
+3. Create a target data from the transformed XML document.
 
 Of course, is simpler to use for this case a template like Liquid or Handlebars.

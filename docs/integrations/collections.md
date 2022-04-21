@@ -3,9 +3,11 @@ sidebar_position: 2
 
 ---
 
-# Collections.
+# Collections
 
 A collection is a way to organize a group of elements of an integration. By grouping those elements, you are able to manage them all at once, in order to export the collection, import it or share it with another account or tenant.
+
+You can perform operations on collections using the Cenit IO API V2. To do this, see the specification of this API regarding [collections](https://cenit-io.github.io/api-v2-specs/#tag/Collections).
 
 To go the Collection Section, please head over: Integration Menu/ Collections.
 
@@ -19,7 +21,7 @@ If you select it, you will be able to see or edit the elements that make up that
 
 However, it is recommended not to change the elements at this point, but to do so on the elements available in your tenant: datatypes, workflows, resources, etc. to customize them to your specific integration needs.
 
-## Adding new Collections.
+## Adding new Collections
 
 You can add a new collection by creating your elements in this same environment, but it will be more difficult to test them separately. So, we recommend having the elements ready beforehand and then packing them here.
 
@@ -55,7 +57,7 @@ In any process of creating a collection, you can go to the [System Notifications
 
 ![Checking system notifications when creating a collection](https://user-images.githubusercontent.com/99367633/159578267-c4fafec4-be49-4f07-b543-05732ce4780b.png)
 
-## Importing Collections.
+## Importing Collections
 
 To import collections do it in the Menu: Integrations/Collections.
 
@@ -75,7 +77,7 @@ Where it says “Parser” you gently click on the line (no + sign is given, bec
 
 Then, wait for the process and when it is completed, it refreshes the list of collections and there you can see the new collection imported. At this point, you can see the elements that this collection contains and reuse or edit them at your convenience.
 
-## Pull import Collections.
+## Pull import Collections
 
 The "Pull import" operation allows you to review the items to be imported before actually updating them.
 
@@ -116,12 +118,12 @@ Any of the elements can be edited before being confirmed.
 
 When all items are reviewed, agree by clicking the button in the bottom right corner. After that, the task is finished, and you will have the possibility to appreciate the new collection by refreshing the list of collections in the Menu Integrations/Collections.
 
-## Exporting a Collection.
+## Exporting a Collection
 
 When there is a finished integration job that you want to share with other tenants, Cenit allows you to export the collection in a Json type file, which is the one used for future import or pull import operations explained above.
 To share collections there is also the possibility of using the "Share" action that is explained in the [Shared Collections](integrations/shared_collections.md) section.
 
-Sometimes you could have the needed to export your collection without shared to another account or tenant.
+Sometimes you could have the need to export your collection without shared to another account or tenant.
 
 To export collections do it in the Menu: Integrations/Collections.
 
@@ -145,7 +147,7 @@ Go to the Tasks view in the Menu Monitors in order to see the task:
 
 ![Exportacion realizada](https://user-images.githubusercontent.com/99367633/159814456-486c4821-f589-4ac5-b5fd-9f1f20ec42fe.png)
 
-In [System Notificacions](monitors/system_notifications.md), you will select the appropiate notification, open it and observe the JSON created as an attachment that you can download:
+In [System Notifications](monitors/system_notifications.md), you will select the appropiate notification, open it and observe the JSON created as an attachment that you can download:
 
 ![Json selected](https://user-images.githubusercontent.com/99367633/159815092-10ee95fe-7d2a-4915-8d36-78ea3063cb23.png)
 

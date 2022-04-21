@@ -7,6 +7,8 @@ sidebar_position: 3
 
 When implementing a basic integration, we usually need to transform data from one type A to a type B. Converter translators create records of a data type B inside Cenit from records of a data type A which were already stored in Cenit. So, It deals with two data types, the type A, which is referred in the converter as source data type, and the data type B, also known as target data type.
 
+You can manipulate converters via CENIT IO API V2. In order to do that, see specifications for this API in the section [Converters](https://cenit-io.github.io/api-v2-specs/#tag/Converters).
+
 #### Add New
 
 The submenu Transformations/Converters allow to create a new converter translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting the type of converter you want to define, for example, Ruby Converter, which refers to a converter written in a DSL based on the Ruby Programming Language, so the logic of the converter translator is described in ruby style. When creating the converter translator, you may select the most suitable [Converter Model](transformations/converters.md#converter-models) depending on the data format you need to handle.
@@ -50,7 +52,7 @@ The main goal of a transformation is to manipulate data. The objective of a conv
 
 When these variables are used together, the code becomes simpler. For example:
 
-```
+```ruby
 target.full_name = source.name
 target.birthday = source.bday
 target.age = "#{source.age} years old"
@@ -60,7 +62,7 @@ This code creates a new record with properties full_name and birthday instead of
 
 When processing several records, the Source Handler field should be set true in order to access the variable sources in the code which would be like the one below:
 
-```
+```ruby
 sources.each do |source|
     target.full_name = source.name
     target.bithday = source.bday
@@ -130,12 +132,15 @@ Than code looks similar to the liquid template code shown above, however it's a 
 
 When using transformations such as XSLT templates, you should consider they are just template engines and so they can be used to produce any kind of content type, for example, JSON content.
 
-Even if records are not stored in XML format an XSLT transformation is possible for Cenit by  following the steps below :  
-1.Format the source record into XML if necessary.  
-2.Applies the XSLT transformation to the XML formatted record.  
-3.Create a target data from the transformed XML document.
+Even if records are not stored in XML format an XSLT transformation is possible for Cenit by  following the steps below:
 
- Of course, is simpler to use for this case a template like Liquid or Handlebars.
+1. Format the source record into XML if necessary.  
+
+2. Applies the XSLT transformation to the XML formatted record.  
+
+3. Create a target data from the transformed XML document.
+   
+   Of course, is simpler to use for this case a template like Liquid or Handlebars.
 
 #### Mapping Converter
 
