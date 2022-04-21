@@ -99,20 +99,19 @@ After pressing the "new" button you can start filling every input field the same
   
   Define the algorithm code. It is written in a DSL based on the Ruby Programming Language. The code is handled by Cenit as a [Snippet](compute/snippets.md). It doesn't mean you are forced to create or edit a snippet when coding, you may just modify the code field and Cenit implicitly updates the linked snippet.
   
-  ##### How to add parameters
+##### How to add parameters
   
-  If you want to define one or more parameters, you need to press the + button once:
-  ![parameters](https://user-images.githubusercontent.com/54523080/153798785-e3e5b3d3-9990-40c0-9c4b-81c1bc94ade1.png)
-  Then press repeatedly the other + button
-  ![parameters add more](https://user-images.githubusercontent.com/54523080/153805041-171db7f6-7a58-4e53-a8ad-1a4f6ec153bf.png)
-  After completing the algorithm declaration and pressing the save button, you can see the new algorithm in the list of algorithms and you can manage it as well as you can do with other elements in Cenit.
-  ![algorithm list](https://user-images.githubusercontent.com/54523080/153807270-8420d07f-c80d-4a0b-b8b5-75424624d75e.png)
+If you want to define one or more parameters, you need to press the + button once:
+![parameters](https://user-images.githubusercontent.com/54523080/153798785-e3e5b3d3-9990-40c0-9c4b-81c1bc94ade1.png)
+Then press repeatedly the other + button
+![parameters add more](https://user-images.githubusercontent.com/54523080/153805041-171db7f6-7a58-4e53-a8ad-1a4f6ec153bf.png)
+After completing the algorithm declaration and pressing the save button, you can see the new algorithm in the list of algorithms and you can manage it as well as you can do with other elements in Cenit.
+![algorithm list](https://user-images.githubusercontent.com/54523080/153807270-8420d07f-c80d-4a0b-b8b5-75424624d75e.png)
   
-  #### 
+ 
+#### How to execute algorithms
   
-  #### How to execute algorithms
-  
-  An algorithm can be executed in these ways:
+An algorithm can be executed in these ways:
 
 - Run Algorithm option.
 
@@ -121,42 +120,69 @@ After pressing the "new" button you can start filling every input field the same
 - Algorithm execution as a scheduled Task .
 
 - Algorithm execution as an application action.
-  **Run Algorithm option.**
-  From the list of algorithms you can select an algorithm an execute it by using the Run button:
-  ![algorithm run 1](https://user-images.githubusercontent.com/54523080/153808930-f257932a-3286-4b5b-ba58-f7b40811d4e6.png)
-  If the algorithm has no parameters, you just need to press the save button on the next screen:
-  ![algorithm run 2](https://user-images.githubusercontent.com/54523080/153808933-dd17c9ba-37d9-4932-9478-a73831ad65fc.png)
-  In those cases the algorithm expects for the parameter's values, after pressing the Run Button:
-  ![algorithm run 3](https://user-images.githubusercontent.com/54523080/153808935-f9d888df-4689-4534-99dc-0ab7079bd838.png)
-  you need to enter the parameter's values and then press save, for example:
-  ![algorithm run 4](https://user-images.githubusercontent.com/54523080/153808936-b0eeea37-f083-48b5-8030-e4e88894d32f.png)
-  **Algorithm execution via Code, from another algorithm.**
-  An algorithm can be called from another algorithm or from a transformation or snippet.
-  When the algorithm called and the algorithm making the call, belong to the same namespace, calling an algorithm is as simple as using its name followed by empty parenthesis, when it not expects parameters, for example:
-  `algorithm_r()` 
-  ![algorithm call 1](https://user-images.githubusercontent.com/54523080/153811242-79d99f70-8736-4cfb-8338-5bb49461f9de.png)
-  When the algorithms expect the parameter's values, then you need to specify the list of values among parenthesis, for  example
-  `processing_data(5.8, "abc", "Joel", 43, [1,2,3], objJson)`
-  ![algorithm call 2](https://user-images.githubusercontent.com/54523080/153811246-6e03d5d9-98d9-4ab0-a892-9d479a3db2cb.png)
-  When the algorithms to be called and the algorithm which makes the call belong to different namespaces, then you need to make the call in an explicit way, for example:
-  `Cenit.namespace('Test').algorithm('algorithm_r').run()`
-  `Cenit.namespace('Test').algorithm('processing_data').run([5.8, "abc", "Joel", 43, [1,2,3], objJson])`
-  You should notice in case of passing parameters, the run method receives an array containing the list of the parameter's values. 
-  **Algorithm execution as a scheduled Task**
-  After executing an algorithm, a [Task](monitors/tasks.md) linked to that algorithm is created. If you associate a scheduler to that task, the algorithm will be executed every time the event occurs. If you want to know how to schedule a task, click here: [Task Scheduling](monitors/tasks.md#task-scheduling)
-  **Algorithm execution as an application action.**
-  To know how to execute and algorithm as an application action visit [Applications](compute/applications.md)
+
+##### Run Algorithm option
+From the list of algorithms you can select an algorithm an execute it by using the Run button:
   
-  #### Algorithm's outputs
+![algorithm run 1](https://user-images.githubusercontent.com/54523080/153808930-f257932a-3286-4b5b-ba58-f7b40811d4e6.png)
   
-  As a result of an algorithm execution, some data can be created, so the algorithm provides output data by using different ways, such as:
+If the algorithm has no parameters, you just need to press the save button on the next screen:
+  
+![algorithm run 2](https://user-images.githubusercontent.com/54523080/153808933-dd17c9ba-37d9-4932-9478-a73831ad65fc.png)
+  
+In those cases the algorithm expects for the parameter's values, after pressing the Run Button:
+  
+![algorithm run 3](https://user-images.githubusercontent.com/54523080/153808935-f9d888df-4689-4534-99dc-0ab7079bd838.png)
+  
+you need to enter the parameter's values and then press save, for example:
+  
+![algorithm run 4](https://user-images.githubusercontent.com/54523080/153808936-b0eeea37-f083-48b5-8030-e4e88894d32f.png)
+  
+##### Algorithm execution via Code, from another algorithm
+ 
+An algorithm can be called from another algorithm or from a transformation or snippet.
+  
+When the algorithm called and the algorithm making the call, belong to the same namespace, calling an algorithm is as simple as using its name followed by empty parenthesis, when it not expects parameters, for example:
+  
+`algorithm_r()` 
+  
+![algorithm call 1](https://user-images.githubusercontent.com/54523080/153811242-79d99f70-8736-4cfb-8338-5bb49461f9de.png)
+  
+When the algorithms expect the parameter's values, then you need to specify the list of values among parenthesis, for  example
+  
+`processing_data(5.8, "abc", "Joel", 43, [1,2,3], objJson)`
+  
+![algorithm call 2](https://user-images.githubusercontent.com/54523080/153811246-6e03d5d9-98d9-4ab0-a892-9d479a3db2cb.png)
+  
+When the algorithms to be called and the algorithm which makes the call belong to different namespaces, then you need to make the call in an explicit way, for example:
+  
+`Cenit.namespace('Test').algorithm('algorithm_r').run()`
+  
+ `Cenit.namespace('Test').algorithm('processing_data').run([5.8, "abc", "Joel", 43, [1,2,3], objJson])`
+  
+You should notice in case of passing parameters, the run method receives an array containing the list of the parameter's values. 
+  
+##### Algorithm execution as a scheduled Task
+ 
+After executing an algorithm, a [Task](monitors/tasks.md) linked to that algorithm is created. If you associate a scheduler to that task, the algorithm will be executed every time the event occurs. If you want to know how to schedule a task, click here: [Task Scheduling](monitors/tasks.md#task-scheduling)
+  
+##### Algorithm execution as an application action
+  
+To know how to execute and algorithm as an application action visit [Applications](compute/applications.md)
+  
+#### Algorithm's outputs
+  
+As a result of an algorithm execution, some data can be created, so the algorithm provides output data by using different ways, such as:
 
 - Returning a value
 
 - Storaging  data type records in Cenit
 
 - Sending data to an API
-  **Returning a value**
+
+
+ ##### Returning a value
+ 
   Algorithms optionally return a value, so they can be used as functions. If you want to return a value, you don't need to specify an explicit return statement since Ruby automatically returns the last evaluated expression. So, for example, the code below return a  json object:
   
   ```
@@ -188,7 +214,8 @@ After pressing the "new" button you can start filling every input field the same
   return nil 
   ```
   
-  **Storaging data type records in Cenit**
+  ##### Storaging data type records in Cenit
+  
   If the algorithm is not intended to be reused, it doesn't need to return the output data, it can store the output data directly as a datatype record instead, as shown in the example below:
   
   ```
@@ -199,7 +226,8 @@ After pressing the "new" button you can start filling every input field the same
   Cenit.namespace('Test').data_type('SlackMessage').create_from_json(data.to_json)
   ```
   
-  **Sending data to an API**
+  ##### Sending data to an API
+  
   If the algorithm is not intended to be reused, it doesn't need to return the output data, it can send data directly to an API instead, as shown in the example below:
   
   ```
@@ -354,7 +382,7 @@ There are some details to consider about the previous algorithm, such as:
 
 
 - ```
-  # loading all the contacts
+  #loading all the contacts
   
   alg_load_contacts = Cenit.namespace('Zoho').algorithm('load_zoho_contacts')
   alg_load_contacts.run_asynchronous()
@@ -367,7 +395,7 @@ The algorithm below shows another example of making requests to an endpoint in t
 ```
 if task != nil
 
-# preparing the connection
+  #preparing the connection
 
   authorization = Cenit.namespace("Zoho").authorization('Zoho Authorization')
   connection = Cenit.namespace("Zoho").connection('Zoho Connection').with(authorization)
@@ -425,7 +453,6 @@ if task != nil
 end
 
 true
-
 ```
 There are some details to consider about the previous algorithm, such as:
 
@@ -444,7 +471,7 @@ There are some details to consider about the previous algorithm, such as:
 - The algorithm's name is import_zoho_contacts and it should be executed in an asynchronous way in order to generate the task associated to its execution. That call can be made from another algorithm init_integration, which also schedule it to be executed according to a scheduler associated to the task.
 
 - ```
-  # creating the config record with last_import_date empty
+  #creating the config record with last_import_date empty
 
   config = {
     "name" => "Zoho",
@@ -454,24 +481,23 @@ There are some details to consider about the previous algorithm, such as:
   config_data_type = Cenit.namespace('Zoho').data_type('Integration Config')
   config_data_type.create_from_json!(config.to_json, primary_field: "name")
 
-  # loading all the contacts
+  #loading all the contacts
 
   alg_load_contacts = Cenit.namespace('Zoho').algorithm('load_zoho_contacts')
   alg_load_contacts.run_asynchronous()
 
-  # updating the config record with last_import_date equals to "now"
+  #updating the config record with last_import_date equals to "now"
   config = {
     "name" => "Zoho",
     "last_import_date" => Time.now 
   }
   config_data_type.create_from_json!(config.to_json, primary_field: "name") 
 
-  # scheduling the import contacts task
+  #scheduling the import contacts task
 
   alg_import_contacts = Cenit.namespace('Zoho').algorithm('import_zoho_contacts')
   scheduler =  Cenit.namespace("Zoho").event("Contacts Every 20 minutes")
   alg_import_contacts.run_asynchronous(scheduler: scheduler)
-
 
   true
 ```
@@ -513,7 +539,7 @@ A [Template Translator](transformations/templates.md) formats data type records 
 The algorithm below exports a Zoho Contact record to the Zoho CRM API.
 
 ```
-# preparing the connection
+#preparing the connection
 authorization = Cenit.namespace("Zoho").authorization('Zoho Authorization')
 connection = Cenit.namespace("Zoho").connection('Zoho Connection').with(authorization)
 webhook = Cenit.namespace("Zoho").webhook("Insert Contact").with(connection)
@@ -562,7 +588,7 @@ The algorithm for exporting a Zoho Contact can be improved in order to process t
 The algorithm below exports a Zoho Contact record to the Zoho CRM API and update the record in Cenit after inserting in the remote platform.
 
 ```
-# preparing the connection
+#preparing the connection
 authorization = Cenit.namespace("Zoho").authorization('Zoho Authorization')
 connection = Cenit.namespace("Zoho").connection('Zoho Connection').with(authorization)
 webhook = Cenit.namespace("Zoho").webhook("Insert Contact").with(connection)
@@ -677,4 +703,6 @@ if previous.nil?
 end
 ```
 
-The algorithm export_zoho_contact will be executed by the trigger evaluator every time a new record is created and its property zoho_id is nil.
+
+The algorithm export_zoho_contact will be executed by the trigger evaluator every time a new Zoho Contact record is created and its property zoho_id is nil.
+
