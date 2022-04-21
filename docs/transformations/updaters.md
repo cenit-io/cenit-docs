@@ -70,6 +70,21 @@ You should notice the pre-defined variable targets is used instead of target. Th
 
 However, It's better if you get used to specify it every time you call the method. You need to keep in mind the primary_field is indispensable when updating.
 
+A simpler way to update the record is by using the save method as it's shown in the code below
+
+```
+targets.each do |target|
+
+  	target.text =  "You got a message: #{target.text}"
+    target.save
+
+end
+```
+
+
+
+
+
 ![Updater save](https://user-images.githubusercontent.com/54523080/151652432-d18933ec-8df5-4d82-890f-a7e5d058e312.png)
 
 After completing the updater declaration and pressing the save button, you can see the new updater translator on the list of updaters and you can manage it as well as you can do with other elements in Cenit.
