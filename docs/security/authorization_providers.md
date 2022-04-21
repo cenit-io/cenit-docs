@@ -7,6 +7,8 @@ sidebar_position: 5
 
 By defining an authorization provider you can set the response type which is code, the authorization endpoint, the token endpoint, the method the token is sent, the scope separator which is usually a comma (,) and the refresh token strategy. To know the role of these elements in the authorization process, you can read the [Authorization with OAuth 2.0 Section](security/authorization.md)
 
+You can perform operations on authorization providers by CENIT IO API V2 according to this API Spec in section [Authorization Providers](https://cenit-io.github.io/api-v2-specs/#tag/Authorizations-Providers).
+
 The Security/Authorization Providers submenu allows to define new provider as well as managing the previously defined ones.
 
 ## Add New

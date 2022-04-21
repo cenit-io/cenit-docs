@@ -12,21 +12,13 @@ The options in this menu may vary accordingly to the user's role.
 For administrators, the options are:
 
 - Tenants
-
 - Configuration
-
 - Users
-
 - Scripts
-
 - Script Executions
-
 - Active Tenants
-
 - Rabbit Cunsumers
-
 - Delayed Messages
-
 - System Reports
 
 In the figure bellow, you will see these options:

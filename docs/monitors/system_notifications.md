@@ -7,6 +7,8 @@ sidebar_position: 2
 
 The execution of flows, tasks or algorithms might generate system notifications depending of the configuration or resulting from being explicitly created via code. These notifications provide information about the execution. They don't only notify whether the execution was successful or not, but also contain detailed information of HTTP requests and responses in those cases an HTTP request was sent.
 
+You can perform operations on system notifications using CENIT IO API V2. See the section [System Notifications](https://cenit-io.github.io/api-v2-specs/#tag/System-Notifications) in the API Spec.
+
 The Monitors/System Notifications submenu allows to manage the system notifications.
 
 ![System notifications menu](https://user-images.githubusercontent.com/54523080/153112162-49f0398b-7e2b-4bef-aad1-0ffedcf0693d.png)
