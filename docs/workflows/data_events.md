@@ -80,6 +80,12 @@ When you select created_at or updated_at, the evaluations for the triggers are:
 
 After completing the data event declaration and pressing the save button, you can see the new data event on the list of data events, and you can manage it as well as you can do with other elements in Cenit.
 
-#### ![List of data events](https://user-images.githubusercontent.com/99367633/161159004-14bb660b-a768-4525-8a67-50ac46062254.png) Notice:
+The example above shows how to add triggers to a Data Event. The triggers allow to define, in simple terms, whether the event occurs or not. However, if we need to specify a complex condition, we might use a Trigger Evaluator algorithm.
+
+![Trigger evaluator 1](https://user-images.githubusercontent.com/54523080/164564101-971927c6-aafc-48c9-b71b-cff22d4e95d2.png)
+
+The trigger evaluator algorithm takes to parameters current and previous (in that order) which refers to the current record of the event Data Type and the previous one before update it, so previous is nil when the record is created and it wasn't present before that. The algorithm should return true to indicate the event occurs and false if not. The section [Algorithms](compute/algorithms.md) shows an example of trigger evaluator.
+
+#### Notice:
 
 You should notice that when you define a data event, you are not telling Cenit to do anything when the event is triggered. You must associate data events to a [Flow](workflows/flows.md)  later.

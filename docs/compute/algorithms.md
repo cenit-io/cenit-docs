@@ -97,19 +97,18 @@ And these lists are NOT OK:
 - Code:
   
   Define the algorithm code. It is written in a DSL based on the Ruby Programming Language. The code is handled by Cenit as a [Snippet](compute/snippets.md). It doesn't mean you are forced to create or edit a snippet when coding, you may just modify the code field and Cenit implicitly updates the linked snippet.
-  
+
 ##### How to add parameters
-  
+
 If you want to define one or more parameters, you need to press the + button once:
 ![parameters](https://user-images.githubusercontent.com/54523080/153798785-e3e5b3d3-9990-40c0-9c4b-81c1bc94ade1.png)
 Then press repeatedly the other + button
 ![parameters add more](https://user-images.githubusercontent.com/54523080/153805041-171db7f6-7a58-4e53-a8ad-1a4f6ec153bf.png)
 After completing the algorithm declaration and pressing the save button, you can see the new algorithm in the list of algorithms and you can manage it as well as you can do with other elements in Cenit.
 ![algorithm list](https://user-images.githubusercontent.com/54523080/153807270-8420d07f-c80d-4a0b-b8b5-75424624d75e.png)
-  
- 
+
 #### How to execute algorithms
-  
+
 An algorithm can be executed in these ways:
 
 - Run Algorithm option.
@@ -121,7 +120,6 @@ An algorithm can be executed in these ways:
 - Algorithm execution as an application action.
 
 ##### Run Algorithm option
-
 
 From the list of algorithms you can select an algorithm an execute it by using the Run button:
 
@@ -180,7 +178,6 @@ As a result of an algorithm execution, some data can be created, so the algorith
 - Storaging data type records in Cenit
 
 - Sending data to an API
-
 
 ##### Returning a value
 
@@ -319,7 +316,6 @@ When an algorithm is executed, it generates a Task which can be associated to an
 
 The algorithm below shows another example of making requests to an endpoint in the Zoho CRM API for getting contacts in groups of size 200 by using tasks.
 
-
 ```
 if task != nil
 
@@ -381,17 +377,14 @@ There are some details to consider about the previous algorithm, such as:
 
 - The algorithm's name is load_zoho_contacts and it should be executed in an asynchronous way in order to generate the task associated to its execution. That call can be made from another algorithm init_integration:
 
-  
-  ```
-  #loading all the contacts
-  
-  alg_load_contacts = Cenit.namespace('Zoho').algorithm('load_zoho_contacts')
-  alg_load_contacts.run_asynchronous()
-  ```
-  
-  
-After the initial load of the contacts, we can schedule another task in order to recover new contacts periodically, for example, every 20 minutes. In order to get only the records which were modified after the last request, we need to use a header in the petition and modify the previous algorithm a little bit.
+```
+#loading all the contacts
 
+alg_load_contacts = Cenit.namespace('Zoho').algorithm('load_zoho_contacts')
+alg_load_contacts.run_asynchronous()
+```
+
+After the initial load of the contacts, we can schedule another task in order to recover new contacts periodically, for example, every 20 minutes. In order to get only the records which were modified after the last request, we need to use a header in the petition and modify the previous algorithm a little bit.
 
 The algorithm below shows another example of making requests to an endpoint in the Zoho CRM API for getting contacts in groups of size 200 and requesting only those records modified after the last request.
 
@@ -429,7 +422,7 @@ if task != nil
       remote_contacts.each do |remote_contact|  
         remote_contact["zoho_id"] =  remote_contact["id"]
         target_data_type = Cenit.namespace('Zoho').data_type('Zoho Contact')
-        target_data_type.create_from_json(remote_contact.to_json, primary_field: "zoho_id")
+        target_data_type.create_from_json(remote_contact.to_json, primary_field: "zoho_id", discard_events: true)
       end
 
 
@@ -466,7 +459,7 @@ There are some details to consider about the previous algorithm, such as:
 
 - The method submit sends the request to the endpoint and returns the API response.
 
-- The algorithms creates records for the data type named 'Zoho Contact' in the namespace 'Zoho'.
+- The algorithms creates records for the data type named 'Zoho Contact' in the namespace 'Zoho'. By using the parameter discard_events with value true in the create_from_json method, we can prevent to trigger a data event for the Zoho Contact Data Type. It's convenient when we don't want to trigger a Contact Created Data Event if the record comes from the API. So you should be prudent when using the discard_events parameter.
 
 - The algorithm receives a parameter task which is passed by Cenit implicitly when the algorithm is called in an asynchronous way. The property state of the task allows to set some parameters associated to the algorithm execution, for example the page to be requested. So after every execution, if more records need to be imported, the parameter page in the property state is increased in 1, and the task is executed again.
 
@@ -505,7 +498,6 @@ There are some details to consider about the previous algorithm, such as:
   
   true
   ```
-  
 
 ##### Algorithms for mapping data
 
@@ -537,7 +529,6 @@ There are some details to consider about the previous algorithm, such as:
 - Unlike a Converter Translator where target_data_type is a predefined variable populated by the flow before executing the translator, the algorithm must recover the Zoho Contact data type manually.
 
 ##### Algorithms for exporting data
-
 
 A [Template Translator](transformations/templates.md) formats data type records stored in Cenit to data which be sent outside. It deals with only one data type, the type of the data to be formatted and sent, which is referred in the template as source data type. Since a Template Translator is called by a [Export Flow](workflows/export_flows.md), some predefined variables help to simplify its code, such as source for accesing the record to be formatted and exported. In case of using an algorithm to implement the export process, the source record is received as a parameter.
 
@@ -684,9 +675,7 @@ Both algorithms for mapping and exporting could be associated to a data event in
 
 ![image](https://user-images.githubusercontent.com/54523080/164339242-5b90da8d-e0ca-4154-b73c-a8526fed0f88.png)
 
-
-A trigger evaluator is an special kind of algorithm which can be associated to a Data Event. It is executed every time a record of the event Data Type is created or updated. Its objective is determine whether the event ocurrs or not. It receives to parameters: current and previous (in that order), where current refers to the current record created or updated and previous refers to the same record before being updated or it can be nil if the record was created and wasn't present previously. The algorithm returns true if we want to specify the event ocurred or false in other case.
-
+A trigger evaluator is an special kind of algorithm which can be associated to a Data Event. It is executed every time a record of the event Data Type is created or updated. Its objective is determine whether the event occurs or not. It receives to parameters: current and previous (in that order), where current refers to the current record created or updated and previous refers to the same record before being updated or it can be nil if the record was created and wasn't present previously. The algorithm returns true if we want to specify the event occurred or false in other case.
 
 So, a trigger evaluator which determines if a new record have been created is as simple as the one below
 
@@ -698,7 +687,7 @@ else
 end  
 ```
 
-The event associated with that trigger evaluator ocurrs any time a new record of its Data Type is created. So, you can define a flow to be activated when that event ocurrs. In the case of an algorithm, there is no field "event" in the algorithm definition, so it can't be associated to a data event as we can do with a flow. Nevertheless, there is trick that allows to do that. It's as simple as executing the algorithm directly in the code of the trigger evaluator. As an example you can see the algorithm below
+The event associated with that trigger evaluator occurs any time a new record of its Data Type is created. So, you can define a flow to be activated when that event occurs. In the case of an algorithm, there is no field "event" in the algorithm definition, so it can't be associated to a data event as we can do with a flow. Nevertheless, there is trick that allows to do that. It's as simple as executing the algorithm directly in the code of the trigger evaluator. As an example you can see the algorithm below
 
 ```
 if previous.nil?
@@ -709,6 +698,4 @@ if previous.nil?
 end
 ```
 
-
 The algorithm export_zoho_contact will be executed by the trigger evaluator every time a new Zoho Contact record is created and its property zoho_id is nil.
-
