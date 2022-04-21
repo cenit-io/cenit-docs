@@ -674,4 +674,4 @@ if previous.nil?
 end
 ```
 
-The algorithm export_zoho_contact will be executed by the trigger evaluator every time a new record is created and its property zoho_id is nil.
+The algorithm export_zoho_contact will be executed by the trigger evaluator every time a new Zoho Contact record is created and its property zoho_id is nil.
