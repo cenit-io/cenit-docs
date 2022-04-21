@@ -3,12 +3,14 @@ sidebar_position: 3
 
 ---
 
-# Shared Collections.
+# Shared Collections
 
 Sharing collections is a way to make a collection available to all tenants.
 First of all, let's compare this operation with export and then import or pull import. When importing a collection, a user A can use the elements of the collection whose file has been created by another user B and the user B delivered that file, for instance my_collection.json, to the user A. In other words, the collection to be imported is available only to those users which got the file my_collection.json  in advance.
 
 On the other hand, a shared collection is available to every user, so all users will be able to import a shared collection to their tenants by using the Pull action. After pulling the shared collection, they can reuse its elements as they were created or they can be modified them according to the needs of a user in a particular tenant.
+
+You can perform operations on shared collections using the Cenit IO API V2. To do this, see the specification of this API regarding [shared collections](https://cenit-io.github.io/api-v2-specs/#tag/Shared-Collections).
 
 In order to share a collection, you must go to the Integration Menu/Collections and select the desired collection to share it. 
 

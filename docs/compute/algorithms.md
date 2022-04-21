@@ -5,7 +5,9 @@ sidebar_position: 2
 # Algorithms
 
 The [Basic Integration](basic_integration.md) section explains how you can achieve a basic integration in Cenit. In order to get data from an API A and send it to another API B the process or flows should be executed. The [Flows](workflows/flows.md) define how data is routed between endpoints and all integrations in order to automate your operations. Every kind of flow has a different role in the integration, which is implemented on its translator also known as transformation. A Transformation is an algorithm with a specific purpose: it defines a logic for data manipulation. However, you may define other pieces of code which can be used for general purposes. Cenit refers to them as Algorithms.
+
 You can perform operations on algorithms using the Cenit IO API V2. To do this, see the specification of this API regarding [algorithms](https://cenit-io.github.io/api-v2-specs/#tag/Algorithms).
+
 The Compute/Algorithms submenu allows to define new Algorithms as well as managing the algorithms previously defined.
 
 #### Add New
@@ -288,6 +290,7 @@ When an algorithm is executed, it generates a Task which can be associated to an
 
 The algorithm below shows another example of making requests to an endpoint in the Zoho CRM API for getting contacts in groups of size 200 by using tasks.
 
+
 ```
 if task != nil
 
@@ -313,13 +316,11 @@ if task != nil
     response = JSON.parse(response)
     if response["data"].present?
       remote_contacts = response["data"]
-
       remote_contacts.each do |remote_contact|  
         remote_contact["zoho_id"] =  remote_contact["id"]
         target_data_type = Cenit.namespace('Zoho').data_type('Zoho Contact')
         target_data_type.create_from_json(remote_contact.to_json, primary_field: "zoho_id")
       end
-
 
       info = response["info"]
       Tenant.notify(message: "#{info['count']} contacts imported successfully!", type: "notice")
@@ -351,6 +352,7 @@ There are some details to consider about the previous algorithm, such as:
 
 - The algorithm's name is load_zoho_contacts and it should be executed in an asynchronous way in order to generate the task associated to its execution. That call can be made from another algorithm init_integration:
 
+
 - ```
   # loading all the contacts
   
@@ -358,12 +360,11 @@ There are some details to consider about the previous algorithm, such as:
   alg_load_contacts.run_asynchronous()
   ```
 
-```
 After the initial load of the contacts, we can schedule another task in order to recover new contacts periodically, for example, every 20 minutes. In order to get only the records which were modified after the last request, we need to use a header in the petition and modify the previous algorithm a little bit. 
 
 The algorithm below shows another example of making requests to an endpoint in the Zoho CRM API for getting contacts in groups of size 200 and requesting only those records modified after the last request.
-```
 
+```
 if task != nil
 
 # preparing the connection
@@ -505,6 +506,7 @@ There are some details to consider about the previous algorithm, such as:
 - Unlike a Converter Translator where target_data_type is a predefined variable populated by the flow before executing the translator, the algorithm must recover the Zoho Contact data type manually.
 
 ##### Algorithms for exporting data
+
 
 A [Template Translator](transformations/templates.md) formats data type records stored in Cenit to data which be sent outside. It deals with only one data type, the type of the data to be formatted and sent, which is referred in the template as source data type. Since a Template Translator is called by a [Export Flow](workflows/export_flows.md), some predefined variables help to simplify its code, such as source for accesing the record to be formatted and exported. In case of using an algorithm to implement the export process, the source record is received as a parameter.
 
@@ -650,6 +652,7 @@ There are some details to consider about the previous algorithm, such as:
 Both algorithms for mapping and exporting could be associated to a data event in order to be executed when a new record is created in Cenit IO. Actually, only flows can be associated with a data event. However, we can use an especial kind of algorithm to make that possible.
 
 ![image](https://user-images.githubusercontent.com/54523080/164339242-5b90da8d-e0ca-4154-b73c-a8526fed0f88.png)
+
 
 A trigger evaluator is an special kind of algorithm which can be associated to a Data Event. It is executed every time a record of the event Data Type is created or updated. Its objective is determine whether the event ocurrs or not. It receives to parameters: current and previous (in that order), where current refers to the current record created or updated and previous refers to the same record before being updated or it  can be nil if the record was created and  wasn't present previously. The algorithm returns true if we want to specify the event ocurred or false in other case.
 

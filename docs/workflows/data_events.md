@@ -6,6 +6,8 @@ sidebar_position: 6
 
 Data Events are the conditions that can change the records of a data set in a certain document type.
 
+You can perform operations on algorithms using the Cenit IO API V2. To do this, see the specification of this API regarding [Data Events.](https://cenit-io.github.io/api-v2-specs/#tag/Data-Events)
+
 ## Add New data event
 
 For creating a new data event, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.

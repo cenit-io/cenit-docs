@@ -5,11 +5,12 @@ sidebar_position: 2
 
 # Tenants
 
-Cenit is a multi-tenant iPaaS designed to orchestrate data flows in an easy way that may involve several kinds of data formats and communication protocols. Multi-tenancy means that processes have their own dedicated areas, even though they are actually sharing an environment. This means the customer can separate business areas and their respective integration needs, or even just have separate development, test and production environments.
+Cenit is a multi-tenant iPaaS designed to orchestrate data flows that may involve several data formats and communication protocols. 
 
-Tenants are generally instances of one application that correspond to distinct subscribing organizations, but tenants may also be instances of different applications from the same organization competing for shared resources.  So, tenants provide logical isolation in a physically shared context. 
+Multi-tenancy means that processes have their own dedicated areas, even though they are actually sharing an environment. This means the customer can separate business areas and their respective integration needs. For example, you can have a tenant for development and another tenants for test, staging and production. 
 
-
+Cenit allows that single users can create multiple tenants, which is very useful for developing B2B applications. When a B2B solution is made, each end customer data 
+remains in an independent tenant, taking advantage of tenants provide logical isolation in a physically shared context. 
 
 Administrators can manage all the tenants in the system, by accesing the submenu [Tenants](administration/tenants.md) in Administration:
 

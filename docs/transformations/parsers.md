@@ -7,7 +7,7 @@ sidebar_position: 2
 
 When implementing a basic integration, we usually need to Import outside data into Cenit. Parser translators create data type records in Cenit from outside data. It deals with only one data type, the type of the data to be created, which is referred in the parser as target data type.
 
-#### Add New
+You can manipulate parsers via CENIT IO API V2. In order to do that, see specifications for this API in the section [Parsers](https://cenit-io.github.io/api-v2-specs/#tag/Parsers).
 
 The submenu Transformations/Parsers allow to create a new parser translator by clicking the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and selecting Ruby Parser, which refers to a parser written in a DSL based on the Ruby Programming Language, so the logic of the parser translator is described in ruby style.
 
@@ -57,7 +57,7 @@ The create methods attempt to persist the records, halting on error only if the 
 
 Sometimes we get from the API not a single record, but several ones. Those cases require a little more of transformation code to parse the outside data to create multiple records:
 
-```
+```ruby
 parsed_data = JSON.parse(data)
 parsed_data.each do |item|
   target_data_type.create_from_json!(item)
@@ -66,7 +66,7 @@ end
 
 The reality is even more complex. When requesting data from an API we need to understand in detail the response data structure. For example, when requesting to the endpoint ` https://slack.com/api/conversations.list ` we can not simply iterate over the variable data because in that case the response data is not an array of conversations but a json with a property channels that contains the array. So the code is a little bit different:
 
-```
+```ruby
 parsed_data = JSON.parse(data)
 conversations = parsed_data["channels"]
 conversations.each do |conversation|
