@@ -22,4 +22,4 @@ Finally, selecting the "Share" button launches the task of sharing the collectio
 
 ![Sharing a collection second picture](https://user-images.githubusercontent.com/99367633/159582932-bf113cdd-9eef-4f83-9fde-b1a63b46f77f.png)
 
-Use [System Notifications](integrations/shared_collections.md) to check for errors. If no errors occur, after a while the collection will be shared.
+Use [System Notifications](monitors/system_notifications.md) to check for errors. If no errors occur, the collection will be shared after a while.
