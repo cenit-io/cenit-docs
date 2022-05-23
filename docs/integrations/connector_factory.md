@@ -150,6 +150,14 @@ As mentioned before, when a Connector is created in Connector Factory, a complet
 
 After creating the connector, some elements might need a few changes to fit particular requirements according to the API. The other ones don't require any modification; however, it's important to understand all the elements in the collection regardless you need to modify them or not. So, this section explains every element in the connector and some examples of modifications they may need. You should notice all the elements refers to the example of connector to the Zoho CRM API we have seen in the previous sections.
 
+**Security**
+
+In most of cases, you don't need to make any change in the authorization provider, the authorization client or the authorization. However, in the case of the example, we need to set some parameters in the authorization in order to guarantee the refresh-token is gotten sucessfully. So, at first you need to review the provider to check the Refresh Token Strategy is set to the value "default". You don't need to change it because that's the strategy used by Zoho CRM to refresh the access_token.
+
+![24a Connector Factory  Checking the Provider](https://user-images.githubusercontent.com/54523080/169728326-b258bb49-5ee6-4333-86d4-b21617fca342.png)
+
+In the case of the autorization we need to add two parameters in order to enable to recovery of the refresh_token in the authorization process: access_type: "offline" and prompt: "consent".
+
 ![24 Connector Factory  Editing the authorization](https://user-images.githubusercontent.com/54523080/169158227-edb37c14-b198-4cf6-9c36-61d8dbb62df5.png)
 
 **Connection**
