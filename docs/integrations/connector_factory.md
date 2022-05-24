@@ -447,6 +447,20 @@ items
 
 The algorithm code contains several details which require to be modified to fit particular requirements related to the API, such as:
 
+- The variable info is used instead of the variable more
+
+- The header If-Modified-Since is introduced in the submit options hash
+
+- The parameters page and per_page are used instead of offset and limit
+
+- The values of the variables items and info were obtained from the response
+
+- The variable info[:more_records] is used to determine if there are more records to be requested
+
+- The variable task.state[:offset] takes the value of the current page (info[:page]) increased in 1.
+
+After those modifications, the algorithm's code looks like the one below.
+
 ```
 # Get dependencies
 ns = Cenit.namespace(:Zohocrm)
@@ -472,7 +486,7 @@ items, info = begin
   response = JSON.parse(response, symbolize_names: true)
   check_error_response.run([response, :get_contacts])
 
-  # Here you must obtain the values of the variables 'items' and 'more' from the response of the api
+  # Here you must obtain the values of the variables 'items' and 'info' from the response of the api
   items = response[:data]
   info = response[:info]
 
