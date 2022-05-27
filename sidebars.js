@@ -60,6 +60,11 @@ const sidebars = {
       type: 'category',
       label: 'Integrations',
       items: ['integrations/integrations', 'integrations/collections', 'integrations/shared_collections', 'integrations/connector_factory'],
+    },	
+	{
+      type: 'category',
+      label: 'Connector Factory',
+      items: ['connector_factory/connector_factory', 'connector_factory/creating_a_new_connector_app', 'connector_factory/understanding_the_connector_app_elements', 'connector_factory/detailing_and_editing_the_connector_app_elements'],
     },		
 	{
       type: 'category',
