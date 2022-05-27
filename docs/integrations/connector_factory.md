@@ -5,39 +5,37 @@ sidebar_position: 4
 
 # Connector Factory
 
-A connector is a special kind of [collection](integrations/collections.md) which provides all the resources (authorization, connection, webhooks, data types, events and algorithms) to handle the import and the export process of a set of records. By using one or more connectors you can gain productivity by reducing time and effort when you create an integration.
+A Connector App is a special kind of [collection](integrations/collections.md) which provides all the resources (authorization, connection, webhooks, data types, events and algorithms) to handle the import and the export process of a set of records. By using one or more connector apps you can gain productivity by reducing time and effort when you create an integration.
 
-The connector factory is an embedded app which allows to create a connector by using a simple interface. For creating a connector through the connector factory you just have to enter a  few information related to the API you want to access and the records to be handled, and a complete set of resources will be generated. Then you probably need to make a few changes in the code and you connector will be ready to be used. So, by using the connector factory, a whole set of resources can be easily generated from a single interface.
+The Connector Factory is an embedded app which allows to create a connector app by using a simple interface. For creating a connector app through the Connector Factory you just have to enter a  few information related to the API you want to access and the records to be handled, and a complete set of resources will be generated. Then you probably need to customize some elements in the connector app according to the API specifications and it will be ready to be used. From the same Connector Factory's UI you can access the created elements for exploring or customizing them. So, by using the Connector Factory, a whole set of resources can be easily generated and managed from a single interface.
 
-On the other hand, the connector factory normalize/standardize the Connector worflow. Cenit allows to do an integration in different ways, so when you put together the desire of building connectors at scale and the different ways of achieving that goal, the result could be an heterogeneous set of connectors, which makes difficult to create integrations later. Since we had the need to build connectors that match the same patterns, the Connector Factory is a valuable tool which provides simplicity in the creation of the connector and homogeneity in the created resources.
+On the other hand, the Connector Factory normalizes/standardizes the Connector workflows. Cenit allows to do an integration in different ways; that means when you put together the desire of building connectors at scale and the different ways of achieving that goal, the result could be a heterogeneous set of connectors. So, by standardizing the connector app workflows, it would be easier to create integrations later. Since we had the need to build connector apps that match the same patterns, the Connector Factory is a valuable tool which provides simplicity in the creation of the connector apps and homogeneity in the created resources.
 
-
-
-## Access the Connector Factory
+## Accessing the Connector Factory
 
 In the side bar where the Cenit IO main menu is shown, scroll down and you will find the list of embedded apps, then choose Connector Factory.
 
 ![01 Connector Factory in Side Bar](https://user-images.githubusercontent.com/54523080/168844790-29f00e79-717b-416e-85fc-87f4001f297c.png)
 
-Once inside the connector factory, you can create a new connector as well as managing the existing ones. The picture below shows the conector factory's main view.
+Once inside the Connector Factory, you can create a new connector app as well as managing the existing ones. The picture below shows the conector factory's main view.
 
-![02 Connector Factory Main View](https://user-images.githubusercontent.com/54523080/168854530-f944fc80-f5c2-4162-8e3a-e7463714b1c3.png)
+![Connector Factory Main View](https://user-images.githubusercontent.com/54523080/170582552-6450158a-6ac5-4709-a236-6b8fcc17c46f.png)
 
-## Create a new Connector
+## Creating a new Connector App
 
-For creating a new connector, press the Add button as shown below
+For creating a new connector app, press the Add button as shown below
 
-![03 Connector Factory Add Button](https://user-images.githubusercontent.com/54523080/168856674-6edcebac-6c14-416c-aecb-7a5eacf4f81e.png)
+![02 Add button](https://user-images.githubusercontent.com/54523080/170582821-d6ae7900-b5a8-4259-8bd1-8a3e3b674adf.png)
 
-After pressing the Add button the edit view is shown and you can start entering the connector information.
+After pressing the Add button the edit view is shown and you can start entering the connector app information.
 
 ![04 Connector Factory Start Editing](https://user-images.githubusercontent.com/54523080/168858093-7108558b-0dca-45a6-92d8-baa934f74399.png)
 
-### Input data to create the Connector
+### Introducing data to create the Connector App
 
-For creating a connector you need to enter some information about the remote platform you want to access. So the UI will guide you to enter:
+For creating a connector app you need to enter some information about the remote platform you want to access. So the UI will guide you to enter:
 
-- The connector name: a lower-case identifier
+- The connector app name: a lower-case identifier
 - Authorization type: the type of authorization.
 - Authorization data: the parameters needed in the authorization process depending on the kind of authorization
 - Connection data: the connection base URL and the connection parameters and headers
@@ -47,15 +45,15 @@ For creating a connector you need to enter some information about the remote pla
 
 Let's see, in detail, how to create the connector.
 
-At first you need to enter the connector name, so a namespace will be generated from that name. Then you need to select the authorization type, and enter the authorization parameters according to the selected type. For example, in case of a basic authorization, you need to enter username and password as shown below
+At first you need to enter the connector app name, so a namespace will be generated from that name. Then you need to select the authorization type, and enter the authorization parameters according to the selected type. For example, in case of a basic authorization, you need to enter username and password as shown below
 
 ![05 Connector Factory Basic Authorization](https://user-images.githubusercontent.com/54523080/168915456-53d50eec-b773-4383-8711-9347db0ecda7.png)
 
-If you select an Oauth2 Authorization you must enter the header prefix to be used with the access token, the authorization endpoint, the access token endpoint, the client ID, the client secret and the list of comma-separated scopes. The picture below shows the authorization data of a connector for accessing the Zoho CRM API.
+If you select an Oauth2 Authorization you must enter the header prefix to be used with the access token, the authorization endpoint, the access token endpoint, the client ID, the client secret and the list of comma-separated scopes. The picture below shows the authorization data of a connector app for accessing the Zoho CRM API.
 
 ![05 Connector Factory Oauth2 Authorization](https://user-images.githubusercontent.com/54523080/168915537-af5e6b7a-8ae4-46ee-8eaa-697f6fc87800.png)
 
-Then you need to set the connection data. You need to enter the base URL for accessing the API resources and pairs name/value to be used as parameters or headers, if they are needed. The picture below shows the connection data of a connector for accessing the Zoho CRM API.
+Then you need to set the connection data. You need to enter the base URL for accessing the API resources and pairs name/value to be used as parameters or headers, if they are needed. The picture below shows the connection data of a connector app for accessing the Zoho CRM API.
 
 ![06 Connector Factory Connection](https://user-images.githubusercontent.com/54523080/168916955-6d8ac83c-e14e-4470-a8d5-58dbdc07cb5a.png)
 
@@ -63,7 +61,7 @@ After setting the authorization and connection, you must start editing the resou
 
 ![07 Connector Factory Add Resource Button](https://user-images.githubusercontent.com/54523080/168917939-40e43e7c-5146-4fcd-be40-9bbc3ab0da4d.png)
 
-For every type of record you want to manage, you need to enter the resources information. For example, in the connector for accessing the Zoho CRM API, we want to manage records of type Contact and Lead. Let's see how to enter that information. After pressing the Add button, a view like the one below is shown and you must enter the data associated with one type of record, then press the Save button and you can repeat the process for every resource you need to add to the connector.
+For every type of record you want to manage, you need to enter the resources information. For example, in the connector for accessing the Zoho CRM API, we want to manage records of type Contact and Lead. Let's see how to enter that information. After pressing the Add button, a view like the one below is shown and you must enter the data associated with one type of record, then press the Save button and you can repeat the process for every resource you need to add to the connector app.
 
 ![07a Connector Factory Resource View](https://user-images.githubusercontent.com/54523080/168921046-a8b98075-763d-4d35-8798-5b2135c859b5.png)
 
@@ -91,7 +89,7 @@ And if it was selected in the kind of processes, you must enter the details of t
 
 ![13 Connector Factory New Resource Export Process and save](https://user-images.githubusercontent.com/54523080/168922549-cf76283c-5b1a-44bd-946d-5047da6fe742.png)
 
-After completing the resource data input, you can press the Save button in order to create the Connector as shown below.
+After completing the resource data input, you can press the Save button in order to create the connector app as shown below.
 
 ![13 Connector Factory Save Connector](https://user-images.githubusercontent.com/54523080/168926930-b503d436-a714-477a-b645-cfd30605add7.png)
 
@@ -103,21 +101,21 @@ Then you can press the Back button
 
 ![15 Connector Factory Back Button](https://user-images.githubusercontent.com/54523080/168927118-d3570589-2f08-4cb7-9715-361de90cb173.png)
 
-And you will see the connector in the list
+And you will see the connector app in the list
 
-![16 Connector Factory list](https://user-images.githubusercontent.com/54523080/168927174-9d8794d3-60e3-4d9b-9b01-409b66de9e98.png) 
+![03 Connector Factory Connector list](https://user-images.githubusercontent.com/54523080/170583885-beef33f1-915c-4b59-9eae-0860f55689ab.png) 
 
-### Explore the Connector
+### Exploring the Connector App
 
-Once a connector is created you can explore its content in the Connector Factory by selecting the connector and pressing the Details button.
+Once a connector app is created you can explore its content in the Connector Factory by selecting the connector app and pressing the Details button.
 
-![17 Connector Factory Details Button](https://user-images.githubusercontent.com/54523080/168940982-d1ae9da5-e07f-46d5-bf4d-665aaf65be94.png)
+![04 Connector Factory Details Button](https://user-images.githubusercontent.com/54523080/170584079-fbc90b50-a5bd-4b17-97c6-3561983ea72b.png)
 
-After pressing the Details button a list of elements is shown. That list contains all the elements generated implicitly by the Connector Factory when the connector was created.
+After pressing the Details button a list of elements is shown. That list contains all the elements generated implicitly by the Connector Factory when the connector app was created.
 
 ![18 Connector Factory Connector List of Elements](https://user-images.githubusercontent.com/54523080/168941095-7f5b6337-7a56-4b00-a733-ffce300a5862.png) 
 
-When you explore the list of connector elements in the Conector Factory, you are able to select one element and see its details.
+When you explore the list of the connector app elements in the Conector Factory, you are able to select one element and see its details.
 
 ![19 Connector Factory Connector Element Details Button](https://user-images.githubusercontent.com/54523080/168941102-7e0cf364-af0d-4d1d-9b48-d3fbd22affa3.png)
 
@@ -125,7 +123,7 @@ That action redirects the user to the show view in Cenit, so, the user will be a
 
 ![20 Connector Factory Connector Element Details](https://user-images.githubusercontent.com/54523080/168941103-35b81431-3383-4fa6-89c3-42c1f4d93ce3.png)
 
-Since a Connector is a special kind of collection, a connector can be managed not only from the Connector Factory main view but also from the Collections Menu in Cenit.
+Since a connector app is a special kind of collection, the connector app can be managed not only from the Connector Factory main view but also from the Collections Menu in Cenit.
 
 ![21 Connector Factory Collection Created](https://user-images.githubusercontent.com/54523080/168944753-7cd07dfb-261d-4730-86ea-dafd8affd236.png)
 
@@ -137,25 +135,150 @@ You get the same result by accessing the menu Gateway/Resource Paths and list th
 
 ![23 Connector Factory  Resources Paths List in Cenit](https://user-images.githubusercontent.com/54523080/168944758-ea6f6fef-554e-4f05-837f-96d37f2c7bdf.png)
 
-As mentioned before, when a Connector is created in Connector Factory, a complete set of resources is generated in order to enable the import and export processes of a group of records. The table below contains all the elements implicitly generated in the Connector of the Zoho CRM API that we used as an example.
+After the connector app is created, you might realize you missed  to add some resource or some process type for a resource, etc. In those cases, you don't need to start creating the connector app from scratch, you can just press the Resume button  to add new resources or edit the existing ones, so you can edit the connector app starting from the previous version and after pressing the Save button, a new collection will be generated for the new version of the connector app.
 
-| Element Kind           | Elements in the Connector                                                                                                                                                                                                 | Observation                                                                                                           |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Security               | default_authorization, default_client, default_provider                                                                                                                                                                   | The authorization, the authorization client and the authorization provider for getting access to the remote platform. |
-| Connection             | default_connection                                                                                                                                                                                                        | The connection to the remote platform                                                                                 |
-| Data Types             | Contact, Lead                                                                                                                                                                                                             | One data type for every resource which was added to the connector.                                                    |
-| Data Events            | handle_contact, handle_lead                                                                                                                                                                                               | One data event for every resource which was added to the connector.                                                   |
-| Resources for Contact  | get_contact, get_contacts, create_contact, update_contact                                                                                                                                                                 | The webhooks for importing and exporting records of type Contact                                                      |
-| Resources for Lead     | get_lead, get_leads, create_lead, update_lead                                                                                                                                                                             | The webhooks for importing and exporting records of type Lead                                                         |
-| Algorithms for Contact | do_import_contact, do_import_contacts, do_get_contacts, do_get_contact, parse_from_api_response_contact, trigger_for_change_contact, do_export_contact, do_create_contact, do_update_contact, parse_2_api_request_contact | The algorithms for importing and exporting records of type Contact                                                    |
-| Algorithms for Lead    | do_import_lead, do_import_leads, do_get_leads, do_get_lead, parse_from_api_response_lead, trigger_for_change_lead, do_export_lead, do_create_lead, do_update_lead, parse_2_api_request_lead                               | The algorithms for importing and exporting records of type Lead                                                       |
-| Algorithms             | do_check_error_response                                                                                                                                                                                                   | The algorithm for processing errors in the responses.                                                                 |
+![04 Connector Factory Resume Button](https://user-images.githubusercontent.com/54523080/170584427-afbf629f-2952-42f0-8fab-08633c1cf671.png)
 
-## Edit the Connector Elements
+As mentioned before, when a connector app is created in the Connector Factory, a complete set of resources is generated in order to enable the import and export processes of a group of records. The table below contains all the elements implicitly generated in the connector app of the Zoho CRM API that we used as an example.
 
-After creating the connector, some elements might need a few changes to fit particular requirements according to the API. The other ones don't require any modification; however, it's important to understand all the elements in the collection regardless you need to modify them or not. So, this section explains every element in the connector and some examples of modifications they may need. You should notice all the elements refers to the example of connector to the Zoho CRM API we have seen in the previous sections.
+| Element Kind           | Elements in the Connector App                                                                                                                                                                                              | Observation                                                                                                           |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Security               | default_authorization, default_client, default_provider                                                                                                                                                                    | The authorization, the authorization client and the authorization provider for getting access to the remote platform. |
+| Connection             | default_connection                                                                                                                                                                                                         | The connection to the remote platform                                                                                 |
+| Data Types             | Contact, Lead                                                                                                                                                                                                              | One data type for every resource which was added to the connector app.                                                |
+| Data Events            | handle_contact, handle_lead                                                                                                                                                                                                | One data event for every resource which was added to the connector app.                                               |
+| Resources for Contact  | get_contact, get_contacts, create_contact, update_contact                                                                                                                                                                  | The webhooks for importing and exporting records of type Contact                                                      |
+| Resources for Lead     | get_lead, get_leads, create_lead, update_lead                                                                                                                                                                              | The webhooks for importing and exporting records of type Lead                                                         |
+| Algorithms for Contact | do_import_contact, do_import_contacts, do_get_contacts, do_get_contact, parse_from_api_response_contacts, trigger_for_change_contact, do_export_contact, do_create_contact, do_update_contact, parse_2_api_request_contact | The algorithms for importing and exporting records of type Contact                                                    |
+| Algorithms for Lead    | do_import_lead, do_import_leads, do_get_leads, do_get_lead, parse_from_api_response_leads, trigger_for_change_lead, do_export_lead, do_create_lead, do_update_lead, parse_2_api_request_lead                               | The algorithms for importing and exporting records of type Lead                                                       |
+| Algorithms             | do_check_error_response, do_generate_hmac                                                                                                                                                                                  | The algorithm for processing errors in the response and the algorithm for generating the hmac of a record.            |
+
+## Understanding the Connector App Elements
+
+After creating the connector app, some elements might need to be customized for fitting particular requirements according to the API. The other ones don't require any modification; however, it's important to understand all the elements in the collection regardless you need to modify them or not. So, this section explains every element in the connector app and the next section explains some examples of the modifications they might need. Anyway, you should notice all the elements refers to the example of connector app to the Zoho CRM API we described in the previous sections.
 
 **Security**
+
+Since we select type of authorization Oauth2,  an authorization named default_authorization, an authorization client named default_client and an authorization provider named default_provider were generated.
+
+**Connection**
+
+A connection named default_connection was created and it contains the default_autorization. So, when the connection is used in the algorithms it's not necessary to explicitly use the authorization.
+
+**Resources**
+
+For every data type we added when creating the connector app, at maximum 4 webhooks are created:
+
+- get_*{resource_name}* and get_*{resource_name}* s   (for example get_contact and get_contacts) if the Process Type Import-Flow was selected.  
+
+- create_*{resource_name}* and update_*{resource_name}*  (for example create_contact and update_contact) if the Process Type Export-Flow was selected.
+
+**Data Types**
+
+For every data type we added when creating the connector app a data type is created with the schema shown below.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "remote_id": {
+      "type": "string"
+    },
+    "hmac": {
+      "type": "string"
+    },
+    "last_source": {
+      "type": "string"
+    },
+    "imported_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "rawData": {
+      "type": "object",
+      "visible": false
+    }
+  }
+}
+```
+
+The properties included in the data type schema are:
+
+- remote_id: the id of the object in the remote platform
+- hmac: it's used to determine whether the record in Cenit change or not.
+- last_source: it's used to determine is the record came from the remote platform or other source
+- imported_at: the date time when the record was imported from the remote API
+- rawData: it contains the entire record with the same structure it  brought from the API
+
+
+
+**Data Events**
+
+For every data type we added when creating the connector app, it generates:
+
+- one data event named handle_*{resource_name}*  (for example handle_contact)
+
+- one trigger evaluator algorithm named trigger_for_change_*{resource_name}*  (for example trigger_for_change_contact)
+
+
+
+**Algorithms**
+
+For every data type we added when creating the connector app, it generates the algorithms in the list below:
+
+If the Process Type Import-Flow was selected:
+
+- do_import_*{resource_name}* (for example do_import_contact) 
+
+- do_import_*{resource_name}* s (for example do_import_contacts)
+
+- do_get_*{resource_name}* (for example do_get_contact)
+
+- do_get_*{resource_name}* s (for example do_get_contacts)
+
+- parse_from_api_response_*{resource_name}* s (for example parse_from_api_response_contacts) 
+
+
+
+If the Process Type Export-Flow was selected:
+
+- trigger_for_change_*{resource_name}* (for example trigger_for_change_contact)
+
+- do_export_*{resource_name}* (for example do_export_contact)
+
+- do_create_*{resource_name}* (for example do_create_contact)
+
+- do_update_*{resource_name}* (for example do_update_contact)
+
+- parse_2_api_request_*{resource_name}* (for example parse_2_api_request_contact)
+
+- parse_from_api_response_*{resource_name}* s (for example parse_from_api_response_contacts) * If both Import-Flow and Export-Flow were selected only one algorithm named parse_from_api_response_*{resource_name}* will be created.
+
+Besides two more algorithms are generated regardless of the count of data types:
+
+- do_check_error_response
+
+- do_generate_hmac
+
+**<u>Understanding how the import process works</u>**
+
+For importing one record from the remote platform, the algorithm do_import_*{resource_name}* (for example do_import_contact) must be called. When calling the algorithm you must pass as a parameter a json object with some options, in this case is important to include a key remote_id, for example  {"remote_id":"5258774552"} to indicate which record you want to import. The algorithm do_import_*{resource_name}* calls the algorithm do_get_*{resource_name}* (for example do_get_contact) passing the same json object, so do_get_*{resource_name}*  makes the request for the record with that id to the remote platform, process the response and then return the record obtained from the API. Then the algorithm do_import_*{resource_name}* takes the record and pass it to the algorithm parse_from_api_response_*{resource_name}* s (for example parse_from_api_response_contacts) which stores it in the corresponding Data Type.
+
+For importing multiple records from the remote platform, the algorithm do_import_*{resource_name}* s (for example do_import_contacts) must be called. When calling the algorithm you can pass as a parameter a json object with some options,  for example {"start_date":"2022-05-24T22:00:00+00:00"} to indicate you want to import the records updated from that date on. The algorithm do_import_*{resource_name}* s calls the algorithm do_get_*{resource_name}* s (for example do_get_contacts) passing the same json object, so do_get_*{resource_name}* s makes the request to the remote platform, process the response and then return the records obtained from the API. Then the algorithm do_import_*{resource_name}* s takes the records and pass them to the algorithm parse_from_api_response_*{resource_name}* s (for example parse_from_api_response_contacts) which stores them in the corresponding Data Type. The algorithms do_import_*{resource_name}* s and do_get_*{resource_name}* s repeat the same process explained below several times because they use the task of type algorithm execution to share each other some parameters which allow to request the records in lots (sets) instead of trying to request them all at once. So after every request is made, the algorithm do_get_*{resource_name}* s checks if there are more records to be requested and uses the variable task.state to indicate the algorithm  do_import_*{resource_name}* s to execute itself again for importing another set of records.
+
+*The next section explains in detail the code inside every algorithm involved in the import process.*
+
+**<u>Understanding how the export process works</u>**
+
+When a record of type *{resource_name}* (for example Contact) is created or updated in Cenit, the event handle_*{resource_name}* (for example handle_contact)  executes the trigger_for_change_*{resource_name}* (for example trigger_for_change_contact). The algorithm trigger_for_change_*{resource_name}* (for example trigger_for_change_contact) generates a new hmac for the current record and compares it with the hmac in the property hmac of the current record in order to determine if the current record has changed. If the current record changed, its hmac is updated with the new hmac and it is exported depending on its property last_source. If last_source is not equal to 'MAPPING_FROM_API_RESPONSE' the algorithm do_export_*{resource_name}* (for example do_export_contact) is executed and  the record must be passed as a parameter. If the record hadn't changed, a notification announcing it was ignored is created. The algorithm do_export_*{resource_name}* (for example do_export_contact) must decide if the record will be exported as a new record or as existing record to be updated in the remoted platform. If the record property remote_id starts with the string "PENDING-PUBLISH-FROM" the algorithm do_create_*{resource_name}* (for example do_create_contact) will be executed else do_update_*{resource_name}* (for example do_update_contact) will be executed instead. The algorithm parse_2_api_request_*{resource_name}* (for example parse_2_api_request_contact)  receives the object in the rawData property as a parameter and formats it to be exported. One of the two algorithm do_create_  or do_export_ is executed and receives the formated data as a parameter and  sends the request to the API for creating or updating the record in the remote platform and return the record. So the algorithm do_export_*{resource_name}* (for example do_export_contact) gets the record as it was returned by the API and pass it as a parameter to the algorithm parse_from_api_response_*{resource_name}* s (for example parse_from_api_response_contacts) which stores it in the corresponding Data Type.
+
+*The next section explains in detail the code inside every algorithm involved in the export process.*
+
+## Detailing and Editing the Connector App Elements
+
+Since some elements might need to be customized for fitting particular requirements according to the API, this section explains which resources need to be customized and which ones may remain just like they were generated, as well as the details about every element in the connector app.
+
+**Security** 
 
 In most of cases, you don't need to make any change in the authorization provider, the authorization client or the authorization. However, in the case of the example, we need to set some parameters in the authorization in order to guarantee the refresh-token is gotten sucessfully. So, at first you need to review the provider to check the Refresh Token Strategy is set to the value "default". You don't need to change it because that's the strategy used by Zoho CRM to refresh the access_token.
 
@@ -167,7 +290,7 @@ In the case of the autorization we need to add two parameters in order to enable
 
 **Connection**
 
-We don't need to make any change in the connection, but it's important to understand that default_connection contains the authorization as you can see in the picture below. So, when the connection is used in the algorithms it's not necessary to use explicitly the authorization.
+We don't need to make any change in the connection, but it's important to understand that default_connection contains the authorization as you can see in the picture below. So, when the connection is used in the algorithms it's not necessary to explicitly use the authorization.
 
 ![27 Connector Factory  Checking the connnection contains the authorization](https://user-images.githubusercontent.com/54523080/169159418-19e7fbbf-8ff8-473d-8a9e-89c950f509a8.png)
 
@@ -230,7 +353,7 @@ Two data events for records of type Contact and Lead were generated. They both c
 
 **Algorithms**
 
-Next, we will explain the main algorithms generated by the Connector Factory and  the modifications we need to make in the code of some of them. Since the example of connector for the Zoho CRM API contains two data types: Contact and Lead, similar algorithms were generated to handle both kinds of records. So, you should notice we are explaining the details about the algorithms related to the data type Contact, but you also need to modify the algorithms related to the data type Lead.
+Next, we will explain the main algorithms generated by the Connector Factory and  the modifications we need to make in the code of some of them. Since the example of connector app for the Zoho CRM API contains two data types: Contact and Lead, similar algorithms were generated to handle both kinds of records. So, you should notice we are explaining the details about the algorithms related to the data type Contact, but you also need to modify the algorithms related to the data type Lead.
 
 **Algorithm do_import_contact**
 
@@ -280,7 +403,7 @@ It calls two algorithms:
 
 - parse_from_api_response_contacts: transforms the records to the structure of the Cenit data type and stores them in Cenit.
 
-The algorithm's code generated by the Connector Factory is shown below. It gets a lot (a set) of records from the API by calling the algorithm do_get_contacts then passes the records as a parameter to the algorithm parse_from_api_response_contacts which stores them in Cenit. Then it determines if there are more records to be imported, so it repeats the process by running again the task associated with its execution. The variable task.state[:import_next_block] must be updated by the algorithm do_get_contacts, which receives as a parameter not only the options object, but also the task associated with the execution of the algorithm do_import_contacts.  So the offset property in the option parameter is used by do_get_contacts to determine which lot of records must be requested as well as the task is used to tell do_import_contacts to run itself again.
+The algorithm's code generated by the Connector Factory is shown below. It gets a lot (a set) of records from the API by calling the algorithm do_get_contacts then passes the records as a parameter to the algorithm parse_from_api_response_contacts which stores them in Cenit. Then it determines if there are more records to be imported, so it repeats the process by running again the task associated with its execution. The variable task.state[:import_next_block] must be updated by the algorithm do_get_contacts, which receives as a parameter not only the options object, but also the task associated with the execution of the algorithm do_import_contacts.  So the offset property in the options parameter is used by do_get_contacts to determine which lot of records must be requested as well as the task is used to tell do_import_contacts to run itself again.
 
 ```ruby
 # Get dependencies
@@ -808,12 +931,10 @@ item = options[:source].to_hash.deep_symbolize_keys
 target = begin
   if options[:is_new_target]
     {
-      name: item[:name],
-      is_private: item[:is_private] || false,
-      team_id: item[:team_id] || ''
+      #create the structure to request a new record.
     }
   else
-    item
+    #create the structure to request the update a record.
   end
 end
 target
@@ -868,12 +989,7 @@ do_generate_hmac = ns.algorithm(:do_generate_hmac)
 
 identify = current_record.rawData.try(:name) || current_record.remote_id
 
-current_hmac = begin
-  attrs = %i[hmac created_at updated_at imported_at last_source]
-  data = current_record.to_hash(include_id: false, ignore: attrs)
-
-  do_generate_hmac.run([data])
-end
+current_hmac = do_generate_hmac.run([current_record])
 
 has_changed = current_record.hmac != current_hmac
 
@@ -947,7 +1063,7 @@ In this case, the algorithm's code needs to be modified to fit particular requir
 
 Or even the API may return an empty response when we request  a record  which doesn't exist, but in this case we create a response object which structure matches the first one above.
 
-So according to that, the algorithm was designed to process both kind of structures and it looks like the one below.
+So according to that, the algorithm was designed to process both kinds of structures and it looks like the one below.
 
 ```ruby
 # Here you must check and process the possible errors returned by the api
