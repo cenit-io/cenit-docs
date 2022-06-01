@@ -564,7 +564,7 @@ item
 
 **Algorithm do_update_contact**
 
-This algorithm updates one record of type Contact in the remote platform, gets the created record from the API and returns it as a result of the algorithm execution. It takes one parameter:
+This algorithm updates one record of type Contact in the remote platform, gets the updated record from the API and returns it as a result of the algorithm execution. It takes one parameter:
 
 - options: A JSON object with some options needed in the import process. This object must contain a property data with the record to be updated in the remote platform. The record in the property data must match the structure expected by the API in the request body.
 
