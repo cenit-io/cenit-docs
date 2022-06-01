@@ -431,7 +431,7 @@ end
 
 **Algorithm do_export_contact**
 
-This algorithm exports one record of type Contact into Cenit. It takes two parameters:
+This algorithm exports one record of type Contact to the remote platform. It takes two parameters:
 
 - options: A JSON object with some options needed in the export process. This object must contain a property id with the record id in the Cenit Data Type.
 
