@@ -40,9 +40,43 @@ By selecting a tenant and pressing the Show button you can see the tenant detail
 
 ![image](https://user-images.githubusercontent.com/54523080/173972414-9e5646cc-fc66-44fd-8652-09304193fe84.png)
 
-The show view is shown in picture below
+The show view is shown in picture below. The tenant information includes its owner and the users with access to that tenant. 
 
-![image](https://user-images.githubusercontent.com/54523080/173972682-7de91a0f-766e-481a-bfa9-b560f003e9e3.png)
+![image](https://user-images.githubusercontent.com/54523080/174103372-6d69311f-b989-4240-a6a9-1251ca0eb260.png)
+
+## Edit the tenant.
+
+For editing the tenant you can press the edit button in the show view or you can select the tenant in the list of tenant and press the edit button.
+
+![image](https://user-images.githubusercontent.com/54523080/174106677-2cde153c-4556-4aa9-973a-bf552db8375e.png)
+
+When you are editing the tenant there are two possible scenarios:
+
+- You are running Cenit IO on premise, so you have role of superadmin.
+
+- You are running Cenit IO in the cloud, so you have role of admin 
+
+If Cenit IO is running on premise and you have role of superadmin, all the options in the administration menu are available
+
+![image](https://user-images.githubusercontent.com/54523080/174109308-05ffe9ac-06ce-4d25-882c-f66e72c075cc.png)
+
+Editing a tenant as a superadmin when Cenit IO is running on premise, let you add new users to your tenant by selecting the users from the list of existing users in your Cenit IO instance.
+
+![image](https://user-images.githubusercontent.com/54523080/174111067-c709a82c-53ce-441a-8cc3-d73d4972a7a7.png)
+
+
+
+When you edit a tenant in the cloud with role admin, you are not able to add users to the tenant
+
+![image](https://user-images.githubusercontent.com/54523080/174115199-7bfd99bd-0e6e-4d74-a55c-3ec1b45f94e5.png)
+
+In those cases you need to make a request via email to support@cenit.io providing the tenant name and the users you need to give access to your tenant. There are some pre-conditions that apply:
+
+- You must specify a tenant you're its owner.
+
+- Users should register for a Cenit account in advance.
+
+- You must provide a list of one or more users emails
 
 ## Move to another tenant.
 
