@@ -14,7 +14,7 @@ remains in an independent tenant, taking advantage of tenants provide logical is
 
 When a user creates a tenant he/she access the tenant with role Admin. Admins can manage all the tenants owned by he/she, by accesing the submenu [Tenants](administration/tenants.md) in Administration:
 
-![](C:\Users\joe\AppData\Roaming\marktext\images\2022-06-15-22-19-32-image.png)
+![image](https://user-images.githubusercontent.com/54523080/173977276-33d3843b-46b3-441c-80e5-e451da8bed0e.png)
 
 ## Add New Tenant.
 
