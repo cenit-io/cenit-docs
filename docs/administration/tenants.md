@@ -14,11 +14,7 @@ remains in an independent tenant, taking advantage of tenants provide logical is
 
 When a user creates a tenant he/she access the tenant with role Admin. Admins can manage all the tenants owned by he/she, by accesing the submenu [Tenants](administration/tenants.md) in Administration:
 
-![tenants](https://user-images.githubusercontent.com/99367633/160722661-e9946e33-6d71-446b-abea-08ddb2d652a9.png)
-
-
-
-
+![](C:\Users\joe\AppData\Roaming\marktext\images\2022-06-15-22-19-32-image.png)
 
 ## Add New Tenant.
 
@@ -37,8 +33,6 @@ Next, you must fill every field with the information related to the tenant and p
 After pressing the save button you can see the new tenant on the list of tenants. You should notice the list of tenants contains only those tenants which are available to the current user.
 
 ![image](https://user-images.githubusercontent.com/54523080/173972000-75009124-3dc6-4e02-9c29-93bbd27f21f1.png)
-
-
 
 ## View tenant's details.
 
@@ -59,8 +53,6 @@ When you log in, your default tenant is shown. If you are intending to work in a
 Another way of moving from one tenant to other, is selecting the tenant in the list of tenant and pressing switch as shown below.
 
 ![image](https://user-images.githubusercontent.com/54523080/173975486-ebf3f095-efe8-4846-ad5b-f0e8e697d407.png)
-
-
 
 You should pay attention to the selected tenant in the top bar, because every new element you define in Cenit belongs to that tenant.
 
