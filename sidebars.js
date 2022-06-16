@@ -24,7 +24,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Administration',
-      items: ['administration/administration', 'administration/tenants','administration/users'],
+      items: ['administration/administration', 'administration/tenants'],
     },
 	{
       type: 'category',

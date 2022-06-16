@@ -12,38 +12,56 @@ Multi-tenancy means that processes have their own dedicated areas, even though t
 Cenit allows that single users can create multiple tenants, which is very useful for developing B2B applications. When a B2B solution is made, each end customer data 
 remains in an independent tenant, taking advantage of tenants provide logical isolation in a physically shared context. 
 
-Administrators can manage all the tenants in the system, by accesing the submenu [Tenants](administration/tenants.md) in Administration:
+When a user creates a tenant he/she access the tenant with role Admin. Admins can manage all the tenants owned by he/she, by accesing the submenu [Tenants](administration/tenants.md) in Administration:
 
 ![tenants](https://user-images.githubusercontent.com/99367633/160722661-e9946e33-6d71-446b-abea-08ddb2d652a9.png)
 
-Simple user can add new tenants, but only will can edit the tenants of their own. 
 
-In the figure below, you can appreciate the edition of a tenant that corresponds to a user logged in the system: 
 
-![my tenant](https://user-images.githubusercontent.com/99367633/160723760-be762e28-6f43-4639-b931-e9ea7acf96e7.png)
 
-If that user is not an administrator, he or she only can edit information about their own tenants. 
 
 ## Add New Tenant.
 
-Administrators or simple users can add new tenants in the system.
+A user can add new tenants as long as he haven't exceeded the maximum amount of tenants on his/her plan.
 
-In order to add a new tenant, you may press the + sign in the generic task bar. 
+For creating a new tenant, press the + button in the generic menu bar. 
 
-![Plus a tenant](https://user-images.githubusercontent.com/99367633/160732877-092431a4-e97a-4e89-ab77-78c9ed705f31.png)
+![image](https://user-images.githubusercontent.com/54523080/173971298-811d0b83-77af-4af8-8e19-91b3bff00832.png)
 
-Next, you must fill in the elements that are made available:
+Next, you must fill every field with the information related to the tenant and press the save button
 
-## ![Adding a tenant](https://user-images.githubusercontent.com/99367633/160727654-20531f71-4113-42da-9a23-6a9259bdb8d7.png) List of tenants.
+![image](https://user-images.githubusercontent.com/54523080/173971706-971cb7c3-4b19-47cd-b005-aacee53d966f.png)
 
-After pressing the save button you can see the new tenant on the list of tenants. In the picture, this simple user can see all of their tenants:
+## List of tenants.
 
-![List of tenants](https://user-images.githubusercontent.com/99367633/160727876-7a0da8bd-7520-4bb1-a47f-3fa099f58a7c.png)
+After pressing the save button you can see the new tenant on the list of tenants. You should notice the list of tenants contains only those tenants which are available to the current user.
+
+![image](https://user-images.githubusercontent.com/54523080/173972000-75009124-3dc6-4e02-9c29-93bbd27f21f1.png)
+
+
+
+## View tenant's details.
+
+By selecting a tenant and pressing the Show button you can see the tenant details.
+
+![image](https://user-images.githubusercontent.com/54523080/173972414-9e5646cc-fc66-44fd-8652-09304193fe84.png)
+
+The show view is shown in picture below
+
+![image](https://user-images.githubusercontent.com/54523080/173972682-7de91a0f-766e-481a-bfa9-b560f003e9e3.png)
 
 ## Move to another tenant.
 
-Gently press the line at the left of your photo. In the select menu at the top bar, yo can choose the tenant you want to use:
+When you log in, your default tenant is shown. If you are intending to work in a different tenant, you need to move to that tenant. In the select menu at the top bar, you can choose the tenant you want to work on:
 
-![Move to a tenant](https://user-images.githubusercontent.com/99367633/160728195-a4861f58-c7ab-4dcb-8df1-169d5c0f0ab8.png)You should pay attention to the selected tenant in the top bar, because every new element you define in Cenit belongs to that tenant.
+![image](https://user-images.githubusercontent.com/54523080/173974810-e3e244b5-3ec1-4866-b9a0-2b76bd425ae7.png)
 
-![Elements in current tenant](https://user-images.githubusercontent.com/99367633/160728535-dfe4bfad-d60f-4d41-aff6-1cfdf0f68541.png)
+Another way of moving from one tenant to other, is selecting the tenant in the list of tenant and pressing switch as shown below.
+
+![image](https://user-images.githubusercontent.com/54523080/173975486-ebf3f095-efe8-4846-ad5b-f0e8e697d407.png)
+
+
+
+You should pay attention to the selected tenant in the top bar, because every new element you define in Cenit belongs to that tenant.
+
+![image](https://user-images.githubusercontent.com/54523080/173975636-a6e59f5f-7e8d-42f5-bedd-b73e5bd273fa.png)
