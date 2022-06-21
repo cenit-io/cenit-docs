@@ -20,7 +20,7 @@ These conveniently defined elements make up the structure of a flow.
 
 Each flow is executed manually or in a controlled way by means of [Data Events](workflows/data_events.md) or [Schedulers](workflows/schedulers.md). 
 
-Another way to configure a flow consists of the use of Hooks.
+Another way to configure a flow is by using a [Notification Flow](workflows/notification_flows_.md).
 
 The figure bellow shows the Workflow Menu. 
 

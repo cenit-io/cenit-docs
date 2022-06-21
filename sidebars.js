@@ -44,7 +44,7 @@ const sidebars = {
 	{
       type: 'category',
       label: 'Workflows',
-      items: ['workflows/workflows', 'workflows/flows', 'workflows/import_flows','workflows/converter_flows','workflows/export_flows','workflows/data_events', 'workflows/schedulers'],
+      items: ['workflows/workflows', 'workflows/flows', 'workflows/import_flows','workflows/converter_flows','workflows/export_flows','workflows/data_events', 'workflows/schedulers', 'workflows/notification_flows'],
     },	
 	{
       type: 'category',

@@ -12,17 +12,21 @@ You can perform operations on algorithms using the Cenit IO API V2. To do this, 
 
 For creating a new data event, click the New button (+) in the [Generic Menu](generic/generic_menu_options_.md) and fill every input field.
 
-![Data events](https://user-images.githubusercontent.com/99367633/161153842-d56587f4-ed1a-41e1-afe4-115630068dc5.png)At first, you need to set its Namespace, Name and the Data Type you want to link to the event.
+![](C:\Users\joe\AppData\Roaming\marktext\images\2022-06-21-13-19-30-image.png)
+
+At first, you need to set its Namespace, Name and the Data Type you want to link to the event.
 
 The Data Type that is selected is the one that we are going to check if certain conditions occur. These conditions are called **triggers** because the system checks that these conditions occur in the data to execute the flow associated with that data.
 
-![Add trigger](https://user-images.githubusercontent.com/99367633/161154247-e2991b0d-a5e1-4982-95d9-39344b7f6ec8.png)
+![image](https://user-images.githubusercontent.com/54523080/174859911-e4c8604c-a01a-422f-9de2-8915f38dad91.png)
 
-In the example, we defined two triggers to be checked about the data type "Conversation": to check all conversations created this week and conversations are from a slack member. That is, triggers can be managed around the attributes of the data type. 
+The simplest trigger you can define is for specifying a record have been created or updated. The picture below shows a trigger which activate de data event whenever a new record have been created.
 
-![Triggers](https://user-images.githubusercontent.com/99367633/161156646-0b1364f2-2252-40f8-b916-d030ff919515.png)
+![image](https://user-images.githubusercontent.com/54523080/174860804-556af8cc-3cae-46d3-9e64-34a5dddb5c98.png)
 
-When defining a trigger you may select an specific attribute, including the ones by default: create_at or updated_at.
+
+
+In addition to that, we can define triggers to observe some properties and customize the condition we can to check. When defining a trigger you may select an specific attribute, including the default ones: create_at or updated_at.
 
 When any attribute is selected, the possible evaluations for the triggers are:
 
@@ -82,7 +86,7 @@ After completing the data event declaration and pressing the save button, you ca
 
 The example above shows how to add triggers to a Data Event. The triggers allow to define, in simple terms, whether the event occurs or not. However, if we need to specify a complex condition, we might use a Trigger Evaluator algorithm.
 
-![Trigger evaluator 1](https://user-images.githubusercontent.com/54523080/164564101-971927c6-aafc-48c9-b71b-cff22d4e95d2.png)
+![image](https://user-images.githubusercontent.com/54523080/174860355-c96c0442-6ea7-430f-9cfb-487e59682f94.png)
 
 The trigger evaluator algorithm takes to parameters current and previous (in that order) which refers to the current record of the event Data Type and the previous one before update it, so previous is nil when the record is created and it wasn't present before that. The algorithm should return true to indicate the event occurs and false if not. The section [Algorithms](compute/algorithms.md) shows an example of trigger evaluator.
 
