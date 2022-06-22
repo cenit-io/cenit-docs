@@ -120,6 +120,9 @@ supports the use of third-party apps or devices which ask you to sign in
 to your Google Account using only your username and password. So you may
 use a google SMTP account only if it was previously configured to accept
 less secure app access since this feature is no longer available.
+Google Workspace and Google Cloud Identity users won’t be affected right
+away, but support for Less Secure Apps will still be phased out for those
+users at a later date.
 If this feature is disabled in your google account, you need to use
 another SMTP account or use an Email Channel of type Email Flow instead.
 The Email Channel of type Email Flow requires the configuration of an
