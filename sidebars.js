@@ -23,6 +23,11 @@ const sidebars = {
 	'basic_integration', 
     {
       type: 'category',
+      label: 'Installation',
+      items: ['installation/installation', 'installation/docker_composer','installation/alternative'],
+    },		
+    {
+      type: 'category',
       label: 'Administration',
       items: ['administration/administration', 'administration/tenants'],
     },
