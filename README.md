@@ -12,7 +12,7 @@
 
 
 * [Join our Slack][join-slack-link]
-[(cenitio.slack.com)][join-slack-link]
+* [(cenitio.slack.com)][join-slack-link]
 * [docs](https://docs.cenit.io/)
 * [Shared Collections](https://cenit.io/setup~shared_collection)
 * support@cenit.io
@@ -21,7 +21,7 @@
 
 Is a 100% open integration-platform-as-a-service (iPaaS) that's modern, powerful, yet hackable to the core, ready to [use in the cloud](https://web.cenit.io) or on-premises. It is designed to solve unique integrations needs, orchestrate data flows that may involve types of protocols and data formats, and provide API management capabilities. All of which can support a wide range of integration use cases. It is particularly valuable to embrace a pervasive integration approach.
 
-To install and learn more about the platform check the [documentation](https://docs.cenit.io/) supported under this repo 
+To install and learn more about the platform check the [documentation](https://docs.cenit.io/) supported under this repo. 
 
 ## Docs website
 
@@ -64,3 +64,12 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+[numApis-image]: https://api.apis.guru/badges/apis_in_collection.svg
+[numSpecs-image]: https://api.apis.guru/badges/openapi_specs.svg
+[endpoints-image]: https://api.apis.guru/badges/endpoints.svg
+[apisDir-link]: https://github.com/APIs-guru/openapi-directory/tree/master/APIs
+[twitterFollow-image]: https://img.shields.io/twitter/follow/cenit_io.svg?style=social
+[twitterFollow-link]: https://twitter.com/intent/follow?screen_name=cenit_io
+[join-slack-link]:
+https://join.slack.com/t/cenitio/shared_invite/zt-1ac9cntav-nbygqIURukJNbWq1CAfPIg
