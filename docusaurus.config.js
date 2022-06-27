@@ -77,6 +77,10 @@ const config = {
                 label: 'Roadmap',
                 href: 'https://cenit.frill.co/roadmap',
               },
+              {
+                label: 'Terms of Service',
+                to: '/docs/terms',
+              },
             ],
           },
           {
