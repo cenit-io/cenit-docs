@@ -21,3 +21,6 @@ Once inside the Connector Factory, you can create a new connector app as well as
 
 ![Connector Factory Main View](https://user-images.githubusercontent.com/54523080/170582552-6450158a-6ac5-4709-a236-6b8fcc17c46f.png)
 
+After creating one or two Connector Apps, you will be able to create a [Recipe](connector_factory/recipes.md), an special kind of collection that implements the mapping process between two Data Types defined in a connector app. A Recipe can be easily generated in the same Connector Factory interface.
+
+![image](https://user-images.githubusercontent.com/54523080/177045946-020257c0-902c-4b97-9637-09b89cde4679.png)

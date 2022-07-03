@@ -113,7 +113,7 @@ As you can see in the picture above, a collection has been created in the curren
 
 ![22 Connector Factory Collection Details](https://user-images.githubusercontent.com/54523080/168944757-5cfb11c9-7c8c-49a3-b4cf-1146f3a93a3c.png)
 
-You get the same result by accessing the menu Gateway/Resource Paths and list the elements en the corresponding namespace.
+You get the same result by accessing the menu Gateway/Resource Paths and list the elements in the corresponding namespace.
 
 ![23 Connector Factory  Resources Paths List in Cenit](https://user-images.githubusercontent.com/54523080/168944758-ea6f6fef-554e-4f05-837f-96d37f2c7bdf.png)
 
@@ -134,4 +134,3 @@ As mentioned before, when a connector app is created in the Connector Factory, a
 | Algorithms for Contact | do_import_contact, do_import_contacts, do_get_contacts, do_get_contact, parse_from_api_response_contacts, trigger_for_change_contact, do_export_contact, do_create_contact, do_update_contact, parse_2_api_request_contact | The algorithms for importing and exporting records of type Contact                                                    |
 | Algorithms for Lead    | do_import_lead, do_import_leads, do_get_leads, do_get_lead, parse_from_api_response_leads, trigger_for_change_lead, do_export_lead, do_create_lead, do_update_lead, parse_2_api_request_lead                               | The algorithms for importing and exporting records of type Lead                                                       |
 | Algorithms             | do_check_error_response, do_generate_hmac                                                                                                                                                                                  | The algorithm for processing errors in the response and the algorithm for generating the hmac of a record.            |
-
