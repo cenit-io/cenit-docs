@@ -15,6 +15,6 @@ In the Connector Factory interface, press the button for switching between the C
 
 ![image](https://user-images.githubusercontent.com/54523080/177047332-0b1ce077-6035-4c13-8e0d-cc2e4fe2e7df.png)
 
-Once inside the Recipe view, you can create a new recipe as well as managing the existing ones. The picture below shows the recipe main view.
+Once inside the Recipe view, you can create a new recipe as well as managing the existing ones. The picture below shows the Recipe view.
 
 ![image](https://user-images.githubusercontent.com/54523080/177047489-13df6151-1f1c-40cc-b815-5312e6f9078b.png)

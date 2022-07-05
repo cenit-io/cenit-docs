@@ -52,8 +52,11 @@ After pressing the Add button the edit view is shown and you can start entering 
 For creating a recipe you need to enter some information about the connector apps involved in the mapping process you want to implement. So the UI will guide you to enter:
 
 - The origin connector
+
 - The destination connector (could be the same connector selected as origin on the condition that it contains two or more Data Types)
+
 - For every mapping process you want to implement:
+  
   - The origin data type
   
   - The destination data type
@@ -62,7 +65,7 @@ For creating a recipe you need to enter some information about the connector app
 
 Let's see, in detail, how to create the recipe. We are using as an example the creation of a Recipe for mapping a Slack User to a Zoho CRM Contact.
 
-At first you need to select the origin connector (Slack in the case of the example) and the destination connector (Zohocrm in the case of the example). The namespace and the name of the collection are generated automatically from the origin and the destination connectors.
+At first you need to select the origin connector (Slack in the case of the example) and the destination connector (Zohocrm in the case of the example). The namespace (SlackToZohocrm in the case of the example) and the name of the collection (slack_to_zohocrm in the case of the example) are generated automatically from the origin and the destination connectors.
 
 ![image](https://user-images.githubusercontent.com/54523080/177053112-4dc672dd-0292-4e1f-8da5-e71dc0002656.png)
 
@@ -74,7 +77,7 @@ After pressing the + button, a view like the one below is shown and you must sel
 
 ![image](https://user-images.githubusercontent.com/54523080/177055669-808a94e6-bfc8-4a0a-b33b-57561820b4d1.png)
 
-In the same view you can specify the mapping code or you can choose to keep the default code in order to modify it later, after the Recipe is generated.
+In the same view you can specify the mapping code or you can choose to keep the default code in order to modify it later, after the Recipe is generated. You should notice the mapping code will be available to be modified later in the algorithm parse_from_sourceNS_sourceDT_to_targetNS_targetDT (in the case of the example: parse_from_slack_user_to_zohocrm_contact)
 
 ![image](https://user-images.githubusercontent.com/54523080/177055828-436faa00-3395-488a-86f9-6d28f1ec953d.png)
 
@@ -100,7 +103,11 @@ After completing the mapping code you can press the save button for completing t
 
 ![image](https://user-images.githubusercontent.com/54523080/177056283-bbe1a05e-e2fb-4508-b7f0-055eee10ad6c.png)
 
-After completing the definition of the mapping process, you can check the information of the recipe is completed and press the Save button in order to create the recipe as the picture below shows.
+The recipe may contain more than one mapping process. For adding a new mapping process you need to press the + button again (see 1 in the picture below). Since a connector might contain more than one data type, you would want to map more than one pair of data types between the same connectors. For example, The zohocrm connector app contains two data types: Contact and Lead. If we want to map the User in the slack connector app to the Lead in the zohocrm connector app, we may not create a new Recipe between the connectors slack and zohocrm because the recipe name would be the same: slack_to_zohocrm (see 2 in the picture below). So, cases like this one must be implemented as a single Recipe with multiples mapping processes.
+
+![image](https://user-images.githubusercontent.com/54523080/177180232-069c93eb-c76e-4190-9181-7958475888cd.png)
+
+After completing the definition of the mapping process, you can check the information of the recipe is completed and press the Save button in order to create the recipe as the picture below shows (You should notice we finally didn't add the mapping process between the Slack User and the Zohocrm Lead).
 
 ![image](https://user-images.githubusercontent.com/54523080/177056210-8b5b8196-7b8e-4c56-80d5-607fa8465292.png)
 

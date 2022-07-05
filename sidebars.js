@@ -69,7 +69,7 @@ const sidebars = {
 	{
       type: 'category',
       label: 'Connector Factory',
-      items: ['connector_factory/connector_factory', 'connector_factory/creating_a_new_connector_app', 'connector_factory/understanding_the_connector_app_elements', 'connector_factory/detailing_and_editing_the_connector_app_elements', 'connector_factory/recipes', 'connector_factory/creating_a_new_recipe'],
+      items: ['connector_factory/connector_factory', 'connector_factory/creating_a_new_connector_app', 'connector_factory/understanding_the_connector_app_elements', 'connector_factory/detailing_and_editing_the_connector_app_elements', 'connector_factory/recipes', 'connector_factory/creating_a_new_recipe', 'connector_factory/understanding_the_recipe_elements'],
     },		
 	{
       type: 'category',
