@@ -70,7 +70,17 @@ Then, you can see the Shared Collection with the title in a light-green backgrou
 
 ## Importing a Shared Collection
 
-You can bring a Shared Collection to your tenant by executing the Pull action to a Shared Collection. At first, let's explore the list of Collection in a tenant used as an example.
+When a Collection is shared, some of its resources becomes available to every tenant as well as the Shared Collection. For example, the algorithms inside the Shared Collection Jira are available in the tenant Ana & Joe Collections as you can see in the picture below. The check boxes in a green background refer to shared items.
+
+![image](https://user-images.githubusercontent.com/54523080/179115589-8c4e8483-5f8a-4958-a39c-8dc8e19f80dd.png)
+
+However, some resources are not available until you import (pull) the Shared Collection  into your tenant. For example, if we access the Authorization menu we can realize the authorization in the namespace Jira is not available as shown below.
+
+![image](https://user-images.githubusercontent.com/54523080/179115934-a1eae2c7-5e3f-47f0-98ca-4635ca1e9921.png)
+
+So, you should not use a shared resource, like the algorithms in the Shared Collection Jira, unless you are sure it doesn't depends on other resource which might not be available. The best way of using a shared resource in you tenant is bringing the entire Shared Collection to your tenant. So, we strongly recommend to import a Shared Collection to your tenant prior to use any of the resources contained in that collection.
+
+You can import a Shared Collection to your tenant by executing the Pull action to a Shared Collection. At first, let's explore the list of Collection in the tenant used as an example above.
 
 ![image](https://user-images.githubusercontent.com/54523080/178794708-d93c0a77-f2ae-4e6d-b5ed-e523282dfc15.png)
 
@@ -106,4 +116,12 @@ And you can see the Collection in your tenant.
 
 ![image](https://user-images.githubusercontent.com/54523080/178801191-58eca6e7-a24f-4005-96f8-4d114a83127b.png)
 
-After importing a Shared Collection to your tenant, it will be available to be used, for example, in the Connector Factory, if the collection is of type Connector App.
+After importing a Shared Collection to your tenant, it will be available to be used, as well as every resource contained in the collection, for example, the authorization in the namespace Jira is now available as you can show below.
+
+![image](https://user-images.githubusercontent.com/54523080/179126140-f9a19322-3e9e-4d7a-a2dd-299e784d6297.png)
+
+Every other resource in the collection is also available , including those algorithms we checked earlier they were available in the algorithm list before importing the Shared Collection.
+
+![image](https://user-images.githubusercontent.com/54523080/179126840-81c9fa4d-3cda-4f40-8a63-41ed790ea84e.png)
+
+Don't worry if some resources, like the algorithms, appear marked as shared resources (the ones with  check boxes in a green background). If you need to modified some of them in order to customize it according to your use case, you are free to do that and the modification only apply to the resource in your tenant, the original shared one remains unaltered. 
