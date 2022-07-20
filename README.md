@@ -72,4 +72,4 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 [twitterFollow-image]: https://img.shields.io/twitter/follow/cenit_io.svg?style=social
 [twitterFollow-link]: https://twitter.com/intent/follow?screen_name=cenit_io
 [join-slack-link]:
-https://join.slack.com/t/cenitio/shared_invite/zt-1ac9cntav-nbygqIURukJNbWq1CAfPIg
+https://join.slack.com/t/cenitio/shared_invite/zt-1cq3uab52-Jv93F8R2BJ9MHr00SbCqjw
