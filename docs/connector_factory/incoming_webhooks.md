@@ -19,7 +19,7 @@ The activation of the events in the remote platform may vary from one API to ano
 
 However, in the case of the Zoho CRM API you need to send a request for configuring the notifications (events) via API.
 
-![image](https://user-images.githubusercontent.com/54523080/180478205-b2bd30d6-2f98-4ca4-af1b-782ae1291534.png)
+![image](https://user-images.githubusercontent.com/54523080/180489473-5e22c575-ae3e-485b-96f7-f1c34d706f4d.png)
 
 On the other hand, the process differs from one API to another. For example, in the case of the Slack API, when an event is triggered, the request sent to Cenit IO contains the entire record that was created or updated in the remote platform, so it can be stored in Cenit IO directly.
 
