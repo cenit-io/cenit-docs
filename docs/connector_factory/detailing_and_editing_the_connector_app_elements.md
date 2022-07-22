@@ -482,8 +482,6 @@ else
 end
 
 nil
-
-
 ```
 
 You don't need to make any changes to the algorithm's code.
