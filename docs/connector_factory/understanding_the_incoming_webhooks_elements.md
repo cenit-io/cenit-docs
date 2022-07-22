@@ -72,18 +72,18 @@ The algorithm action_hook is in charge of processing the request. So there is a 
 
 ### Application actions URL parameters
 
-The URL parameter **:resource_type** is used to identify the type of record that is sent. As shown above, there are two possible URLs where the API can sent the information about the event. One of them contains the URL parameter :resource_type, "contact" in the case of the example, but the other one doesn't contain the URL parameter  :resource_type. So, a doubt might arise: is it necessary or not? You should understand the algoritm: action_hook always needs the type of the resource that comes in the request since the algorithm is going to create or update a record of that type in Cenit IO. However, the algorithm can recover the type of record from the URL parameter :resource_type or from the data sent by the API. Both approaches have pros and cons which are explained in the table below.
+The URL parameter **:resource_type** is used to identify the type of record that is sent. As shown above, there are two possible URLs where the API can sent the information about the event. One of them contains the URL parameter :resource_type, "contact" in the case of the example, but the other one doesn't contain the URL parameter  :resource_type. So, a doubt might arise: is it necessary or not? You should understand the algoritm: action_hook always needs the type of the resource that comes in the request since the algorithm is going to create or update a record of that type in Cenit IO. However, You should try to set different URLs for every type of record so you can include the :resource_type parameter in the URL, on the contrary, if the API doesn't allow to set different URLs, the :resource_type will not be included in the URL. So, the algorithm action_hook can recover the type of record from the URL parameter :resource_type or from the data sent by the API. Both approaches have pros and cons which are explained in the table below.
 
-| Approach                                              | Pros                                                                                                                                           | Cons                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| The URL contains the parameter :resource_type         | The algorith action_hook can recover the type of resource easily by accessing the parameter params: params[:resource_type]                     | When you handle events related to several resources, you need to configure a different URL in the API for every resource for manually include the value of the :resource_type parameter in the URL.                                                                                                                                                                                                                                                                             |
-| The URL doesn't contain the parameter  :resource_type | When you handle events related to several resources, you can  configure only one URL in the API that is used when all the events are triggered | The algorith action_hook must recover the type of resource by accesing the data obtained from the remote platform and it varies from one API to another. For example, in the case of the Zoho CRM API: resource_type= data[:module].singularize.downcase and in the case of the Slack API: resource_type= data[:event][:type].split('_').first. You should notice you can use this approach only if the data sent by the API contains information related to the resource_type. |
+| Approach                                              | Pros                                                                                                                                                                                                                             | Cons                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The URL contains the parameter :resource_type         | The algorith action_hook can recover the type of resource easily by accessing the parameter params: params[:resource_type], so the action algorithm doesn't need to execute extra processing of the data.                        | When you handle events related to several resources, you need to configure a different URL in the API for every resource for manually include the value of the :resource_type parameter in the URL.                                                                                                                                                                                                                                                  |
+| The URL doesn't contain the parameter  :resource_type | When you handle events related to several resources but the API doesn't allow to set different URLs for each type of record, you are forced to  configure only one URL in the API that is used for every event that is triggered | The algorith action_hook must recover the type of resource by accesing the data obtained from the remote platform and it varies from one API to another. For example, in the case of the Zoho CRM API: resource_type= data[:module].singularize.downcase and in the case of the Slack API: resource_type= data[:event][:type].split('_').first. You should use this approach only when the API doesn't allow to set a different URL for every event. |
 
 The URL parameter **:action_type** takes as a value save or import and it's used to command the algorithm action_hook to save the record just like it comes in the request from the API or to import the record obtained from the response to a new  request from Cenit IO to the API. The value of this parameter depends on the data that the API sends when an event ocurr. As explained in the previous section in some remote platforms, like the Slack API, when an event is triggered, the request sent to Cenit IO contains the entire record that was created or updated in the remote platform, so it can be stored in Cenit IO directly. So, in cases like this one, we can set the URL parameter :action_type with value "save".
 
 ![Slack event support](https://user-images.githubusercontent.com/54523080/180131061-38605ef1-1fc5-4111-be92-8be502146454.jpg)
 
-However, in other remote platforms, like Zoho CRM API, when a notification (event) is triggered, the request sent to Cenit IO contains only the id of the record that was created or updated in the remote platform, so Cenit IO needs to use that id to request the entire record in a new petition and recover it from the response. In cases like this one, we must set the URL parameter :action_type with value "import".
+However, in other remote platforms, like Zoho CRM API, when a notification (event) is triggered, the request sent to Cenit IO contains only the id of the record that was created or updated in the remote platform, so Cenit IO needs to use that id to request the entire record in a new petition and recover it from the response. In cases like this one, we must set the URL parameter :action_type with value "import". You should use the same approach when the data contains not only the record_id but only a few properties are included. So, in this case you also need to get the entire record in a new petition.
 
 ![Zoho CRM notification support](https://user-images.githubusercontent.com/54523080/180131064-7313101f-e9c1-4996-9b9a-ec962a5f28a2.jpg)
 
@@ -91,12 +91,12 @@ The table below explains the pros and cons of both approaches.
 
 | Approach                         | Pros                                                                                                             | Cons                                                                                                                                                                                                      |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| :action_type with value "save"   | The algorith action_hook can save the record directly when the event occurs and the request is sent to Cenit IO. | This approach can be used only in those cases the API sends the request with the entire record when the event occurs.                                                                                     |
+| :action_type with value "save"   | The algorith action_hook can save the record directly when the event occurs and the request is sent to Cenit IO. | This approach can be used only in those cases the API sends the request with the entire record when the event occurs. It can't be used when only a few properties are sent in the request.                |
 | :action_type with value "import" | This approach can be used regardless the API because every API sends the request with at least the record id.    | The algorith action_hook needs to process the request from the remote platform, take the record id, then send a new request to the API , get the entire record from the response and save it in Cenit IO. |
 
 So, you need to meticulously review the API documentation in order to make up the URL you need to set in the event configuration following the rules previously discussed and summarized in the table below.
 
-![image](https://user-images.githubusercontent.com/54523080/180345545-28d10291-a53d-4aa2-9898-8a4cbbc1ed3b.png)
+![image](https://user-images.githubusercontent.com/54523080/180476846-8635b86d-6f7d-4310-8ec7-bd8d562dc02e.png)
 
 ### Application parameters
 
@@ -176,7 +176,22 @@ The data that comes from the remote platform in the request body varies from one
 
 - The algorithm whose name was set in the variable action_name is executed for processing the data, that means either store the entire record directly or use the record id for requesting the entire record and then store it in Cenit IO.
 
-For customizing the algorithm code you need to consider all the details explained before. So, for example, the code for the action_hook algorithm  in the case of the ZohoCRM API is like the one below
+For customizing the algorithm code you need to consider all the details explained before. So, for example, in the case of the ZohoCRM API, when a notification is triggered and the request is sent to Cenit IO, the payload data contains info like the one below.
+
+```json
+{
+    "query_params":{}, 
+    "module":"Contacts", 
+    "resource_uri":"https://www.zohoapis.com/crm/v2/Contacts", 
+    "ids":["5221590000000951001"], 
+    "affected_fields":[], 
+    "operation":"insert", 
+    "channel_id":"5221590000000358640", 
+    "token":"TOKEN_CENIT_IO"
+}
+```
+
+And the code for the action_hook algorithm  in the case of the ZohoCRM API is like the one below
 
 ```ruby
 begin
@@ -186,7 +201,7 @@ begin
     control.action.body.rewind
     JSON.parse(control.action.body.read).with_indifferent_access
   end
-  
+
   resource_type = params[:resource_type] || begin
     data[:module].singularize.downcase
   end
@@ -218,13 +233,87 @@ control.render :body => nil, :status => 200
 
 - The data is obtained from the request body by using the parameter control
 
-- The resource_type is obtained from the URL parameter. If it didn't come in the URL parameter, then it's obtained from the data in the request body by accesing the property :module which contains the Zoho module where the event took place. This word must be converted to lowercase and must be converted from plural to singular in order to be used in the algorithm name.
+- The resource_type is obtained from the URL parameter. If it didn't come in the URL parameter, then it's obtained from the data in the request body by accesing the property :module which contains the Zoho module where the event took place. This word must be converted to lowercase and must be converted from plural to singular in order to be used in the algorithm name. So you should notice it's better if you configure the event in the API to include the :resource_type parameter, for example "contact", in the URL.
 
 - The resource data is obtained from the info in the variable data. In the case of the ZohoCRM API it contains only the record_id  which is stored in the property :ids which is an array so we need to access to its first element.
 
 - Since the entire record never comes in the body, in the case of the ZohoCRM API the action_type parameter in the URL must be "import" or it would be wrong. So the algorithm do_import_contact (for example) is selected and it is called later passing the record id as a parameter. This algorithm request the entire record and parse it into Cenit IO.
 
-Let's see another example of code for the action_hook algorithm. The code in the case of the Slack API is like the one below
+Let's see another example of code for the action_hook algorithm.  In the case of the Slack API, when an event is triggered  and the request is sent to Cenit IO, the payload data contains info like the one below.
+
+```json
+{
+    "token":"QFwJaMWNyMPmAMif", 
+    "team_id":"T02RXV0", 
+    "api_app_id":"A02S4M91", 
+    "event":{
+        "user":{
+            "id":"U03Q6C", 
+            "team_id":"T02RXV", 
+            "name":"ana22", 
+            "deleted":false, "color":"684b6c", 
+            "real_name":"Ana Smith", 
+            "tz":"America/New_York", 
+            "tz_label":"Eastern Daylight Time", 
+            "tz_offset":-14400, 
+            "profile":{
+                "title":"", 
+                "phone":"", 
+                "skype":"", 
+                "real_name":"Ana Smith", 
+                "real_name_normalized":"Ana Smith", 
+                "display_name":"Ana Smith", 
+                "display_name_normalized":"Ana Smith", 
+                "fields":{}, 
+                "status_text":"", 
+                "status_emoji":"", 
+                "status_emoji_display_info":[], 
+                "status_expiration":0, 
+                "avatar_hash":"914713f", 
+                "image_original":"https://avatars.slack-edge.com/2022-07-19/3843759117459f450_original.jpg", 
+                "is_custom_image":true, 
+                "email":"ana22@gmail.com", 
+                "first_name":"Ana", 
+                "last_name":"Smith", 
+                "image_24":"https://avatars.slack-edge.com/2022-07-19/384375f5d59f450_24.jpg",
+                "image_32":"https://avatars.slack-edge.com/2022-07-19/384375a3f5d59f450_32.jpg", 
+                "image_48":"https://avatars.slack-edge.com/2022-07-19/384323a3f5d59f450_48.jpg", 
+                "status_text_canonical":"", 
+                "team":"T02RXVW"
+            }, 
+            "is_admin":false, 
+            "is_owner":false, 
+            "is_primary_owner":false, 
+            "is_restricted":false, 
+            "is_ultra_restricted":false, 
+            "is_bot":false, 
+            "is_app_user":false, 
+            "updated":1658247603, 
+            "is_email_confirmed":true, 
+            "who_can_share_contact_card":"EVERYONE", 
+            "locale":"en-US"
+        }, 
+        "cache_ts":1658247603, 
+        "type":"user_profile_changed", 
+        "event_ts":"1658247603.002000"
+    }, 
+    "type":"event_callback", 
+    "event_id":"Ev03PPC6F3N3", 
+    "event_time":1658247603, 
+    "authorizations":[
+        {
+            "enterprise_id":nil, 
+            "team_id":"T02RXV", 
+            "user_id":"U02S6U", 
+            "is_bot":false, 
+            "is_enterprise_install":false
+        }
+    ], 
+    "is_ext_shared_channel":false
+}
+```
+
+The code for the action_hook algorithm in the case of the Slack API is like the one below
 
 ```ruby
 begin
@@ -235,8 +324,8 @@ begin
     JSON.parse(control.action.body.read).with_indifferent_access
   end
 
-  return control.render json: { challenge: data[:challenge] }, status => 200 if data[:type] == 	'url_verification'
-  
+  return control.render json: { challenge: data[:challenge] }, status => 200 if data[:type] ==     'url_verification'
+
   resource_type = params[:resource_type] || begin
     data[:event][:type].split('_').first
   end
@@ -265,7 +354,6 @@ rescue StandardError => ex
 end
 
 control.render :body => nil, :status => 200
-
 ```
 
 - The algorithm action_check_hook is called to verify the incoming data to the action hook.
@@ -280,7 +368,7 @@ control.render :body => nil, :status => 200
 
 - The algorithm whose name was set in the variable action_name is executed for processing the data, that means either store the entire record directly or use the record id for requesting the entire record and then store it in Cenit IO.
 
-The algorithm **action_check_hook** allows to verify the incoming data to the action hook. Its default ode is shown below
+The algorithm **action_check_hook** allows to verify the incoming data to the action hook. Its default code is shown below
 
 ```ruby
 # TODO: Implement here the control of access to the service.
@@ -294,7 +382,7 @@ Cenit.fail("
 
 So, the first time and event occurs and the request is sent to Cenit IO, the algorithm action_hook calls the algorithm action_check_hook and the execution is stopped to anounce the process isn't customized yet. After customizing the code in the algorithm action_hook you must change the code in the algorithm action_check_hook to let the process executes succesfully. 
 
-If you are not sure about how to control the access to the service you can just leave the code of the algorithm action_check_hook blank. However, depending on the info sent by the API you can check if you want the process to be executed or rejected. Let's see an example of code of the algorithm action_check_hook for the Zoho CRM API:
+If you are not sure about how to control the access to the service you can just leave the code of the algorithm action_check_hook blank but we recommend to write some code here in order to do some verification. So, depending on the info sent by the API you can check if you want the process to be executed or rejected. You need to find the way of verifying the origin and authenticity of the data. Let's see an example of code of the algorithm action_check_hook for the Zoho CRM API:
 
 ```ruby
 # TODO: Implement here the control of access to the service.
