@@ -61,17 +61,57 @@ When configuring the app, you should select one of the two possible values for t
 
 - User Credentials
   
-  In this case, when you access the app, Cenit requests for authentication.
+  In this case, when you access the app, Cenit requests for authentication.  If the access to the app is via API, you must provide the: X-Tenant-Access-Key and X-Tenant-Access-Token headers.
 
 In Cenit the redirect URI has the default value  "https://server.cenit.io/oauth/callback"
 
+
+
+**Selecting Authentication Method: Users Credentials**
+
+![image](https://user-images.githubusercontent.com/54523080/186570245-821b842f-1417-48a6-8f82-35b350792480.png)
+
+When User credentials is used as Authentication Method  and we make a request, this case in Postman, you can see we get the same error
+
+![image](https://user-images.githubusercontent.com/54523080/186571083-8ab57bb8-7944-411a-9722-81fac42015d2.png)
+
+The reason is we need to send two headers X-Tenant-Access-Key and X-Tenant-Access-Token to get access to the application when the Authentication Method is User credentials
+
+![image](https://user-images.githubusercontent.com/54523080/186571606-d3b688de-a0c1-4256-896c-e10c3a1179aa.png)
+
+The values for these headers should be gotten from the tenant where the application is registered, as explained below.
+
+You can find the tenant in the list of tenant in the Administration menu and press show to see it details
+
+![image](https://user-images.githubusercontent.com/54523080/186572262-ab511773-4cd5-468d-8450-7c49ae8124fe.png) 
+
+Or you can use a shortcut to the current tenant by clicking the user icon.
+
+![image](https://user-images.githubusercontent.com/54523080/186572860-90625edc-4c99-4b29-8b1b-a2af65247315.png)
+
+Once inside your tenant's details, you need to scroll down, find the fields Authorization Token and Number, press the button fetch and copy the values for every header. 
+
+![image](https://user-images.githubusercontent.com/54523080/186573683-d00fda9d-1843-4514-9723-e5b30d8f35a0.png)
+
+If we send a new request in Postman and send the headers with the credentials to access the tenant the response is no longer Invalid authentication method which mean we get access to the application. 
+
+![image](https://user-images.githubusercontent.com/54523080/186574267-85ba77f4-ceb1-4e37-b7c0-e0bee8b5e307.png)
+
+The error Bad path is explained in the next section.
+
+
+
+**Selecting Authentication Method: Application ID**
+
 ![application configure window](https://user-images.githubusercontent.com/54523080/154370145-4e370af6-d598-48f4-a187-7910cd4beadb.png)
 
-After selecting Application ID as Authentication Method and saving the configuration, we can repeat the request.
+After selecting Application ID as Authentication Method and saving the configuration, we can make a request in the browser (You should notice no headers with the credentials are being sent in this case).
 
 ![application bad path](https://user-images.githubusercontent.com/54523080/154370164-c8885d6f-2367-45f8-a2b9-cc1f4169099e.png)
 
-You should note there is no authentication error anymore, the response is just notifying the path doesn't exist. As mentioned before, a correct path has the format https://server.cenit.io/app/{app_path}/{action_path}, so https://server.cenit.io/app/messages is not a valid endpoint and we need to define at least one action in order to enable the access to the URL https://server.cenit.io/app/messages/getMessage
+You should note there is no authentication error because the application is free to access in this case, the response is just notifying the path doesn't exist. As mentioned before, a correct path has the format https://server.cenit.io/app/{app_path}/{action_path}, so https://server.cenit.io/app/messages is not a valid endpoint and we need to define at least one action in order to enable the access to the URL https://server.cenit.io/app/messages/getMessage
+
+
 
 #### Add Action
 
