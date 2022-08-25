@@ -21,6 +21,7 @@ const sidebars = {
   tutorialSidebar: [
     'intro', 
 	'basic_integration', 
+	'registration',
     {
       type: 'category',
       label: 'Installation',
