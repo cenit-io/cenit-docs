@@ -92,7 +92,7 @@ const config = {
               },
               {
                 label: 'Slack',
-                href: 'https://join.slack.com/t/cenitio/shared_invite/zt-1cq3uab52-Jv93F8R2BJ9MHr00SbCqjw',
+                href: 'https://join.slack.com/t/cenitio/shared_invite/zt-1fm5s30pw-DoslIbTLHCQ1ln3tDzeKGg',
               },
               {
                 label: 'Youtube',
