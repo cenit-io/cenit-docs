@@ -1,12 +1,11 @@
+# **We announce Cenit IO has closed its doors and its operations, this marks the end of our company's presence.**
 
-# **Terms of Service**
 
+
+
+## **Terms of Service**
 
 ### **PLEASE READ THESE TERMS AND CONDITIONS (“Terms”) CAREFULLY BEFORE USING THIS PLATFORM**
-
-We are Cenit IO LLC (registered with number  EIN 87-1942827) aka Cenit IO.
-
-If you have any questions about these Terms, please contact us at **[support@cenit.io](mailto:support@cenit.io)**.
 
 By using our Platform you accept these Terms. You must not use our Platform if you do not agree to these Terms.
 
